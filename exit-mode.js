@@ -9,8 +9,8 @@ const num=n=>Number(n).toLocaleString('zh-CN',{maximumFractionDigits:3});
 export function initExitMode(onChange){
  const orderCandidates=createCandidateOrder();
  const nav=document.querySelector('.market-navigation');
- nav.insertAdjacentHTML('afterend',`<section class="decision-mode" aria-label="研究模式"><div class="decision-caption"><span>YOUR NEXT MOVE</span><p id="decisionHint">你的下一步</p></div><div class="decision-switch" role="group" aria-label="切换研究模式"><i aria-hidden="true"></i><div class="decision-label"><span id="decisionLabel">${mysteryMark}</span><small id="decisionLabelEnglish" hidden>DISCOVER</small></div><button type="button" data-decision="exit" aria-pressed="false" aria-label="查看卖出候选（需要登录）"><span class="portal-aura" aria-hidden="true"></span><span class="portal-art" aria-hidden="true"><img class="portal-mark portal-closed" src="/stone-portal.png" width="142" height="164" alt="" draggable="false"><img class="portal-mark portal-open" src="/stone-portal-open.png" width="142" height="164" alt="" draggable="false"></span></button></div></section>
- <section class="exit-workspace" id="exit-workspace" hidden aria-labelledby="exitTitle"><header class="exit-heading"><div><span class="exit-eyebrow" id="exitEyebrow">A股 · KNOW WHEN TO EXIT</span><h1 id="exitTitle" tabindex="-1"><span class="exit-title-kicker">醒醒</span><span>持有这些股票或基金</span><span class="exit-title-emphasis">该准备退出了</span></h1><p>查看出现退出信号的股票和基金，辅助判断减仓与离场时机。</p></div><a id="exitHoldingsLink" href="/portfolio?market=cn">管理我的持仓</a></header><div class="exit-toolbar"><div class="exit-scope" role="group" aria-label="检查范围"><button data-exit-scope="market" aria-pressed="true">市场观察池</button><button data-exit-scope="holdings" aria-pressed="false">我的持仓</button></div><label><span id="exitSearchLabel">搜索股票</span><input id="exitSearch" type="search" placeholder="名称或代码" autocomplete="off"></label></div><p id="exitMeta" class="exit-meta" role="status"></p><div id="exitStats" class="exit-stats"></div><div id="exitRules" class="exit-rules"></div><div id="exitCards" class="exit-grid"></div><button id="exitMore" hidden>查看更多</button><p class="exit-footnote" id="exitFootnote">市场候选每次打开随机展示，顺序不代表卖出优先级。只展示同时符合 R01 与向下 R02 的卖出候选，使用最近30自然日的行情观察期。候选不等于必须卖出；未入选也不代表可以放心持有。规则尚未完成收益回测，不自动执行交易。</p></section>`);
+ nav.insertAdjacentHTML('afterend',`<section class="decision-mode" aria-label="研究模式"><div class="decision-caption"><h2 class="decision-title" id="decisionTitle" tabindex="-1"><span class="decision-kicker">留意</span><span>这些股票或基金</span><span class="decision-emphasis">机会正在浮现</span></h2><p id="decisionHint" role="status" hidden></p></div><div class="decision-switch" role="group" aria-label="切换研究模式"><i aria-hidden="true"></i><div class="decision-label"><span id="decisionLabel">${mysteryMark}</span><small id="decisionLabelEnglish" hidden>DISCOVER</small></div><button type="button" data-decision="exit" aria-pressed="false" aria-label="查看卖出候选（需要登录）"><span class="portal-aura" aria-hidden="true"></span><span class="portal-art" aria-hidden="true"><img class="portal-mark portal-closed" src="/stone-portal.png" width="142" height="164" alt="" draggable="false"><img class="portal-mark portal-open" src="/stone-portal-open.png" width="142" height="164" alt="" draggable="false"></span></button></div></section>
+ <section class="exit-workspace" id="exit-workspace" hidden aria-labelledby="exitTitle"><header class="exit-heading"><div><h2 id="exitTitle">A股 · 退出信号</h2><p>查看出现退出信号的股票和基金，辅助判断减仓与离场时机。</p></div><a id="exitHoldingsLink" href="/portfolio?market=cn">管理我的持仓</a></header><div class="exit-toolbar"><div class="exit-scope" role="group" aria-label="检查范围"><button data-exit-scope="market" aria-pressed="true">市场观察池</button><button data-exit-scope="holdings" aria-pressed="false">我的持仓</button></div><label><span id="exitSearchLabel">搜索股票</span><input id="exitSearch" type="search" placeholder="名称或代码" autocomplete="off"></label></div><p id="exitMeta" class="exit-meta" role="status"></p><div id="exitStats" class="exit-stats"></div><div id="exitRules" class="exit-rules"></div><div id="exitCards" class="exit-grid"></div><button id="exitMore" hidden>查看更多</button><p class="exit-footnote" id="exitFootnote">市场候选每次打开随机展示，顺序不代表卖出优先级。只展示同时符合 R01 与向下 R02 的卖出候选，使用最近30自然日的行情观察期。候选不等于必须卖出；未入选也不代表可以放心持有。规则尚未完成收益回测，不自动执行交易。</p></section>`);
  document.body.insertAdjacentHTML('beforeend',`<dialog id="exitTransition" aria-labelledby="exitQuote"><span class="transition-brand">时序 <small>SHIXU</small></span><div class="exit-quote" id="exitQuote"><span>投资的远见</span><span>不止于发现价值</span><strong>更在于进退有据</strong></div><div class="transition-bottom"><span>KNOW WHEN TO EXIT</span><button id="skipExitTransition" type="button">看见另一面</button></div></dialog>`);
  const $=id=>document.getElementById(id),dialog=$('exitTransition'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const openGate=document.querySelector('.portal-open');
@@ -19,7 +19,8 @@ export function initExitMode(onChange){
  let active=false,market='cn',data=null,scope='market',limit=9,version=0,busy=false,skip=null,animations=[];
  const loginURL=()=>'/login?return_to='+encodeURIComponent('/?market='+market+'&view=exit');
  function paint(){
-  document.querySelector('.decision-caption').classList.remove('has-invitation');
+  document.querySelector('.decision-caption').classList.remove('has-error','has-invitation');
+  $('decisionHint').hidden=true;$('decisionHint').textContent='';
   document.body.classList.toggle('exit-mode',active);
   $('exit-workspace').hidden=!active;
   document.querySelector('.decision-switch').classList.toggle('is-exit',active);
@@ -27,7 +28,7 @@ export function initExitMode(onChange){
   $('decisionLabel').innerHTML=active?'寻找机会':mysteryMark;
   $('decisionLabelEnglish').hidden=!active;
   document.querySelector('[data-decision=exit]').setAttribute('aria-label',active?'返回寻找机会':'查看卖出候选（需要登录）');
-  $('decisionHint').textContent=active?'把退出的依据，看清楚。':'你的下一步';
+  $('decisionTitle').innerHTML=active?'<span class="decision-kicker">醒醒</span><span>持有这些股票或基金</span><span class="decision-emphasis">该准备退出了</span>':'<span class="decision-kicker">留意</span><span>这些股票或基金</span><span class="decision-emphasis">机会正在浮现</span>';
   document.getElementById('marketWorkspaces').hidden=active;
   document.dispatchEvent(new CustomEvent('shixu:mode',{detail:{exit:active}}));
  }
@@ -79,15 +80,15 @@ export function initExitMode(onChange){
     }
    }
   }catch{
-   $('decisionHint').textContent='暂时无法验证登录，请稍后再试。';
+   $('decisionHint').hidden=false;$('decisionHint').textContent='暂时无法验证登录，请稍后再试。';
    document.querySelector('.decision-caption').classList.add('has-error');
   }finally{
    skip=null;animations.forEach(a=>a.cancel());animations=[];
    if(dialog.open)dialog.close();dialog.getAnimations().forEach(a=>a.cancel());
    buttons.forEach(b=>b.disabled=false);busy=false;
-   if(active)$('exitTitle').focus({preventScroll:true});else (trigger||document.querySelector('[data-decision="exit"]')).focus({preventScroll:true});
+   if(active)$('decisionTitle').focus({preventScroll:true});else (trigger||document.querySelector('[data-decision="exit"]')).focus({preventScroll:true});
    if(guestReturn&&!active){
-    $('decisionHint').setAttribute('role','status');
+    $('decisionHint').hidden=false;
     $('decisionHint').innerHTML='<a href="'+loginURL()+'">登录时序，看见投资的另一面。</a>';
     document.querySelector('.decision-caption').classList.add('has-invitation');
     if(!reduced.matches)$('decisionHint').animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:800,easing:'cubic-bezier(.22,1,.36,1)'});
@@ -123,11 +124,11 @@ export function initExitMode(onChange){
  }
  async function load(){
   const id=++version,selected=market;data=null;limit=9;
-  $('exitEyebrow').textContent=names[market]+' · KNOW WHEN TO EXIT';$('exitHoldingsLink').href='/portfolio?market='+market;
+  $('exitTitle').textContent=names[market]+' · 退出信号';$('exitHoldingsLink').href='/portfolio?market='+market;
   $('exitStats').innerHTML='';$('exitRules').innerHTML='';$('exitCards').innerHTML='';$('exitMore').hidden=true;
   $('exitSearchLabel').textContent=market==='fund'?'搜索基金':'搜索股票';
   $('exitMeta').textContent='正在检查'+names[market]+'退出信号…';$('exitCards').innerHTML='<div class="exit-loading" role="status">正在读取行情快照与触发记录…</div>';
-  try{const response=await fetch('/api/stock-exits?'+new URLSearchParams({market,...(scope==='holdings'?{codes:holdings().map(r=>r.code).join(',')}:{})}),{cache:'no-store',credentials:'same-origin',signal:AbortSignal.timeout(20000)});if(response.status===401){if(id===version&&active){active=false;paint();persist();onChange();$('decisionHint').innerHTML='登录已失效，请重新登录。 <a href="'+loginURL()+'">去登录</a>';document.querySelector('.decision-caption').classList.add('has-error');}return;}if(!response.ok)throw Error();const next=await response.json();if(next.market!==selected.toUpperCase()||!Array.isArray(next.rows))throw Error();if(id!==version||!active)return;data={...next,rows:orderCandidates(next.rows,selected+':'+scope)};render();}catch{if(id!==version||!active)return;$('exitMeta').textContent='退出检查暂未载入';$('exitCards').innerHTML='<div class="exit-empty"><p>暂时无法读取行情，请重试。</p><button id="retryExit">重新加载</button></div>';$('retryExit').onclick=load;}
+  try{const response=await fetch('/api/stock-exits?'+new URLSearchParams({market,...(scope==='holdings'?{codes:holdings().map(r=>r.code).join(',')}:{})}),{cache:'no-store',credentials:'same-origin',signal:AbortSignal.timeout(20000)});if(response.status===401){if(id===version&&active){active=false;paint();persist();onChange();$('decisionHint').hidden=false;$('decisionHint').innerHTML='登录已失效，请重新登录。 <a href="'+loginURL()+'">去登录</a>';document.querySelector('.decision-caption').classList.add('has-error');}return;}if(!response.ok)throw Error();const next=await response.json();if(next.market!==selected.toUpperCase()||!Array.isArray(next.rows))throw Error();if(id!==version||!active)return;data={...next,rows:orderCandidates(next.rows,selected+':'+scope)};render();}catch{if(id!==version||!active)return;$('exitMeta').textContent='退出检查暂未载入';$('exitCards').innerHTML='<div class="exit-empty"><p>暂时无法读取行情，请重试。</p><button id="retryExit">重新加载</button></div>';$('retryExit').onclick=load;}
  }
  document.querySelectorAll('[data-exit-scope]').forEach(b=>b.onclick=()=>{scope=b.dataset.exitScope;limit=9;document.querySelectorAll('[data-exit-scope]').forEach(n=>n.setAttribute('aria-pressed',String(n===b)));load();});
  $('exitSearch').oninput=()=>{limit=9;render();};$('exitMore').onclick=()=>{limit+=9;render();};
