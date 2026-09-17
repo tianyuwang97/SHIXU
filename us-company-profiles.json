@@ -1,0 +1,1330 @@
+{
+  "DGX": {
+    "name": "奎斯特诊断",
+    "industry": "医疗检验",
+    "summary": "为医院、医生和个人提供血液、病理及其他医学检验，通过实验室和采样网点出具诊断信息，帮助医生判断疾病和制定治疗方案。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/dgx/company/"
+      }
+    ]
+  },
+  "XOM": {
+    "name": "埃克森美孚",
+    "industry": "石油与天然气",
+    "summary": "业务覆盖石油、天然气开采、炼油和化工。你熟悉的美孚润滑油属于它的产品，旗下还使用 Exxon、Esso 等品牌销售能源产品。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/xom/company/"
+      }
+    ]
+  },
+  "V": {
+    "name": "Visa 维萨",
+    "industry": "支付网络",
+    "summary": "运营连接银行、商户与消费者的支付网络。刷 Visa 卡时，背后的交易授权、清算和结算由其网络提供支持，也经营跨境转账和风控服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/v/company/"
+      }
+    ]
+  },
+  "HCA": {
+    "name": "HCA 医疗集团",
+    "industry": "医院运营",
+    "summary": "在美国经营医院、急诊、门诊手术及其他医疗设施，为患者提供住院、手术、诊断和康复服务，主营业务是实际医疗服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/hca/company/"
+      }
+    ]
+  },
+  "ADP": {
+    "name": "ADP 自动数据处理",
+    "industry": "人力资源服务",
+    "summary": "帮助企业发工资、管理员工和处理人事事务。产品包括薪酬及人力资源软件，也提供员工福利管理、人事外包等服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/adp/company/"
+      }
+    ]
+  },
+  "EG": {
+    "name": "Everest 保险集团",
+    "industry": "保险与再保险",
+    "summary": "向企业提供财产和责任保险，同时经营再保险，也就是帮助其他保险公司分担部分承保风险，业务涉及灾害、航空、海运等领域。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/eg/company/"
+      }
+    ]
+  },
+  "TRV": {
+    "name": "旅行者保险",
+    "industry": "财产与责任保险",
+    "summary": "为个人和企业提供汽车、住宅、商业财产及责任保险，也经营保证担保和专业险，主要业务是承保风险并处理索赔。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/trv/company/"
+      }
+    ]
+  },
+  "KDP": {
+    "name": "Keurig Dr Pepper",
+    "industry": "饮料与咖啡",
+    "summary": "销售 Dr Pepper、Canada Dry 等饮料，以及 Keurig 单杯咖啡机和 K-Cup 咖啡胶囊，业务涵盖饮料品牌、生产和分销。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/kdp/company/"
+      }
+    ]
+  },
+  "UHS": {
+    "name": "Universal Health Services",
+    "industry": "医院与精神健康",
+    "summary": "经营综合医院、门诊及行为健康设施，提供急诊、手术和诊断等医疗服务，也专门经营精神健康与相关治疗服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/uhs/company/"
+      }
+    ]
+  },
+  "SOLV": {
+    "name": "Solventum 索尔思文",
+    "industry": "医疗用品与技术",
+    "summary": "提供伤口护理、手术耗材、牙科及正畸产品，并经营医疗信息系统。产品用于医院日常治疗、感染预防和口腔医疗。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/solv/company/"
+      }
+    ]
+  },
+  "BRK-B": {
+    "name": "伯克希尔·哈撒韦 B类",
+    "industry": "多元化控股",
+    "summary": "旗下业务涉及保险、铁路货运、公用事业和多种制造、零售业务，也持有投资资产。购买这只股票相当于持有这家多元业务控股公司的股份。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/brk.b/company/"
+      }
+    ]
+  },
+  "MSFT": {
+    "name": "微软",
+    "industry": "软件与云计算",
+    "summary": "提供 Windows、Microsoft 365 办公软件和 Azure 云服务，同时经营企业软件、Xbox 游戏及人工智能相关产品，客户包括个人和企业。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/msft/company/"
+      }
+    ]
+  },
+  "NWS": {
+    "name": "新闻集团 B类",
+    "industry": "新闻与出版",
+    "summary": "经营新闻、商业信息、图书出版和数字房地产服务。旗下业务包括《华尔街日报》、道琼斯信息服务及 HarperCollins 出版社。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/nws/company/"
+      }
+    ]
+  },
+  "RSG": {
+    "name": "Republic Services",
+    "industry": "垃圾处理与环保",
+    "summary": "为居民、企业和工业客户收集、运输并处理垃圾，经营回收、填埋及其他环境服务，可以理解为城市与企业的废弃物处理服务商。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/rsg/company/"
+      }
+    ]
+  },
+  "MDT": {
+    "name": "美敦力",
+    "industry": "医疗器械",
+    "summary": "为医院和医生提供医疗设备及治疗技术，涉及心脏起搏器、心血管介入、神经系统及外科治疗等领域。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/mdt/company/"
+      }
+    ]
+  },
+  "COR": {
+    "name": "Cencora",
+    "industry": "药品流通",
+    "summary": "把药品从制造商配送到医院、药房和诊所，也为药企及医疗机构提供供应链、专科药物支持和相关服务，是医药流通环节的公司。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/cor/company/"
+      }
+    ]
+  },
+  "VTRS": {
+    "name": "晖致",
+    "industry": "制药",
+    "summary": "销售品牌处方药、仿制药等医药产品，覆盖心血管、神经、皮肤、呼吸等治疗领域，业务分布在多个国家和地区。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/vtrs/company/"
+      }
+    ]
+  },
+  "BIIB": {
+    "name": "渤健",
+    "industry": "生物制药",
+    "summary": "研发并销售疾病治疗药物，产品涉及多发性硬化、脊髓性肌萎缩和阿尔茨海默病等领域，包括 SPINRAZA 和 LEQEMBI 等药物。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/biib/company/"
+      }
+    ]
+  },
+  "DHR": {
+    "name": "丹纳赫",
+    "industry": "生命科学与诊断",
+    "summary": "为药物研发、生产和医学诊断提供仪器、耗材与技术服务，覆盖生物制药、生命科学和诊断业务，客户主要是实验室、药企和医疗机构。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/dhr/company/"
+      }
+    ]
+  },
+  "HUM": {
+    "name": "哈门那",
+    "industry": "医疗保险",
+    "summary": "提供医疗保险，业务包括面向美国老年人等群体的 Medicare 相关计划；旗下 CenterWell 还经营基层医疗、药房及健康服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/hum/company/"
+      }
+    ]
+  },
+  "CME": {
+    "name": "芝商所",
+    "industry": "金融交易所",
+    "summary": "运营期货及期权交易市场，产品涉及利率、股指、外汇、能源和农产品等，并提供交易清算与市场数据服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/cme/company/"
+      }
+    ]
+  },
+  "VMRK": {
+    "name": "Vivmark Residential",
+    "industry": "住宅房地产",
+    "summary": "投资、开发并管理美国主要都市地区的出租公寓，业务围绕住宅社区运营展开，租户支付的房租是理解其业务的重要线索。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/vmrk/company/"
+      }
+    ]
+  },
+  "EXPD": {
+    "name": "康捷国际物流",
+    "industry": "货运代理",
+    "summary": "为企业安排国际空运、海运、报关及仓储配送，帮助货物跨境流通，核心服务是组织物流和处理运输链条中的手续。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/expd/company/"
+      }
+    ]
+  },
+  "IFF": {
+    "name": "国际香料香精",
+    "industry": "食品配料与香料",
+    "summary": "为食品、饮料、日化等企业提供香精、香料、食品配料及生物科技产品，帮助下游品牌调整味道、香气和产品功能。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/iff/company/"
+      }
+    ]
+  },
+  "DIS": {
+    "name": "迪士尼",
+    "industry": "娱乐与主题乐园",
+    "summary": "经营影视内容、流媒体、体育和主题乐园。你熟悉的迪士尼、漫威、皮克斯、Disney+ 及迪士尼乐园都与它的业务有关。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/dis/company/"
+      }
+    ]
+  },
+  "TRGP": {
+    "name": "Targa Resources",
+    "industry": "能源运输与处理",
+    "summary": "为天然气和天然气液体提供收集、加工、运输、储存等服务，经营能源基础设施，连接油气生产商与下游市场。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/trgp/company/"
+      }
+    ]
+  },
+  "AWK": {
+    "name": "美国水务",
+    "industry": "供水与污水处理",
+    "summary": "为居民、企业及公共机构提供自来水和污水处理服务，经营水厂、管网及相关设施，也为部分市政客户管理供排水系统。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/awk/company/"
+      }
+    ]
+  },
+  "BDX": {
+    "name": "碧迪医疗",
+    "industry": "医疗耗材与设备",
+    "summary": "提供注射器、导管、输液及用药管理设备，也经营实验室和诊断产品，客户包括医院、诊所、药企与研究机构。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/bdx/company/"
+      }
+    ]
+  },
+  "MSI": {
+    "name": "摩托罗拉解决方案",
+    "industry": "公共安全通信",
+    "summary": "为警务、公共安全和企业客户提供专业对讲通信、指挥中心软件、视频监控及门禁解决方案，核心业务围绕安全通信系统展开。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/msi/company/"
+      }
+    ]
+  },
+  "KO": {
+    "name": "可口可乐",
+    "industry": "饮料品牌",
+    "summary": "经营可口可乐、雪碧、芬达等饮料品牌，销售饮料浓缩液、糖浆和成品饮料，并通过装瓶合作伙伴及分销网络触达消费者。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/ko/company/"
+      }
+    ]
+  },
+  "FANG": {
+    "name": "响尾蛇能源",
+    "industry": "油气开采",
+    "summary": "在美国二叠纪盆地勘探和开发陆上石油、天然气资源，业务重点是油气生产。FANG 在这里是公司股票代码。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/fang/company/"
+      }
+    ]
+  },
+  "PFE": {
+    "name": "辉瑞",
+    "industry": "创新药与疫苗",
+    "summary": "研发、生产并销售药品和疫苗，产品覆盖肿瘤、心血管、炎症免疫和感染等疾病领域，消费者可能熟悉其肺炎球菌疫苗和 Paxlovid。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/pfe/company/"
+      }
+    ]
+  },
+  "WFC": {
+    "name": "富国银行",
+    "industry": "综合银行",
+    "summary": "为个人与企业提供存款、贷款、信用卡、房贷和财富管理，也经营企业银行及资本市场相关服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/wfc/company/"
+      }
+    ]
+  },
+  "JNJ": {
+    "name": "强生",
+    "industry": "创新药与医疗器械",
+    "summary": "主营创新药与医疗技术，药物涉及肿瘤、免疫等领域；医疗器械业务涵盖手术、骨科、心血管和视力保健等产品。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/jnj/company/"
+      }
+    ]
+  },
+  "WAT": {
+    "name": "沃特世",
+    "industry": "分析仪器",
+    "summary": "为实验室提供液相色谱、质谱及相关耗材和软件，帮助检测样品中的成分，常用于药物研发、质量控制、食品和环境检测。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/wat/company/"
+      }
+    ]
+  },
+  "WRB": {
+    "name": "W. R. Berkley",
+    "industry": "商业保险",
+    "summary": "主要为企业提供财产、责任和专业险，也经营再保险。业务涉及多种行业风险，包括商业财产、雇员和专业责任等。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/wrb/company/"
+      }
+    ]
+  },
+  "LYB": {
+    "name": "利安德巴塞尔",
+    "industry": "化工与塑料",
+    "summary": "生产烯烃、聚乙烯、聚丙烯及其他化工材料，为包装、汽车、工业制造等下游提供塑料与化工原料，也提供相关工艺技术。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/lyb/company/"
+      }
+    ]
+  },
+  "AIZ": {
+    "name": "Assurant",
+    "industry": "设备与财产保障",
+    "summary": "为手机、家电、汽车和住宅提供保险及保障服务，包括设备保护、延长服务合约和租客保险，常通过商业合作伙伴销售。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/aiz/company/"
+      },
+      {
+        "label": "Assurant 官网",
+        "url": "https://www.assurant.com/capabilities/protection-solutions"
+      }
+    ]
+  },
+  "MA": {
+    "name": "万事达",
+    "industry": "支付网络",
+    "summary": "连接银行、商户和消费者，为银行卡及其他支付提供交易处理服务，同时提供跨境支付、数据分析和安全风控相关服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/ma/company/"
+      }
+    ]
+  },
+  "ICE": {
+    "name": "洲际交易所",
+    "industry": "交易所与金融数据",
+    "summary": "经营证券及衍生品交易和清算平台，并提供固定收益数据、金融信息及房贷技术服务，业务连接金融交易与后台基础设施。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/ice/company/"
+      }
+    ]
+  },
+  "MET": {
+    "name": "大都会人寿",
+    "industry": "人寿保险与福利",
+    "summary": "提供人寿保险、年金和员工福利，也经营资产管理，服务个人、企业雇主及机构客户，业务覆盖多个国家。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/met/company/"
+      }
+    ]
+  },
+  "KHC": {
+    "name": "卡夫亨氏",
+    "industry": "包装食品",
+    "summary": "销售调味酱、奶酪、方便食品及饮料等，消费者熟悉的亨氏番茄酱和 Kraft 品牌食品属于其产品组合。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/khc/company/"
+      }
+    ]
+  },
+  "GM": {
+    "name": "通用汽车",
+    "industry": "汽车制造",
+    "summary": "设计、生产和销售汽车及零部件，旗下品牌包括雪佛兰、别克、凯迪拉克和 GMC，并通过汽车金融业务支持购车融资。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/gm/company/"
+      }
+    ]
+  },
+  "J": {
+    "name": "Jacobs 雅各布斯",
+    "industry": "工程设计与咨询",
+    "summary": "为基础设施和先进制造设施提供规划、设计、工程咨询及项目管理服务，客户涉及交通、水务、能源、政府和生命科学等领域。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/j/company/"
+      }
+    ]
+  },
+  "CB": {
+    "name": "安达保险 Chubb",
+    "industry": "综合保险",
+    "summary": "为企业和个人提供财产、责任、人寿等保险，也经营再保险，产品包括企业风险保障、住宅、汽车及专业责任险。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/cb/company/"
+      }
+    ]
+  },
+  "CTAS": {
+    "name": "信达思",
+    "industry": "企业日常服务",
+    "summary": "为企业提供制服租赁与清洗、地垫及卫生用品，也销售急救、安全和消防相关产品与服务，服务于客户的日常运营。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/ctas/company/"
+      }
+    ]
+  },
+  "CVS": {
+    "name": "CVS 健康",
+    "industry": "药房与医疗保险",
+    "summary": "经营零售药房及健康服务，并提供药品福利管理和医疗保险，业务涵盖消费者取药、企业药品计划和参保人的医疗保障。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/cvs/company/"
+      }
+    ]
+  },
+  "WBD": {
+    "name": "华纳兄弟探索",
+    "industry": "影视与流媒体",
+    "summary": "制作和发行电影、电视剧及其他节目，经营 HBO Max、discovery+ 等流媒体与电视业务，旗下包括华纳兄弟和 HBO 等内容品牌。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/wbd/company/"
+      }
+    ]
+  },
+  "CINF": {
+    "name": "辛辛那提金融",
+    "industry": "财产与责任保险",
+    "summary": "为企业和个人提供财产及责任保险，产品包括商业财产、汽车、住宅和雇员保障，也经营人寿保险及投资业务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/cinf/company/"
+      }
+    ]
+  },
+  "UPS": {
+    "name": "联合包裹",
+    "industry": "快递与物流",
+    "summary": "提供包裹、文件及货物运输，业务覆盖美国国内和国际市场，通过地面与航空网络为个人和企业送货。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/ups/company/"
+      }
+    ]
+  },
+  "AES": {
+    "name": "AES 电力",
+    "industry": "发电与公用事业",
+    "summary": "经营发电与供电业务，向公用事业、工业和居民等客户销售电力，业务涉及可再生能源、电力基础设施及相关技术。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/aes/company/"
+      }
+    ]
+  },
+  "ALL": {
+    "name": "好事达保险",
+    "industry": "汽车与住宅保险",
+    "summary": "为个人及企业提供保险，产品包括汽车、住宅等财产保障，也经营设备和消费品保护计划，旗下品牌包括 Allstate 和 National General。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/all/company/"
+      }
+    ]
+  },
+  "GOOG": {
+    "name": "Alphabet 谷歌母公司 C类",
+    "industry": "互联网与云计算",
+    "summary": "旗下谷歌提供搜索、YouTube、Android 等产品，并经营数字广告、Google Cloud 云服务及其他技术业务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/goog/company/"
+      }
+    ]
+  },
+  "TECH": {
+    "name": "Bio-Techne",
+    "industry": "生命科学工具",
+    "summary": "向科研、诊断和生物制药客户销售试剂、蛋白、抗体及分析仪器，帮助实验室开展生命科学研究和相关检测。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/tech/company/"
+      }
+    ]
+  },
+  "BALL": {
+    "name": "波尔公司",
+    "industry": "铝制包装",
+    "summary": "生产铝制饮料罐及其他铝包装，为饮料、个人护理和家居产品企业供货，也提供铝瓶、铝杯等产品。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/ball/company/"
+      }
+    ]
+  },
+  "CPAY": {
+    "name": "Corpay",
+    "industry": "企业支付",
+    "summary": "帮助企业管理车辆、住宿和其他经营支出，提供燃油等支付方案、跨境付款、虚拟卡及费用管理服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/cpay/company/"
+      }
+    ]
+  },
+  "HIG": {
+    "name": "哈特福德保险",
+    "industry": "商业与个人保险",
+    "summary": "为企业和个人提供财产、汽车、责任及员工福利相关保险，并经营基金业务，商业险是其主要业务领域之一。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/hig/company/"
+      }
+    ]
+  },
+  "MDLZ": {
+    "name": "亿滋国际",
+    "industry": "零食食品",
+    "summary": "销售饼干、巧克力和其他零食，旗下品牌包括奥利奥、Ritz、吉百利和 Milka，产品通过零售渠道销往多个市场。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/mdlz/company/"
+      }
+    ]
+  },
+  "VRTX": {
+    "name": "福泰制药",
+    "industry": "生物制药",
+    "summary": "研发并销售用于严重疾病的药物，业务涉及囊性纤维化、镰状细胞病和急性疼痛等领域，产品包括 TRIKAFTA 等。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/vrtx/company/"
+      }
+    ]
+  },
+  "GPC": {
+    "name": "Genuine Parts",
+    "industry": "汽车与工业配件",
+    "summary": "分销汽车维修配件及工业替换零件，服务修理厂、车主和工业客户，产品涉及刹车、电池、过滤器等日常维护用品。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/gpc/company/"
+      }
+    ]
+  },
+  "AMP": {
+    "name": "Ameriprise 安美",
+    "industry": "财富与资产管理",
+    "summary": "为个人和机构提供理财规划、投资顾问及资产管理，也经营退休和保障相关产品，业务围绕客户财富管理展开。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/amp/company/"
+      }
+    ]
+  },
+  "OKE": {
+    "name": "ONEOK",
+    "industry": "能源管道与储运",
+    "summary": "经营天然气收集、处理、管道运输和储存等能源中游业务，也提供天然气液体、成品油及原油相关物流服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/oke/company/"
+      }
+    ]
+  },
+  "NVR": {
+    "name": "NVR 住宅建筑",
+    "industry": "住宅开发",
+    "summary": "在美国建造并销售独栋住宅、联排住宅等，品牌包括 Ryan Homes 和 NVHomes，也为购房客户提供房贷相关服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/nvr/company/"
+      }
+    ]
+  },
+  "ACGL": {
+    "name": "Arch Capital",
+    "industry": "保险与再保险",
+    "summary": "提供企业保险、再保险和房贷保险，帮助客户管理财产、责任及住房贷款等风险，业务覆盖美国及其他市场。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/acgl/company/"
+      }
+    ]
+  },
+  "WELL": {
+    "name": "Welltower",
+    "industry": "养老住宅房地产",
+    "summary": "投资并经营面向老年人的住宅与社区，业务分布于美国、英国和加拿大，重点围绕养老居住空间及相关物业运营。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/well/company/"
+      }
+    ]
+  },
+  "GPN": {
+    "name": "Global Payments",
+    "industry": "商户支付服务",
+    "summary": "为商户提供收款及支付处理技术，把线上、门店和软件系统中的支付连接起来，并提供相关商业管理解决方案。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/gpn/company/"
+      }
+    ]
+  },
+  "CAH": {
+    "name": "康德乐",
+    "industry": "药品与医疗用品流通",
+    "summary": "向医院、药房和诊所配送药品、医疗用品及相关产品，同时提供药房管理和专科药物服务，处于医疗供应链环节。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/cah/company/"
+      }
+    ]
+  },
+  "VLTO": {
+    "name": "Veralto",
+    "industry": "水质与产品质量",
+    "summary": "提供水质分析、水处理、包装印码和颜色管理技术。旗下 Hach 等产品帮助客户监测水质，其他业务支持商品标识和包装质量。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/vlto/company/"
+      }
+    ]
+  },
+  "FOX": {
+    "name": "福克斯 B类",
+    "industry": "新闻与体育媒体",
+    "summary": "经营新闻、体育和娱乐节目，业务包括 FOX 电视网络、相关有线电视内容及 Tubi 视频平台，收入来源涉及广告和内容分发。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/fox/company/"
+      }
+    ]
+  },
+  "INCY": {
+    "name": "Incyte 因赛特",
+    "industry": "生物制药",
+    "summary": "研发并销售治疗药物，产品涉及血液疾病、肿瘤等领域，包括用于特定骨髓及血液疾病的 JAKAFI 等药物。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/incy/company/"
+      }
+    ]
+  },
+  "DOC": {
+    "name": "Healthpeak",
+    "industry": "医疗房地产",
+    "summary": "拥有、经营并开发服务于医疗研究和诊疗的房地产，为生命科学及医疗活动提供物业空间，是医疗房地产领域的投资公司。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/doc/company/"
+      }
+    ]
+  },
+  "C": {
+    "name": "花旗集团",
+    "industry": "综合银行",
+    "summary": "为个人、企业、政府和机构提供银行服务，业务包括跨境现金管理、证券服务、投行业务、交易、个人银行和财富管理。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/c/company/"
+      }
+    ]
+  },
+  "FOXA": {
+    "name": "福克斯 A类",
+    "industry": "新闻与体育媒体",
+    "summary": "与 FOX 对应同一家公司，经营新闻、体育、娱乐电视及 Tubi 视频平台。A类与B类属于不同股份类别，公司主体相同。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/foxa/company/"
+      }
+    ]
+  },
+  "HSIC": {
+    "name": "汉瑞祥",
+    "industry": "牙科与医疗供应",
+    "summary": "向牙科诊所和其他医疗机构销售耗材、设备及技术服务，包括牙科器械、影像设备和数字化工具，帮助诊所开展日常业务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/hsic/company/"
+      }
+    ]
+  },
+  "AVY": {
+    "name": "艾利丹尼森",
+    "industry": "标签与识别材料",
+    "summary": "生产标签材料、胶带及图形材料，并提供数字身份识别解决方案，产品用于商品包装、品牌标识及供应链中的物品识别。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/avy/company/"
+      }
+    ]
+  },
+  "AFL": {
+    "name": "Aflac 美国家庭人寿",
+    "industry": "补充健康与寿险",
+    "summary": "在日本和美国经营补充健康保险与人寿保险，产品涉及癌症、意外、住院和伤残等风险，为客户补充现有保障。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/afl/company/"
+      }
+    ]
+  },
+  "JPM": {
+    "name": "摩根大通",
+    "industry": "综合银行",
+    "summary": "经营个人银行、信用卡、企业与投资银行、资产管理和财富管理，既为个人提供存贷款，也为企业融资和机构交易提供服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/jpm/company/"
+      }
+    ]
+  },
+  "XYZ": {
+    "name": "Block",
+    "industry": "金融科技与支付",
+    "summary": "旗下 Square 为商户提供收款设备、支付和经营软件；Cash App 为个人提供转账及其他金融工具，连接商户经营与个人支付场景。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/xyz/company/"
+      }
+    ]
+  },
+  "CCEP": {
+    "name": "可口可乐欧洲太平洋伙伴",
+    "industry": "饮料装瓶与分销",
+    "summary": "生产、包装并销售可口可乐等饮料品牌产品。它属于装瓶与分销企业，与股票代码 KO 对应的可口可乐公司是不同上市公司。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/ccep/company/"
+      }
+    ]
+  },
+  "ESS": {
+    "name": "Essex 公寓信托",
+    "industry": "住宅房地产",
+    "summary": "在美国西海岸部分市场投资、开发并管理多户住宅和公寓社区，业务围绕出租住宅的持有及运营展开。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/ess/company/"
+      }
+    ]
+  },
+  "CSCO": {
+    "name": "思科",
+    "industry": "网络与安全设备",
+    "summary": "为企业和运营商提供网络连接、安全及协作技术，产品包括数据中心交换设备、网络安全方案和 Webex 协作工具。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/csco/company/"
+      }
+    ]
+  },
+  "SCHW": {
+    "name": "嘉信理财",
+    "industry": "证券经纪与财富管理",
+    "summary": "为个人投资者和投资顾问提供证券交易、托管、财富管理及银行服务，客户可通过其平台投资股票、债券、基金等产品。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/schw/company/"
+      }
+    ]
+  },
+  "BEN": {
+    "name": "富兰克林邓普顿",
+    "industry": "资产管理",
+    "summary": "为个人、机构及退休计划管理投资，产品覆盖股票、债券、多资产及另类投资，通过旗下投资管理业务提供基金和相关服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/ben/company/"
+      }
+    ]
+  },
+  "NXPI": {
+    "name": "恩智浦半导体",
+    "industry": "汽车与工业芯片",
+    "summary": "设计并销售微控制器、处理器、连接和安全芯片等，产品用于汽车、工业及其他电子设备，也包括近场通信等无线连接技术。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/nxpi/company/"
+      }
+    ]
+  },
+  "SYY": {
+    "name": "Sysco 西斯科食品",
+    "industry": "餐饮供应链",
+    "summary": "向餐厅、酒店、学校和医疗机构配送食品及餐饮用品，产品包括肉类、海鲜、乳制品、果蔬及一次性用品。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/syy/company/"
+      }
+    ]
+  },
+  "VTR": {
+    "name": "Ventas",
+    "industry": "养老与医疗房地产",
+    "summary": "持有并经营养老住宅及其他医疗相关物业，为老年人口的居住和服务需求提供房地产空间，业务覆盖北美及英国。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/vtr/company/"
+      }
+    ]
+  },
+  "HST": {
+    "name": "Host Hotels & Resorts",
+    "industry": "酒店房地产",
+    "summary": "持有酒店及度假村物业，并与万豪、凯悦、希尔顿等酒店品牌合作，业务重点是酒店房地产资产的投资与管理。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/hst/company/"
+      }
+    ]
+  },
+  "PRU": {
+    "name": "保德信金融",
+    "industry": "保险与资产管理",
+    "summary": "提供人寿保险、退休及年金产品，同时通过 PGIM 经营资产管理，服务个人和机构客户，业务分布于美国及海外市场。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/pru/company/"
+      }
+    ]
+  },
+  "PLD": {
+    "name": "安博 Prologis",
+    "industry": "物流房地产",
+    "summary": "围绕物流基础设施开展业务，持有和运营支持货物流通的工业物流物业，为企业仓储和供应链活动提供空间及服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/pld/company/"
+      },
+      {
+        "label": "安博中国官网",
+        "url": "https://www.prologis.cn/about-us/company-history"
+      }
+    ]
+  },
+  "GL": {
+    "name": "Globe Life",
+    "industry": "人寿与健康保险",
+    "summary": "面向美国个人和家庭提供人寿及补充健康保险，产品涉及定期与终身寿险、意外、癌症和住院等保障。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/gl/company/"
+      }
+    ]
+  },
+  "APD": {
+    "name": "空气产品公司",
+    "industry": "工业气体",
+    "summary": "为炼化、制造、电子和医疗等行业提供氧气、氮气、氢气及其他工业气体，同时提供相关设备和技术服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/apd/company/"
+      }
+    ]
+  },
+  "FRT": {
+    "name": "Federal Realty",
+    "industry": "商业房地产",
+    "summary": "投资、经营并改造购物中心及综合用途物业，项目结合零售和其他城市生活空间，业务重点在商业地产运营。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/frt/company/"
+      }
+    ]
+  },
+  "AXP": {
+    "name": "美国运通",
+    "industry": "银行卡与支付",
+    "summary": "提供信用卡和签账卡、商户支付网络及旅行等服务，并经营融资与银行产品，客户包括个人消费者和企业。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/axp/company/"
+      }
+    ]
+  },
+  "CSX": {
+    "name": "CSX 铁路",
+    "industry": "铁路货运",
+    "summary": "通过铁路运输化工品、农产品、汽车、金属、煤炭和集装箱等货物，也提供公铁联运等相关物流服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/csx/company/"
+      }
+    ]
+  },
+  "ROST": {
+    "name": "Ross 百货",
+    "industry": "折扣零售",
+    "summary": "经营 Ross Dress for Less 和 dd’s DISCOUNTS 折扣商店，销售服装、鞋履、配饰和家居用品，主要面向大众消费市场。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/rost/company/"
+      }
+    ]
+  },
+  "GWW": {
+    "name": "固安捷",
+    "industry": "工业用品分销",
+    "summary": "向企业和机构销售维修、保养与运营用品，包括工具、安全设备、清洁用品和物料搬运设备，并提供库存管理服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/gww/company/"
+      }
+    ]
+  },
+  "F": {
+    "name": "福特汽车",
+    "industry": "汽车制造",
+    "summary": "销售福特汽车、皮卡、商用车和林肯豪华车，业务包括燃油、混合动力及电动车，同时提供车辆服务与汽车金融。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/f/company/"
+      }
+    ]
+  },
+  "USB": {
+    "name": "美国合众银行",
+    "industry": "综合银行",
+    "summary": "为个人、企业和机构提供存贷款、支付、财富管理及其他银行服务，业务包括零售银行、企业金融和支付服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/usb/company/"
+      }
+    ]
+  },
+  "STT": {
+    "name": "道富",
+    "industry": "机构金融服务",
+    "summary": "为基金和其他机构投资者提供资产托管、会计核算、基金行政及交易相关服务，并经营投资管理业务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/stt/company/"
+      }
+    ]
+  },
+  "TSCO": {
+    "name": "Tractor Supply",
+    "industry": "乡村生活零售",
+    "summary": "销售牲畜饲料、宠物用品、园艺设备、工具和工作服等，服务农场、小型养殖及乡村生活场景的消费者。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/tsco/company/"
+      }
+    ]
+  },
+  "ALLE": {
+    "name": "安朗杰",
+    "industry": "门锁与出入安全",
+    "summary": "提供门锁、门控、电子门禁及相关软件与服务，帮助住宅和商业建筑管理人员出入及安全。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/alle/company/"
+      }
+    ]
+  },
+  "HAS": {
+    "name": "孩之宝",
+    "industry": "玩具与游戏",
+    "summary": "设计并销售玩具、卡牌、桌游及相关消费品，也通过品牌授权开展业务，产品覆盖儿童玩具及成人游戏收藏场景。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/has/company/"
+      }
+    ]
+  },
+  "UNH": {
+    "name": "联合健康",
+    "industry": "医疗保险与服务",
+    "summary": "旗下 UnitedHealthcare 提供医疗保险，Optum 提供医疗服务、健康信息技术和药品相关服务，业务覆盖保障与医疗运营两端。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/unh/company/"
+      }
+    ]
+  },
+  "TROW": {
+    "name": "普徕仕",
+    "industry": "资产管理",
+    "summary": "为个人、机构和退休计划提供投资管理，管理股票、债券等基金及相关投资组合，研究和投资管理是其核心业务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/trow/company/"
+      }
+    ]
+  },
+  "KIM": {
+    "name": "Kimco Realty",
+    "industry": "购物中心房地产",
+    "summary": "投资并经营露天购物中心和综合用途物业，许多项目以食品超市为主要租户，服务周边居民日常购物需求。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/kim/company/"
+      }
+    ]
+  },
+  "KVUE": {
+    "name": "科赴",
+    "industry": "消费健康",
+    "summary": "销售非处方药、皮肤护理、口腔及其他日常健康用品，业务覆盖自我健康管理、美容护肤和基础健康护理。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/kvue/company/"
+      }
+    ]
+  },
+  "CRL": {
+    "name": "查尔斯河实验室",
+    "industry": "药物研发服务",
+    "summary": "为药企及研究机构提供药物发现、临床前研究和安全性测试服务，也提供研究模型等产品，支持新药进入临床前的研究工作。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/crl/company/"
+      }
+    ]
+  },
+  "UNP": {
+    "name": "联合太平洋",
+    "industry": "铁路货运",
+    "summary": "通过旗下铁路运输粮食、化工品、汽车、工业原料及集装箱等货物，帮助企业在美国进行大规模陆路运输。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/unp/company/"
+      }
+    ]
+  },
+  "KEY": {
+    "name": "KeyCorp 银行集团",
+    "industry": "区域银行",
+    "summary": "通过 KeyBank 为个人及企业提供存贷款、房贷、现金管理和财富管理等服务，业务包括消费者银行与商业银行。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/key/company/"
+      }
+    ]
+  },
+  "AMZN": {
+    "name": "亚马逊",
+    "industry": "电商与云计算",
+    "summary": "经营线上及实体零售、第三方商家服务、广告和会员订阅；旗下 AWS 向企业提供云计算服务，也销售 Kindle 等设备并制作媒体内容。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/amzn/company/"
+      }
+    ]
+  }
+}

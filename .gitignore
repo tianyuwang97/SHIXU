@@ -1,0 +1,13 @@
+.sites-runtime/
+node_modules/
+.wrangler/
+__pycache__/
+.generated/
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+*.pem
+*.key
+*admin-account*.txt

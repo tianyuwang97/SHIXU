@@ -1,0 +1,6 @@
+.home-island{padding-bottom:0}.home-island .hd-header{will-change:auto}
+.home-island{--floating-bar-width:none;--floating-bar-gutter:16px}
+.home-island .hd-island{position:fixed;box-sizing:border-box;width:calc(100% - 2 * var(--floating-bar-gutter));max-width:var(--floating-bar-width);left:0;right:0;margin-inline:auto}
+.home-island .hd-island .hd-inner{max-width:none;padding-inline:clamp(22px,2vw,40px)}
+.home-island .market-navigation{position:relative;top:auto;box-shadow:none}.home-island .market-shell #stock-picks{scroll-margin-top:calc(var(--live-header-h,100px) + 24px)}
+@media(max-width:650px){.home-island{--floating-bar-gutter:12px}.home-island .hd-island .hd-inner{padding-inline:15px}}

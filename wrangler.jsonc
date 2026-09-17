@@ -1,0 +1,5 @@
+{
+ "name":"fund-rehearsal-preview","main":"worker.mjs","compatibility_date":"2025-09-01",
+ "assets":{"directory":"./dist/client","binding":"ASSETS","run_worker_first":["/api/*"]},
+ "d1_databases":[{"binding":"DB","database_name":"fund-rehearsal-preview","database_id":"local-preview-only","migrations_dir":"drizzle"}]
+}

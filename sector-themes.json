@@ -1,0 +1,82 @@
+[
+  {
+    "id": "health",
+    "name": "医药医疗",
+    "pattern": "医药|医疗|生物医|健康|创新药"
+  },
+  {
+    "id": "chip",
+    "name": "半导体 / 芯片",
+    "pattern": "半导体|芯片|集成电路"
+  },
+  {
+    "id": "energy",
+    "name": "新能源",
+    "pattern": "新能源|光伏|储能|风电|锂电"
+  },
+  {
+    "id": "bank",
+    "name": "银行",
+    "pattern": "(?<![农工瑞])银行"
+  },
+  {
+    "id": "consumer",
+    "name": "消费",
+    "pattern": "消费"
+  },
+  {
+    "id": "food",
+    "name": "食品饮料 / 白酒",
+    "pattern": "食品|饮料|白酒"
+  },
+  {
+    "id": "ai",
+    "name": "人工智能 / 机器人",
+    "pattern": "人工智能|机器人"
+  },
+  {
+    "id": "software",
+    "name": "计算机 / 软件",
+    "pattern": "计算机|软件|云计算|大数据"
+  },
+  {
+    "id": "communication",
+    "name": "通信",
+    "pattern": "通信|5G"
+  },
+  {
+    "id": "defense",
+    "name": "军工 / 国防",
+    "pattern": "军工|国防|航空航天"
+  },
+  {
+    "id": "agriculture",
+    "name": "农业",
+    "pattern": "农业|畜牧|养殖"
+  },
+  {
+    "id": "finance",
+    "name": "证券 / 保险",
+    "pattern": "证券(?:公司|行业|保险|龙头|ETF|主题|30)|券商|保险|非银"
+  },
+  {
+    "id": "property",
+    "name": "房地产",
+    "pattern": "房地产|地产"
+  },
+  {
+    "id": "infrastructure",
+    "name": "基建 / 建材",
+    "pattern": "基建|基础建设|建筑|建材"
+  },
+  {
+    "id": "metals",
+    "name": "有色金属",
+    "pattern": "有色|稀土|稀有金属|黄金股"
+  },
+  {
+    "id": "coal",
+    "name": "煤炭",
+    "pattern": "煤炭"
+  }
+]

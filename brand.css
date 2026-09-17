@@ -1,0 +1,13 @@
+/* Shared bilingual wordmark; typography carries the brand. */
+.topbar:has(.brand-bilingual){height:auto;min-height:104px;padding-top:16px;padding-bottom:16px;gap:22px}
+.topbar a.brand-bilingual{display:inline-flex;flex-direction:column;align-items:flex-start;gap:7px;flex-shrink:0;color:#07392f;text-decoration:none;font-weight:400;letter-spacing:normal;line-height:1.2}
+.brand-bilingual .brand-name{display:flex;align-items:baseline;gap:13px}
+.brand-bilingual .brand-name strong{font-size:30px;font-weight:850;letter-spacing:.06em;line-height:1}
+.brand-bilingual .brand-name span{font-size:13px;font-weight:650;letter-spacing:.24em;color:#52776c}
+.brand-bilingual .brand-tagline{display:flex;align-items:baseline;gap:12px;line-height:1.45}
+.brand-bilingual .brand-tagline-cn{font-size:14px;font-weight:500;letter-spacing:.12em;color:#365f53}
+.brand-bilingual .brand-tagline-en{padding-left:12px;border-left:1px solid #c4d4cb;font-size:12px;font-weight:450;letter-spacing:.015em;color:#647c71}
+.topbar a.brand-bilingual:hover{color:#07392f;text-decoration:none}
+.topbar a.brand-bilingual:focus-visible{outline:2px solid #ee8752;outline-offset:7px;border-radius:3px}
+@media(max-width:1050px){.topbar:has(.brand-bilingual){flex-wrap:wrap}.brand-bilingual .brand-tagline{display:block}.brand-bilingual .brand-tagline-en{display:block;border:0;padding-left:0;margin-top:2px}}
+@media(max-width:600px){.topbar:has(.brand-bilingual){min-height:110px;gap:14px}.brand-bilingual .brand-name strong{font-size:27px}.brand-bilingual .brand-name span{font-size:12px;letter-spacing:.22em}.brand-bilingual .brand-tagline-cn{font-size:14px}.brand-bilingual .brand-tagline-en{font-size:12px}.home-topbar .home-top-note{font-size:12px;max-width:76px;text-align:right;line-height:1.7}}
