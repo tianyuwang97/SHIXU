@@ -30,7 +30,90 @@
   }catch(error){if(id!==changeId||error?.name==='AbortError')return;if(caption)caption.textContent=themes[key][1]+' · 图案暂未载入';}
  }
  let loaded=false,entrance=null,response=null,version=0,frame=0,point=null;
- function cancelMotion(){version++;entrance?.cancel();response?.cancel();entrance=response=null;}
+ function cancelMotion(){version++;entrance?.cancel();response?.cancel();entrance=response=null;resetSpin();}
+ // Spin the illustrated coin around its face; keep the hit area fixed while dragging.
+ let angle=0,velocity=0,spinFrame=0,gesture=null,suppressClickUntil=0;
+ const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
+ function paintSpin(){
+  const lean=reduced.matches?0:clamp(velocity*8,-10,10);
+  image.style.transform=`rotateY(${lean}deg) rotateZ(${angle}deg)`;
+ }
+ function stopFrame(){cancelAnimationFrame(spinFrame);spinFrame=0;}
+ function releaseGesture(){
+  const id=gesture?.id;gesture=null;button.classList.remove('dragging');
+  if(id!==undefined&&button.hasPointerCapture(id))button.releasePointerCapture(id);
+ }
+ function resetSpin(){
+  stopFrame();releaseGesture();angle=velocity=0;image.style.transform='';button.classList.remove('spinning');
+ }
+ function settleSpin(){
+  stopFrame();
+  if(reduced.matches){resetSpin();return;}
+  const from=angle,to=Math.round(angle/360)*360,start=performance.now();
+  velocity=0;
+  function settle(now){
+   const p=clamp((now-start)/650,0,1),ease=1-(1-p)**3;
+   angle=from+(to-from)*ease;paintSpin();
+   if(p<1)spinFrame=requestAnimationFrame(settle);else resetSpin();
+  }
+  spinFrame=requestAnimationFrame(settle);
+ }
+ function coast(){
+  stopFrame();button.classList.add('spinning');
+  if(reduced.matches){resetSpin();return;}
+  let last=performance.now();
+  function tick(now){
+   const dt=Math.min(now-last,40);last=now;
+   const decay=Math.exp(-dt/540);
+   angle+=velocity*540*(1-decay);velocity*=decay;paintSpin();
+   if(Math.abs(velocity)>.035)spinFrame=requestAnimationFrame(tick);else settleSpin();
+  }
+  spinFrame=requestAnimationFrame(tick);
+ }
+ button.setAttribute('aria-label','拨动金币旋转，可左右滑动或使用左右方向键');
+ image.draggable=false;
+ button.addEventListener('dragstart',e=>e.preventDefault());
+ button.addEventListener('pointerdown',e=>{
+  if(!loaded||turnAnimation||!e.isPrimary||e.button!==0||gesture)return;
+  // Take over any ongoing animation immediately, without waiting for the entrance.
+  entrance?.cancel();entrance=null;flight.classList.remove('arriving');
+  response?.cancel();response=null;stopFrame();velocity=0;tilt.style.transform='';
+  gesture={id:e.pointerId,x:e.clientX,y:e.clientY,lastX:e.clientX,lastTime:performance.now(),axis:null,
+   sensitivity:360/Math.max(160,button.getBoundingClientRect().width)};
+ },{passive:true});
+ button.addEventListener('pointermove',e=>{
+  if(!gesture||gesture.id!==e.pointerId)return;
+  const g=gesture,dx=e.clientX-g.x,dy=e.clientY-g.y,now=performance.now();
+  if(!g.axis){
+   if(Math.max(Math.abs(dx),Math.abs(dy))<8)return;
+   if(Math.abs(dy)>Math.abs(dx)){releaseGesture();settleSpin();return;}
+   g.axis='x';button.setPointerCapture(e.pointerId);button.classList.add('dragging','spinning');
+  }
+  e.preventDefault();
+  const delta=(e.clientX-g.lastX)*g.sensitivity,dt=Math.max(8,now-g.lastTime);
+  angle+=delta;velocity=clamp(delta/dt,-2.4,2.4);
+  g.lastX=e.clientX;g.lastTime=now;paintSpin();
+ },{passive:false});
+ function finishGesture(e,cancelled=false){
+  if(!gesture||gesture.id!==e.pointerId)return;
+  const moved=gesture.axis==='x';
+  // A held finger brakes the coin instead of replaying an old flick velocity.
+  velocity*=Math.exp(-Math.max(0,performance.now()-gesture.lastTime-40)/75);
+  releaseGesture();
+  if(moved){suppressClickUntil=performance.now()+500;cancelled?settleSpin():coast();}
+  else if(cancelled)settleSpin();
+ }
+ button.addEventListener('pointerup',e=>finishGesture(e));
+ button.addEventListener('pointercancel',e=>finishGesture(e,true));
+ button.addEventListener('lostpointercapture',e=>finishGesture(e,true));
+ button.addEventListener('pointerleave',e=>{if(gesture&&!gesture.axis)finishGesture(e,true);});
+ button.addEventListener('keydown',e=>{
+  if(!['ArrowLeft','ArrowRight'].includes(e.key)||!loaded||turnAnimation)return;
+  e.preventDefault();entrance?.cancel();entrance=null;flight.classList.remove('arriving');
+  stopFrame();velocity=e.key==='ArrowLeft'?-1.1:1.1;coast();
+ });
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)resetSpin();});
+ window.addEventListener('blur',resetSpin);
  function replay(){
   if(!loaded)return;
   cancelMotion();const current=version;flight.classList.add('ready');flight.classList.remove('arriving');
@@ -47,24 +130,18 @@
   ],{duration:1450,delay:200,easing:'cubic-bezier(.2,.65,.3,1)',fill:'backwards'});
   entrance.finished.then(()=>{if(current===version){flight.classList.remove('arriving');entrance=null;}}).catch(()=>{});
  }
- function nod(){
-  if(!loaded||reduced.matches||entrance)return;
-  response?.cancel();
-  response=button.animate([
-   {transform:'translateY(0) rotate(0deg)'},
-   {transform:'translateY(-18px) rotate(5deg)',offset:.35},
-   {transform:'translateY(3px) rotate(-2deg)',offset:.72},
-   {transform:'translateY(0) rotate(0deg)'}
-  ],{duration:650,easing:'cubic-bezier(.22,1,.36,1)'});
-  response.finished.catch(()=>{});
- }
- button.addEventListener('click',nod);
+ button.addEventListener('click',e=>{
+  if(performance.now()<suppressClickUntil){e.preventDefault();return;}
+  if(!loaded||turnAnimation||reduced.matches)return;
+  entrance?.cancel();entrance=null;flight.classList.remove('arriving');
+  stopFrame();velocity=1.15;coast();
+ });
  document.addEventListener('demo:market',e=>changeTheme(e.detail.market));
  document.getElementById('replay')?.addEventListener('click',replay);
  stage.addEventListener('pointermove',e=>{
-  if(reduced.matches||entrance||e.pointerType==='touch')return;
+  if(reduced.matches||entrance||gesture||spinFrame||e.pointerType==='touch')return;
   const r=stage.getBoundingClientRect();point={x:Math.max(-1,Math.min(1,(e.clientX-r.left)/r.width*2-1)),y:Math.max(-1,Math.min(1,(e.clientY-r.top)/r.height*2-1))};
-  if(!frame)frame=requestAnimationFrame(()=>{frame=0;if(point&&!reduced.matches&&!entrance)tilt.style.transform=`translate(${point.x*7}px,${point.y*5}px) rotateX(${-point.y*3}deg) rotateY(${point.x*4}deg)`;});
+  if(!frame)frame=requestAnimationFrame(()=>{frame=0;if(point&&!reduced.matches&&!entrance&&!gesture&&!spinFrame)tilt.style.transform=`translate(${point.x*7}px,${point.y*5}px) rotateX(${-point.y*3}deg) rotateY(${point.x*4}deg)`;});
  },{passive:true});
  stage.addEventListener('pointerleave',()=>{point=null;tilt.style.transform='';});
  reduced.addEventListener('change',()=>{cancelMotion();flight.classList.remove('arriving');tilt.style.transform='';changeTheme(wanted);});
