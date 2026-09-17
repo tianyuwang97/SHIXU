@@ -4,12 +4,13 @@ import {researchButtons} from './research-store.mjs';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const names={cn:'A股',us:'美股',hk:'港股',fund:'基金'};
 const pct=n=>Number.isFinite(n)?(n>=0?'+':'')+(n*100).toFixed(2)+'%':'—';
+const mysteryMark='<img class="mystery-mark" src="/mystery-mark.svg" width="64" height="80" alt="?" draggable="false">';
 const num=n=>Number(n).toLocaleString('zh-CN',{maximumFractionDigits:3});
 export function initExitMode(onChange){
  const orderCandidates=createCandidateOrder();
  const nav=document.querySelector('.market-navigation');
- nav.insertAdjacentHTML('afterend',`<section class="decision-mode" aria-label="研究模式"><div class="decision-caption"><span>YOUR NEXT MOVE</span><p id="decisionHint">你的下一步</p></div><div class="decision-switch" role="group" aria-label="切换研究模式"><i aria-hidden="true"></i><div class="decision-label"><span id="decisionLabel">?</span><small id="decisionLabelEnglish" hidden>DISCOVER</small></div><button type="button" data-decision="exit" aria-pressed="false" aria-label="查看卖出候选（需要登录）"><span class="portal-aura" aria-hidden="true"></span><span class="portal-art" aria-hidden="true"><img class="portal-mark portal-closed" src="/stone-portal.png" width="142" height="164" alt="" draggable="false"><img class="portal-mark portal-open" src="/stone-portal-open.png" width="142" height="164" alt="" draggable="false"></span></button></div></section>
- <section class="exit-workspace" id="exit-workspace" hidden aria-labelledby="exitTitle"><header class="exit-heading"><div><span class="exit-eyebrow">KNOW WHEN TO EXIT</span><h1 id="exitTitle" tabindex="-1">A股 · 卖点检查</h1><p>重新检查，最初买入的理由。</p></div><a id="exitHoldingsLink" href="/portfolio?market=cn">管理我的持仓</a></header><div class="exit-toolbar"><div class="exit-scope" role="group" aria-label="检查范围"><button data-exit-scope="market" aria-pressed="true">市场观察池</button><button data-exit-scope="holdings" aria-pressed="false">我的持仓</button></div><label><span id="exitSearchLabel">搜索股票</span><input id="exitSearch" type="search" placeholder="名称或代码" autocomplete="off"></label></div><p id="exitMeta" class="exit-meta" role="status"></p><div id="exitStats" class="exit-stats"></div><div id="exitRules" class="exit-rules"></div><div id="exitCards" class="exit-grid"></div><button id="exitMore" hidden>查看更多</button><p class="exit-footnote" id="exitFootnote">市场候选每次打开随机展示，顺序不代表卖出优先级。只展示同时符合 R01 与向下 R02 的卖出候选，使用最近30自然日的行情观察期。候选不等于必须卖出；未入选也不代表可以放心持有。规则尚未完成收益回测，不自动执行交易。</p></section>`);
+ nav.insertAdjacentHTML('afterend',`<section class="decision-mode" aria-label="研究模式"><div class="decision-caption"><span>YOUR NEXT MOVE</span><p id="decisionHint">你的下一步</p></div><div class="decision-switch" role="group" aria-label="切换研究模式"><i aria-hidden="true"></i><div class="decision-label"><span id="decisionLabel">${mysteryMark}</span><small id="decisionLabelEnglish" hidden>DISCOVER</small></div><button type="button" data-decision="exit" aria-pressed="false" aria-label="查看卖出候选（需要登录）"><span class="portal-aura" aria-hidden="true"></span><span class="portal-art" aria-hidden="true"><img class="portal-mark portal-closed" src="/stone-portal.png" width="142" height="164" alt="" draggable="false"><img class="portal-mark portal-open" src="/stone-portal-open.png" width="142" height="164" alt="" draggable="false"></span></button></div></section>
+ <section class="exit-workspace" id="exit-workspace" hidden aria-labelledby="exitTitle"><header class="exit-heading"><div><span class="exit-eyebrow" id="exitEyebrow">A股 · KNOW WHEN TO EXIT</span><h1 id="exitTitle" tabindex="-1"><span class="exit-title-kicker">醒醒</span><span>持有这些股票或基金</span><span class="exit-title-emphasis">该准备退出了</span></h1><p>查看出现退出信号的股票和基金，辅助判断减仓与离场时机。</p></div><a id="exitHoldingsLink" href="/portfolio?market=cn">管理我的持仓</a></header><div class="exit-toolbar"><div class="exit-scope" role="group" aria-label="检查范围"><button data-exit-scope="market" aria-pressed="true">市场观察池</button><button data-exit-scope="holdings" aria-pressed="false">我的持仓</button></div><label><span id="exitSearchLabel">搜索股票</span><input id="exitSearch" type="search" placeholder="名称或代码" autocomplete="off"></label></div><p id="exitMeta" class="exit-meta" role="status"></p><div id="exitStats" class="exit-stats"></div><div id="exitRules" class="exit-rules"></div><div id="exitCards" class="exit-grid"></div><button id="exitMore" hidden>查看更多</button><p class="exit-footnote" id="exitFootnote">市场候选每次打开随机展示，顺序不代表卖出优先级。只展示同时符合 R01 与向下 R02 的卖出候选，使用最近30自然日的行情观察期。候选不等于必须卖出；未入选也不代表可以放心持有。规则尚未完成收益回测，不自动执行交易。</p></section>`);
  document.body.insertAdjacentHTML('beforeend',`<dialog id="exitTransition" aria-labelledby="exitQuote"><span class="transition-brand">时序 <small>SHIXU</small></span><div class="exit-quote" id="exitQuote"><span>投资的远见</span><span>不止于发现价值</span><strong>更在于进退有据</strong></div><div class="transition-bottom"><span>KNOW WHEN TO EXIT</span><button id="skipExitTransition" type="button">看见另一面</button></div></dialog>`);
  const $=id=>document.getElementById(id),dialog=$('exitTransition'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const openGate=document.querySelector('.portal-open');
@@ -23,7 +24,7 @@ export function initExitMode(onChange){
   $('exit-workspace').hidden=!active;
   document.querySelector('.decision-switch').classList.toggle('is-exit',active);
   document.querySelector('[data-decision=exit]').setAttribute('aria-pressed',String(active));
-  $('decisionLabel').textContent=active?'寻找机会':'?';
+  $('decisionLabel').innerHTML=active?'寻找机会':mysteryMark;
   $('decisionLabelEnglish').hidden=!active;
   document.querySelector('[data-decision=exit]').setAttribute('aria-label',active?'返回寻找机会':'查看卖出候选（需要登录）');
   $('decisionHint').textContent=active?'把退出的依据，看清楚。':'你的下一步';
@@ -122,7 +123,7 @@ export function initExitMode(onChange){
  }
  async function load(){
   const id=++version,selected=market;data=null;limit=9;
-  $('exitTitle').textContent=names[market]+' · 卖点检查';$('exitHoldingsLink').href='/portfolio?market='+market;
+  $('exitEyebrow').textContent=names[market]+' · KNOW WHEN TO EXIT';$('exitHoldingsLink').href='/portfolio?market='+market;
   $('exitStats').innerHTML='';$('exitRules').innerHTML='';$('exitCards').innerHTML='';$('exitMore').hidden=true;
   $('exitSearchLabel').textContent=market==='fund'?'搜索基金':'搜索股票';
   $('exitMeta').textContent='正在检查'+names[market]+'退出信号…';$('exitCards').innerHTML='<div class="exit-loading" role="status">正在读取行情快照与触发记录…</div>';

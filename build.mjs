@@ -47,7 +47,7 @@ fs.mkdirSync('.generated',{recursive:true});
 privateExits.FUND=buildFundExits(daily);
 fs.writeFileSync('.generated/stock-picks.json',JSON.stringify(privatePicks));
 fs.writeFileSync('.generated/stock-exits.json',JSON.stringify(privateExits));
-for(const f of ['exit-mode.css','stone-portal.png','stone-portal-open.png'])fs.copyFileSync(f,'dist/client/'+f);
+for(const f of ['exit-mode.css','stone-portal.png','stone-portal-open.png','mystery-mark.svg'])fs.copyFileSync(f,'dist/client/'+f);
 for(const f of ['stock-peers.html','stock-peers.css'])fs.copyFileSync(f,'dist/client/'+f);
 await build({entryPoints:['stock-peers.js'],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:'dist/client/stock-peers.js'});
 for(const peerRoot of ['stock-peer-data','us-peer-data','hk-peer-data']){
