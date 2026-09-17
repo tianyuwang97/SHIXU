@@ -5,7 +5,7 @@ import {exitView} from './stock-exits-api.mjs';
 const date=i=>new Date(Date.UTC(2026,0,1+i)).toISOString().slice(0,10);
 function sample(tail){const values=[...Array(30).fill(100),...tail],points=values.map((v,i)=>[date(i),v]);return {stock:{code:'123456',name:'Test',points,source:'https://example.com'},context:{asof:points.at(-1)[0],historyStart:date(0),calendar:points.map(p=>p[0])}};}
 const check=tail=>{const {stock,context}=sample(tail);return stockExit(stock,context);};
-test('two consecutive closes below original lower edge and unchanged R01 are required',()=>{const r=check([99,98]);assert.equal(r.status,'triggered');assert.deepEqual(r.signals.map(s=>s.id),['R01','R02']);assert.equal(r.box.lower,100);assert.equal(r.box.firstBreakDate,date(30));assert.equal(r.box.confirmDate,date(31));assert.equal(r.box.rangeEnd,date(29));});
+test('two consecutive closes below original lower edge and unchanged R01 are required',()=>{const r=check([99,98]);assert.equal(r.status,'triggered');assert.deepEqual(r.signals.map(s=>s.id),['R01','R02']);assert.equal(r.box.lower,100);assert.equal(r.box.firstBreakDate,date(30));assert.equal(r.box.confirmDate,date(31));assert.equal(r.box.rangeEnd,date(16));});
 test('one lower close and failed confirmation do not match',()=>{assert.equal(check([99]).status,'clear');assert.equal(check([99,100]).status,'clear');});
 test('returning to exactly the original lower edge cancels the confirmed signal',()=>{assert.equal(check([99,98,100]).status,'clear');assert.equal(check([99,98,101]).status,'clear');});
 test('R01 stays mandatory even when a downside break is confirmed',()=>{const r=check([96,94]);assert.equal(r.rule2,true);assert.equal(r.rule1,false);assert.equal(r.status,'clear');assert.equal(check([96,95]).status,'triggered');});

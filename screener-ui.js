@@ -1,12 +1,13 @@
 const D=JSON.parse(document.getElementById('dataset').textContent),$=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let page=1,filtered=[],calculated=[],activeDays=15;const size=60,valid=r=>typeof r.amplitude==='number',pct=x=>typeof x==='number'?(x*100).toFixed(2)+'%':'—',periodCache=new Map();
+let page=1,filtered=[],calculated=[],activeDays=30;const size=60,valid=r=>typeof r.amplitude==='number',pct=x=>typeof x==='number'?(x*100).toFixed(2)+'%':'—',periodCache=new Map();
 let activeAmp=.1,activeChangeMin=-.05,activeChangeMax=.05;
-let activeMode='rule1',activeBreakoutStage='confirmed',activeRules=['rule1'];
+let activeMode='both',activeBreakoutStage='confirmed',activeRules=['rule1','rule2'];
 let historyTimer,scopeTimer,historyScopeKey='',historyScope=[],historyAutoAllowed=false;
 const longMetricCache=new Map();
 function longMetric(row,days){const entry=historyStore.entries.get(row.code),cached=longMetricCache.get(row.code);if(cached&&cached.entry===entry&&cached.days===days)return cached.value;const value=screeningLongWindow(row,entry,D.context.asof,days,calculateCalendarWindow);longMetricCache.set(row.code,{entry,days,value});return value;}
 const historyStore=new ScreenerHistoryStore(D.context.asof,{changed:()=>{clearTimeout(historyTimer);historyTimer=setTimeout(()=>update(true),250)}});
 $('customDays').max=SCREEN_MAX_DAYS;
+$('days').value='30';$('customDays').value=30;
 $('customDaysLabel').firstChild.textContent='自然日天数（2—360）';
 for(const [value,label] of [[90,'最近90天'],[180,'最近180天'],[360,'最近360天']])if(!$('days').querySelector(`option[value="${value}"]`)){const option=document.createElement('option');option.value=value;option.textContent=label;$('days').insertBefore(option,$('days').querySelector('option[value="custom"]'));}
 const historyPanel=document.createElement('div');historyPanel.id='longHistoryPanel';historyPanel.hidden=true;historyPanel.className='history-progress';historyPanel.innerHTML='<p id="longHistoryStatus" role="status"></p><div class="history-actions"><button id="loadLongHistory">加载当前范围历史</button><button id="pauseLongHistory" hidden>暂停加载</button><button id="retryLongHistory" hidden>重试失败项</button></div>';$('customDaysLabel').closest('.filters').after(historyPanel);
@@ -17,7 +18,7 @@ function syncHistoryScope(rows,days){
  }
  historyPanel.hidden=key==='short';if(historyPanel.hidden)return;
  const ready=rows.filter(r=>historyStore.entries.get(r.code)?.phase==='ready').length,failed=rows.filter(r=>historyStore.entries.get(r.code)?.phase==='error').length;
- $('longHistoryStatus').textContent=location.protocol==='file:'?'超过30天的期间需要联网读取历史净值，请在网站中打开基金筛选。':`${days}自然日 · 当前范围${rows.length.toLocaleString()}只 · 已取得${ready.toLocaleString()}只历史 · 加载失败${failed}只 · ${historyStore.running?'正在逐只加载，结果会陆续更新':ready+failed===rows.length?'本轮加载结束':rows.length>20?'点击加载，或搜索名称/代码缩小范围':'等待加载'}。尚未加载及加载失败的净值不作为横盘不符合；规则二仍使用原先锁定的15天区间。`;
+ $('longHistoryStatus').textContent=location.protocol==='file:'?'超过30天的期间需要联网读取历史净值，请在网站中打开基金筛选。':`${days}自然日 · 当前范围${rows.length.toLocaleString()}只 · 已取得${ready.toLocaleString()}只历史 · 加载失败${failed}只 · ${historyStore.running?'正在逐只加载，结果会陆续更新':ready+failed===rows.length?'本轮加载结束':rows.length>20?'点击加载，或搜索名称/代码缩小范围':'等待加载'}。尚未加载及加载失败的净值不作为横盘不符合；规则二将按所选期间的前半段重新计算固定区间。`;
  $('loadLongHistory').hidden=historyStore.running||ready+failed===rows.length;$('loadLongHistory').disabled=location.protocol==='file:';
  $('pauseLongHistory').hidden=!historyStore.running;$('retryLongHistory').hidden=historyStore.running||failed===0;
 }
@@ -45,17 +46,17 @@ const breakoutLabels={watch:'观察中 · 未突破',pending:'首次突破 · �
 function breakoutSummary(r){
  const b=r.breakout;if(!b)return '<div class="rule-meta">规则二：数据待核实</div>';
  const box=b.box;
- return `<div class="rule-meta"><strong>规则二：${esc(breakoutLabels[b.phase]||'数据待核实')}</strong>${b.reason?'<div>'+esc(b.reason)+'</div>':''}${box?`<div>固定区间 ${esc(box.rangeStart)}—${esc(box.rangeEnd)}</div><div>区间上沿 ${pct(box.upper/box.base-1)} · 下沿 ${pct(box.lower/box.base-1)}<br>（区间首个调整后净值＝0%）</div><div>首破 ${esc(box.firstBreakDate)}${box.confirmDate?' · 确认 '+esc(box.confirmDate):''}${box.exitDate?'<br>退出／复核 '+esc(box.exitDate):''}${box.failedDate?' · 未确认 '+esc(box.failedDate):''}</div>`:''}</div>`;
+ return `<div class="rule-meta"><strong>规则二：${esc(breakoutLabels[b.phase]||'数据待核实')}</strong>${b.reason?'<div>'+esc(b.reason)+'</div>':''}${box?`<div>固定区间 ${esc(box.rangeStart)}—${esc(box.rangeEnd)}</div><div>区间上沿 ${pct(box.upper/box.base-1)} · 下沿 ${pct(box.lower/box.base-1)}<br>（区间首个调整后净值＝0%）</div><div>首破 ${esc(box.firstBreakDate||'尚未形成')}${box.confirmDate?' · 确认 '+esc(box.confirmDate):''}${box.exitDate?'<br>退出／复核 '+esc(box.exitDate):''}${box.failedDate?' · 未确认 '+esc(box.failedDate):''}</div>`:''}</div>`;
 }
 // Add future rules here: one card, evaluator and detail renderer; combinations use the selected IDs.
 const RULES=[
  {id:'rule1',number:'01',name:'横盘筛选',short:'横盘',description:'在所选自然日期间内，限制振幅和首尾涨跌幅。',evaluate:rule1State,
   settings:`<label>振幅上限 %<input id="amp" type="number" min="0" max="1000" step="0.5" value="10"></label><label>首尾涨跌幅最低 %<input id="changeMin" type="number" step="any" value="-5" placeholder="不限"></label><label>首尾涨跌幅最高 %<input id="changeMax" type="number" step="any" value="5" placeholder="不限"></label><p class="rule-help" id="changeHelp">使用下方选择的自然日期间。涨跌幅含上下限，留空表示该侧不限。</p>`,
   detail:r=>`<p class="rule-meta">期间 ${esc(r.windowStart)}—${esc(r.windowEnd)}<br>振幅 ${pct(r.amplitude)} / 上限 ${pct(activeAmp)}<br>首尾涨跌幅 ${pct(r.change)} / 范围 ${Number.isFinite(activeChangeMin)?pct(activeChangeMin):'不限'} 至 ${Number.isFinite(activeChangeMax)?pct(activeChangeMax):'不限'}${r.reason?'<br>'+esc(r.reason):''}</p>`},
- {id:'rule2',number:'02',name:'横盘后突破',short:'突破',description:'锁定此前15天横盘区间，连续两个净值披露点突破上沿。',evaluate:rule2State,
-  settings:`<label>信号阶段<select id="breakoutStage"><option value="confirmed">已确认突破</option><option value="newBuy">本次新确认的买入信号</option><option value="pending">首次突破，等待确认</option><option value="exited">跌回原区间，退出／复核</option></select></label><p class="rule-help">横盘条件固定为15个自然日、振幅≤10%、涨跌幅±5%。首破锁定区间；确认后回到上沿或更低，提示退出／复核。下方期间只影响展示指标和走势。</p>`,detail:breakoutSummary}
+ {id:'rule2',number:'02',name:'横盘后突破',short:'突破',description:'以所选期间前半段固定横盘上下沿，后半段连续两个净值披露点突破上沿。',evaluate:rule2State,
+  settings:`<label>信号阶段<select id="breakoutStage"><option value="confirmed">已确认突破</option><option value="newBuy">本次新确认的买入信号</option><option value="pending">首次突破，等待确认</option><option value="exited">跌回原区间，退出／复核</option></select></label><p class="rule-help">前半段天数为R01期间的一半（奇数向下取整），横盘振幅≤10%、涨跌幅±5%。上下沿在前半段结束时固定；仅后半段确认突破，确认后跌回上沿或更低即失效。30天对应前15天，60天对应前30天。</p>`,detail:breakoutSummary}
 ];
-$('rulesGrid').innerHTML=RULES.map(rule=>`<article class="rule-card" id="card_${rule.id}"><div class="rule-top"><label class="rule-select"><input type="checkbox" id="enable_${rule.id}" data-rule="${rule.id}" ${rule.id==='rule1'?'checked':''} aria-label="启用${rule.name}"><span><span class="rule-number">规则 ${rule.number}</span>${rule.name}</span></label><span class="rule-count" id="ruleCount_${rule.id}"></span></div><p id="ruleBrief_${rule.id}">${rule.description}</p><details><summary>${rule.name} · 参数与说明</summary><div class="rule-settings">${rule.settings}</div></details></article>`).join('');
+$('rulesGrid').innerHTML=RULES.map(rule=>`<article class="rule-card" id="card_${rule.id}"><div class="rule-top"><label class="rule-select"><input type="checkbox" id="enable_${rule.id}" data-rule="${rule.id}" checked aria-label="启用${rule.name}"><span><span class="rule-number">规则 ${rule.number}</span>${rule.name}</span></label><span class="rule-count" id="ruleCount_${rule.id}"></span></div><p id="ruleBrief_${rule.id}">${rule.description}</p><details><summary>${rule.name} · 参数与说明</summary><div class="rule-settings">${rule.settings}</div></details></article>`).join('');
 function selectRules(ids){RULES.forEach(rule=>$('enable_'+rule.id).checked=ids.includes(rule.id))}
 const statusClass=value=>value==='符合'?'pass':value==='不符合'?'fail':'unknown';
 function ruleBadges(r){return `<span class="pill ${statusClass(state(r))}">${esc(state(r))}</span><div class="rule-tags">${RULES.filter(rule=>activeRules.includes(rule.id)).map(rule=>`<span class="rule-tag ${statusClass(rule.evaluate(r))}">${rule.short} · ${rule.id==='rule2'&&r.breakout?.known?esc(({confirmed:'已确认',pending:'待确认',exited:'退出复核',failed:'未确认',watch:'未突破'})[r.breakout.phase]):esc(rule.evaluate(r))}</span>`).join('')}</div>`}
@@ -98,7 +99,7 @@ function update(keepPage=false){
  const rangeLabel=min===-Infinity?(max===Infinity?'不限':`≤ ${max}%`):(max===Infinity?`≥ ${min}%`:`${min}% 至 ${max}%`);
  $('heading').textContent='基金筛选';
  $('ruleBrief_rule1').textContent=`${days}个自然日 · 振幅≤${activeAmp*100}% · 首尾涨跌幅 ${Number.isFinite(activeChangeMin)?(activeChangeMin*100).toFixed(1)+'%':'不限'} 至 ${Number.isFinite(activeChangeMax)?(activeChangeMax*100).toFixed(1)+'%':'不限'}`;
- $('ruleBrief_rule2').textContent=`此前15天横盘 → 两个披露点确认 · ${$('breakoutStage').selectedOptions[0].textContent}`;
+ $('ruleBrief_rule2').textContent=`前${Math.floor(days/2)}自然日固定横盘区间 → 后${days-Math.floor(days/2)}自然日两个披露点确认 · ${$('breakoutStage').selectedOptions[0].textContent}`;
  const names=RULES.filter(rule=>activeRules.includes(rule.id)).map(rule=>rule.name);
  $('ruleExplanation').textContent=names.length?`已启用 ${names.length} 条：${names.join(' ＋ ')}${names.length>1?' · 全部满足（取交集）':''}。每张卡片的数量为该规则在当前基金范围内的独立匹配数。`:'请至少勾选一条规则，开始筛选。';
  $('period').textContent=`净值截止 ${D.context.asof} · 展示 ${days} 个自然日 / ${expected} 个净值披露日`;
@@ -128,7 +129,7 @@ function render(){
 }
 ['search','type','status','amp','changeMin','changeMax','sort','days','customDays','breakoutStage',...RULES.map(rule=>'enable_'+rule.id)].forEach(id=>$(id).addEventListener('input',()=>update()));
 $('prev').onclick=()=>{page--;render()};$('next').onclick=()=>{page++;render()};
-$('reset').onclick=()=>{selectRules(['rule1']);$('breakoutStage').value='confirmed';$('days').value='15';$('customDays').value=15;$('amp').value=10;$('changeMin').value=-5;$('changeMax').value=5;$('search').value='';$('type').value='';$('status').value='符合';$('sort').value='changeDesc';update()};
+$('reset').onclick=()=>{selectRules(['rule1','rule2']);$('breakoutStage').value='confirmed';$('days').value='30';$('customDays').value=30;$('amp').value=10;$('changeMin').value=-5;$('changeMax').value=5;$('search').value='';$('type').value='';$('status').value='符合';$('sort').value='changeDesc';update()};
 $('body').onclick=e=>{
  const code=e.target.dataset.code;if(!code)return;const r=calculated.find(r=>r.code===code);
  $('detailTitle').textContent=r.code+' '+r.name;

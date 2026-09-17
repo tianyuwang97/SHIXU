@@ -1734,5 +1734,17 @@
         "url": "https://stockanalysis.com/stocks/goog/company/"
       }
     ]
+  },
+  "BF-B": {
+    "name": "百富门",
+    "industry": "消费品 · 烈酒",
+    "summary": "百富门（Brown-Forman）生产、营销和销售烈酒，业务重点包括美国威士忌及高端烈酒品牌。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 关于我们",
+        "url": "https://www.brown-forman.com/about-us"
+      }
+    ]
   }
 }

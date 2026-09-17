@@ -6,7 +6,7 @@ function calculateCalendarWindow(row, context, days) {
   const dateAt=i=>new Date(Date.parse(context.history_start+'T00:00:00Z')+i*86400000).toISOString().slice(0,10);
   const required=context.calendar_offsets.filter(i=>i>=begin&&i<=end);
   const observations=row.history.filter(p=>p[0]>=begin&&p[0]<=end);
-  const base={...row,windowStart:dateAt(begin),windowEnd:dateAt(end),periodDays:days,dates:observations.map(p=>dateAt(p[0])),pointCount:observations.length};
+  const base={...row,amplitude:undefined,change:undefined,series:undefined,breakout:{known:false,phase:'unknown',reason:'所选期间数据待核实'},windowStart:dateAt(begin),windowEnd:dateAt(end),periodDays:days,dates:observations.map(p=>dateAt(p[0])),pointCount:observations.length};
   const present=new Set(observations.map(p=>p[0]));
   const missing=required.filter(i=>!present.has(i));
   if(missing.length)return {...base,result:row.fetchError?'获取失败':'数据不足',reason:`期间缺少${missing.length}个应披露日：${missing.map(dateAt).join('、')}${row.fetchError?'；补充历史数据获取失败':''}`};
@@ -20,6 +20,8 @@ function calculateCalendarWindow(row, context, days) {
     if(!Number.isFinite(ratio)||ratio<=0)return {...base,result:'数据异常',reason:'期间内存在无效收益率'};
     value*=ratio;series.push(value);if(cash>0)dividends++;
   }
-  return {...base,result:'可计算',amplitude:Math.max(...series)/Math.min(...series)-1,change:series.at(-1)-1,series,dividends,nav_start:observations[0][1],nav_end:observations.at(-1)[1]};
+  const evaluate=typeof evaluateFixedWindow==='function'?evaluateFixedWindow:require('./fixed-window-rules.cjs').evaluateFixedWindow;
+  const breakout=evaluate(row,{history_start:context.history_start,asof:dateAt(end),dates:context.calendar_offsets.map(dateAt),periodDays:days},'up').result;
+  return {...base,result:'可计算',breakout,amplitude:Math.max(...series)/Math.min(...series)-1,change:series.at(-1)-1,series,dividends,nav_start:observations[0][1],nav_end:observations.at(-1)[1]};
 }
 if(typeof module!=='undefined')module.exports={calculateCalendarWindow};

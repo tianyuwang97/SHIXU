@@ -4,15 +4,14 @@ export function stockPick(stock,context){
  const {asof,historyStart,calendar}=context,start=shift(asof,-29);
  const base={code:stock.code,name:stock.name,source:stock.source};
  if(stock.error)return {...base,error:stock.error};
- const points=stock.points.filter(p=>p[0]<=asof),dates=points.map(p=>p[0]);
- if(!points.length||dates.at(-1)!==asof||dates.some((d,i)=>i&&d<=dates[i-1])||points.some(p=>!Number.isFinite(p[1])||p[1]<=0)||calendar.some(d=>d<=asof&&!dates.includes(d)))return {...base,error:'行情缺失、停牌或历史不足，未参与匹配'};
+ const points=(stock.points||[]).filter(p=>p[0]>=start&&p[0]<=asof),dates=points.map(p=>p[0]);
+ if(historyStart>start||!points.length||dates.at(-1)!==asof||dates.some((d,i)=>i&&d<=dates[i-1])||points.some(p=>!Number.isFinite(p[1])||p[1]<=0)||calendar.some(d=>d>=start&&d<=asof&&!dates.includes(d)))return {...base,error:'所选30自然日行情缺失、停牌或历史不足，未参与匹配'};
  const window=points.filter(p=>p[0]>=start),values=window.map(p=>p[1]);
  if(window.length<2)return {...base,error:'30自然日内不足两个收盘价'};
  const amplitude=Math.max(...values)/Math.min(...values)-1,change=values.at(-1)/values[0]-1;
  const rule1=amplitude<=.1+1e-12&&Math.abs(change)<=.05+1e-12;
  const history=points.map(p=>[Math.round((Date.parse(p[0])-Date.parse(historyStart))/86400000),p[1]]);
- // The established fixed 15-calendar-day breakout algorithm consumes adjusted
- // closes here, with zero cash adjustments because the source is already qfq.
+ // The first 15 calendar days of this same 30-day window fix both edges.
  const signal=breakout.evaluateBreakout({code:stock.code,history},{asof,history_start:historyStart,dates:calendar.filter(d=>d<=asof)}).result;
  return {...base,asof,start,amplitude,change,rule1,rule2:signal.known&&signal.phase==='confirmed',signal,points:window.map(p=>[p[0],p[1]/values[0]])};
 }

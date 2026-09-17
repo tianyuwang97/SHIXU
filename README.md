@@ -36,6 +36,7 @@ npm run dev
 | Worker 与接口路由 | `worker.mjs` |
 | 首页与候选展示 | `simulation/home.html`、`home-picks.js` |
 | 指数概览 | `market-indices.js`、`market-indices-api.mjs` |
+| 四市场统一规则核心（30天／前15天） | `fixed-window-rules.cjs` |
 | 买入候选规则 | `stock-picks-core.mjs`、`stock-picks-breakout.cjs` |
 | 退出规则与主题过渡 | `stock-exits-core.mjs`、`stock-picks-breakdown.cjs`、`exit-mode.js` |
 | 股票与基金对比 | `stock-peers.js`、`compare.js` |
@@ -52,7 +53,7 @@ npm run dev
 先执行构建，再运行现有的认证及退出规则测试：
 
 ```sh
-node --test --test-isolation=none auth-access.test.mjs stock-exits.test.mjs
+node --test --test-isolation=none auth-access.test.mjs stock-exits.test.mjs fixed-window-rules.test.mjs
 ```
 
 测试覆盖管理员认证与会话撤销、接口权限、固定区间边界、连续收盘确认、重新涨回后的信号处理、双规则同时满足及基金分红口径等。

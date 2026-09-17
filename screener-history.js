@@ -9,7 +9,7 @@ function validateScreenHistory(data,code,asof){
 }
 function screeningLongWindow(row,entry,asof,days,calculate){
  if(!Number.isInteger(days)||days<2||days>SCREEN_MAX_DAYS)throw new RangeError('自然日天数必须为2—360的整数');
- const base={...row,amplitude:undefined,change:undefined,series:undefined,dividends:undefined,fetchError:undefined,windowStart:screeningStart(asof,days),windowEnd:asof,periodDays:days,dates:[],pointCount:0};
+ const base={...row,amplitude:undefined,change:undefined,series:undefined,dividends:undefined,fetchError:undefined,breakout:{known:false,phase:'unknown',reason:'所选期间历史净值待加载'},windowStart:screeningStart(asof,days),windowEnd:asof,periodDays:days,dates:[],pointCount:0};
  if(entry?.phase==='ready')return calculate({...base,history:entry.data.history},entry.data.context,days);
  return {...base,result:'数据待核实',reason:entry?.phase==='error'?'历史净值加载失败，请重试；并非历史不足':entry?.phase==='loading'?'正在加载所选期间的历史净值':'所选期间的历史净值尚未加载'};
 }

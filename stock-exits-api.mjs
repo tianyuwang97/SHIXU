@@ -1,7 +1,7 @@
 import {authenticatedUser,authJSON} from './admin-auth.mjs';
 export const EXIT_RULES=[
  {id:'R01',name:'30日横盘',description:'近30自然日收盘价区间振幅≤10%，首尾涨跌幅在−5%至+5%；基金使用分红再投净值指数。'},
- {id:'R02',name:'向下突破确认',description:'此前15自然日横盘，连续两个收盘点低于原区间下沿，截至当前收盘尚未涨回。区间下沿在首次跌破前固定；基金使用已披露净值观察点。'}
+ {id:'R02',name:'向下突破确认',description:'所选30自然日的前15自然日形成横盘区间并固定上下沿；仅在后15自然日内，连续两个收盘点低于下沿确认向下突破，截至当前收盘尚未涨回。基金使用分红再投净值观察点。'}
 ];
 export function exitView(snapshot,member,codes=null){
  if(!member)return {authenticated:false,error:'请先登录。'};

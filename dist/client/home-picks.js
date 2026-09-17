@@ -1735,6 +1735,18 @@ var us_company_profiles_default = {
         url: "https://stockanalysis.com/stocks/goog/company/"
       }
     ]
+  },
+  "BF-B": {
+    name: "\u767E\u5BCC\u95E8",
+    industry: "\u6D88\u8D39\u54C1 \xB7 \u70C8\u9152",
+    summary: "\u767E\u5BCC\u95E8\uFF08Brown-Forman\uFF09\u751F\u4EA7\u3001\u8425\u9500\u548C\u9500\u552E\u70C8\u9152\uFF0C\u4E1A\u52A1\u91CD\u70B9\u5305\u62EC\u7F8E\u56FD\u5A01\u58EB\u5FCC\u53CA\u9AD8\u7AEF\u70C8\u9152\u54C1\u724C\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u5173\u4E8E\u6211\u4EEC",
+        url: "https://www.brown-forman.com/about-us"
+      }
+    ]
   }
 };
 
