@@ -5,6 +5,30 @@
  const turn=document.getElementById('coinTurn'),caption=document.getElementById('coinCaption');
  const themes={fund:['/coin-fund.png','基金 · 北京中轴线'],cn:['/coin-cn.png','A股 · 浦东建筑群'],us:['/coin-us.png','美股 · 自由女神像'],hk:['/coin-hk.png','港股 · 维多利亚港']};
  const assets=new Map();let wanted=image.dataset?.market||'fund',shown=wanted,changeId=0,turnAnimation=null;
+ // Two independently facing surfaces and a faceted gold rim give the turn real thickness.
+ const rotor=document.createElement('span'),rim=document.createElement('span'),back=image.cloneNode(false);
+ rotor.className='coin-rotor';rim.className='coin-rim';
+ back.removeAttribute('id');back.removeAttribute('data-market');back.alt='';back.setAttribute('aria-hidden','true');
+ back.className='coin-back';back.draggable=false;
+ image.classList.add('coin-front');button.append(rotor);rotor.append(rim,image,back);
+ const rimPanels=Array.from({length:48},(_,i)=>{
+  const panel=document.createElement('i');
+  panel.style.background=`linear-gradient(90deg,#a95710,hsl(38 95% ${44+12*Math.cos(i/48*Math.PI*2)}%),#e6a02a)`;
+  rim.append(panel);return panel;
+ });
+ function sizeCoin(){
+  const w=button.clientWidth,h=button.clientHeight,depth=Math.max(14,w*.065);
+  rotor.style.setProperty('--coin-half-depth',depth/2+'px');
+  rimPanels.forEach((panel,i)=>{
+   const theta=i/48*Math.PI*2,rx=w*.365,ry=h*.398;
+   const normal=Math.atan2(rx*Math.sin(theta),ry*Math.cos(theta));
+   const length=Math.hypot(rx*Math.sin(theta),ry*Math.cos(theta))*Math.PI*2/48+1;
+   panel.style.width=depth+'px';panel.style.height=length+'px';
+   panel.style.marginLeft=-depth/2+'px';panel.style.marginTop=-length/2+'px';
+   panel.style.transform=`translate3d(${rx*Math.cos(theta)}px,${ry*Math.sin(theta)}px,0) rotateZ(${normal}rad) rotateY(90deg)`;
+  });
+ }
+ new ResizeObserver(sizeCoin).observe(button);sizeCoin();
  function prepare(key){
   if(!assets.has(key)){const asset=new Image();asset.src=themes[key][0];assets.set(key,asset.decode().then(()=>asset).catch(error=>{assets.delete(key);throw error;}));}
   return assets.get(key);
@@ -21,7 +45,7 @@
     turnAnimation=turn.animate([{transform:'rotateY(0deg)',opacity:1},{transform:'rotateY(48deg)',opacity:.12}],{duration:180,easing:'cubic-bezier(.45,0,.8,.5)',fill:'forwards'});
     await turnAnimation.finished;if(id!==changeId)return;
    }
-   image.src=asset.src;image.alt=themes[key][1]+'主题的纯色立体金币';if(caption)caption.textContent=themes[key][1];shown=key;
+   image.src=back.src=asset.src;image.alt=themes[key][1]+'主题的纯色立体金币';if(caption)caption.textContent=themes[key][1];shown=key;
    turnAnimation?.cancel();turnAnimation=null;
    if(!reduced.matches){
     turnAnimation=turn.animate([{transform:'rotateY(-42deg)',opacity:.12},{transform:'rotateY(5deg)',opacity:1,offset:.78},{transform:'rotateY(0deg)',opacity:1}],{duration:330,easing:'cubic-bezier(.22,1,.36,1)'});
@@ -31,12 +55,13 @@
  }
  let loaded=false,entrance=null,response=null,version=0,frame=0,point=null;
  function cancelMotion(){version++;entrance?.cancel();response?.cancel();entrance=response=null;resetSpin();}
- // Spin the illustrated coin around its face; keep the hit area fixed while dragging.
+ // Y is the upright axis: the artwork never rolls around the screen-facing Z axis.
  let angle=0,velocity=0,spinFrame=0,gesture=null,suppressClickUntil=0;
  const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
  function paintSpin(){
-  const lean=reduced.matches?0:clamp(velocity*8,-10,10);
-  image.style.transform=`rotateY(${lean}deg) rotateZ(${angle}deg)`;
+  // Cancel the existing decorative -8 degree tilt around the vertical spin axis.
+  rotor.style.transform=`rotateZ(8deg) rotateY(${angle}deg) rotateZ(-8deg)`;
+  rim.style.visibility=Math.abs(Math.sin(angle*Math.PI/180))>.08?'visible':'hidden';
  }
  function stopFrame(){cancelAnimationFrame(spinFrame);spinFrame=0;}
  function releaseGesture(){
@@ -44,7 +69,7 @@
   if(id!==undefined&&button.hasPointerCapture(id))button.releasePointerCapture(id);
  }
  function resetSpin(){
-  stopFrame();releaseGesture();angle=velocity=0;image.style.transform='';button.classList.remove('spinning');
+  stopFrame();releaseGesture();angle=velocity=0;rotor.style.transform='';rim.style.visibility='hidden';button.classList.remove('spinning');
  }
  function settleSpin(){
   stopFrame();
