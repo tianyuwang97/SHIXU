@@ -1874,7 +1874,7 @@ var num = (n) => Number(n).toLocaleString("zh-CN", { maximumFractionDigits: 3 })
 function initExitMode(onChange) {
   const orderCandidates2 = createCandidateOrder();
   const nav = document.querySelector(".market-navigation");
-  nav.insertAdjacentHTML("afterend", `<section class="decision-mode" aria-label="\u7814\u7A76\u6A21\u5F0F"><div class="decision-caption"><h2 class="decision-title" id="decisionTitle" tabindex="-1"><span class="decision-kicker">\u7559\u610F</span><span>\u8FD9\u4E9B\u80A1\u7968\u6216\u57FA\u91D1</span><span class="decision-emphasis">\u673A\u4F1A\u6B63\u5728\u6D6E\u73B0</span></h2><p id="decisionHint" role="status" hidden></p></div><div class="decision-switch" role="group" aria-label="\u5207\u6362\u7814\u7A76\u6A21\u5F0F"><i aria-hidden="true"></i><div class="decision-label"><span id="decisionLabel">${mysteryMark}</span><small id="decisionLabelEnglish" hidden>DISCOVER</small></div><button type="button" data-decision="exit" aria-pressed="false" aria-label="\u67E5\u770B\u5356\u51FA\u5019\u9009\uFF08\u9700\u8981\u767B\u5F55\uFF09"><span class="portal-aura" aria-hidden="true"></span><span class="portal-art" aria-hidden="true"><img class="portal-mark portal-closed" src="/stone-portal.png" width="142" height="164" alt="" draggable="false"><img class="portal-mark portal-open" src="/stone-portal-open.png" width="142" height="164" alt="" draggable="false"></span></button></div></section>
+  nav.insertAdjacentHTML("afterend", `<section class="decision-mode" aria-label="\u7814\u7A76\u6A21\u5F0F"><div class="decision-caption"><h2 class="decision-title" id="decisionTitle" tabindex="-1"><span class="decision-kicker">\u7559\u610F</span><span>\u8FD9\u4E9B\u80A1\u7968\u6216\u57FA\u91D1</span><span class="decision-emphasis">\u673A\u4F1A\u6B63\u5728\u6D6E\u73B0</span></h2><p id="decisionHint" role="status" hidden></p></div><div id="decisionInvitation" class="decision-invitation" role="status" hidden></div><div class="decision-switch" role="group" aria-label="\u5207\u6362\u7814\u7A76\u6A21\u5F0F"><i aria-hidden="true"></i><div class="decision-label"><span id="decisionLabel">${mysteryMark}</span><small id="decisionLabelEnglish" hidden>DISCOVER</small></div><button type="button" data-decision="exit" aria-pressed="false" aria-label="\u67E5\u770B\u5356\u51FA\u5019\u9009\uFF08\u9700\u8981\u767B\u5F55\uFF09"><span class="portal-aura" aria-hidden="true"></span><span class="portal-art" aria-hidden="true"><img class="portal-mark portal-closed" src="/stone-portal.png" width="142" height="164" alt="" draggable="false"><img class="portal-mark portal-open" src="/stone-portal-open.png" width="142" height="164" alt="" draggable="false"></span></button></div></section>
  <section class="exit-workspace" id="exit-workspace" hidden aria-labelledby="exitTitle"><header class="exit-heading"><div><h2 id="exitTitle">A\u80A1</h2><p>\u67E5\u770B\u51FA\u73B0\u9000\u51FA\u4FE1\u53F7\u7684\u80A1\u7968\u548C\u57FA\u91D1\uFF0C\u8F85\u52A9\u5224\u65AD\u51CF\u4ED3\u4E0E\u79BB\u573A\u65F6\u673A\u3002</p></div><a id="exitHoldingsLink" href="/portfolio?market=cn">\u7BA1\u7406\u6211\u7684\u6301\u4ED3</a></header><div class="exit-toolbar"><div class="exit-scope" role="group" aria-label="\u68C0\u67E5\u8303\u56F4"><button data-exit-scope="market" aria-pressed="true">\u5E02\u573A\u89C2\u5BDF\u6C60</button><button data-exit-scope="holdings" aria-pressed="false">\u6211\u7684\u6301\u4ED3</button></div><label><span id="exitSearchLabel">\u641C\u7D22\u80A1\u7968</span><input id="exitSearch" type="search" placeholder="\u540D\u79F0\u6216\u4EE3\u7801" autocomplete="off"></label></div><p id="exitMeta" class="exit-meta" role="status"></p><div id="exitStats" class="exit-stats"></div><div id="exitRules" class="exit-rules"></div><div id="exitCards" class="exit-grid"></div><button id="exitMore" hidden>\u67E5\u770B\u66F4\u591A</button><p class="exit-footnote" id="exitFootnote">\u5E02\u573A\u5019\u9009\u6BCF\u6B21\u6253\u5F00\u968F\u673A\u5C55\u793A\uFF0C\u987A\u5E8F\u4E0D\u4EE3\u8868\u5356\u51FA\u4F18\u5148\u7EA7\u3002\u53EA\u5C55\u793A\u540C\u65F6\u7B26\u5408 R01 \u4E0E\u5411\u4E0B R02 \u7684\u5356\u51FA\u5019\u9009\uFF0C\u4F7F\u7528\u6700\u8FD130\u81EA\u7136\u65E5\u7684\u884C\u60C5\u89C2\u5BDF\u671F\u3002\u5019\u9009\u4E0D\u7B49\u4E8E\u5FC5\u987B\u5356\u51FA\uFF1B\u672A\u5165\u9009\u4E5F\u4E0D\u4EE3\u8868\u53EF\u4EE5\u653E\u5FC3\u6301\u6709\u3002\u89C4\u5219\u5C1A\u672A\u5B8C\u6210\u6536\u76CA\u56DE\u6D4B\uFF0C\u4E0D\u81EA\u52A8\u6267\u884C\u4EA4\u6613\u3002</p></section>`);
   document.body.insertAdjacentHTML("beforeend", `<dialog id="exitTransition" aria-labelledby="exitQuote"><span class="transition-brand">\u65F6\u5E8F <small>SHIXU</small></span><div class="exit-quote" id="exitQuote"><span>\u6295\u8D44\u7684\u8FDC\u89C1</span><span>\u4E0D\u6B62\u4E8E\u53D1\u73B0\u4EF7\u503C</span><strong>\u66F4\u5728\u4E8E\u8FDB\u9000\u6709\u636E</strong></div><div class="transition-bottom"><span>KNOW WHEN TO EXIT</span><button id="skipExitTransition" type="button" disabled aria-hidden="true">\u770B\u89C1\u53E6\u4E00\u9762</button></div></dialog>`);
   const $2 = (id) => document.getElementById(id), dialog = $2("exitTransition"), reduced = matchMedia("(prefers-reduced-motion: reduce)");
@@ -1885,7 +1885,10 @@ function initExitMode(onChange) {
   let active = false, market2 = "cn", data2 = null, scope = "market", limit2 = 9, version = 0, busy = false, skip = null, animations = [];
   const loginURL2 = () => "/login?return_to=" + encodeURIComponent("/?market=" + market2 + "&view=exit");
   function paint() {
-    document.querySelector(".decision-caption").classList.remove("has-error", "has-invitation");
+    document.querySelector(".decision-caption").classList.remove("has-error");
+    document.querySelector(".decision-mode").classList.remove("has-invitation");
+    $2("decisionInvitation").hidden = true;
+    $2("decisionInvitation").textContent = "";
     $2("decisionHint").hidden = true;
     $2("decisionHint").textContent = "";
     document.body.classList.toggle("exit-mode", active);
@@ -1929,7 +1932,10 @@ function initExitMode(onChange) {
     const returning = !next;
     const buttons = [...document.querySelectorAll("[data-decision]")];
     buttons.forEach((b) => b.disabled = true);
-    document.querySelector(".decision-caption").classList.remove("has-error", "has-invitation");
+    document.querySelector(".decision-caption").classList.remove("has-error");
+    document.querySelector(".decision-mode").classList.remove("has-invitation");
+    $2("decisionInvitation").hidden = true;
+    $2("decisionInvitation").textContent = "";
     try {
       dialog.classList.toggle("is-returning", returning);
       if (returning) {
@@ -1998,10 +2004,10 @@ function initExitMode(onChange) {
       if (active) $2("decisionTitle").focus({ preventScroll: true });
       else (trigger || document.querySelector('[data-decision="exit"]')).focus({ preventScroll: true });
       if (guestReturn && !active) {
-        $2("decisionHint").hidden = false;
-        $2("decisionHint").innerHTML = '<a href="' + loginURL2() + '">\u767B\u5F55\u65F6\u5E8F\uFF0C\u770B\u89C1\u6295\u8D44\u7684\u53E6\u4E00\u9762\u3002</a>';
-        document.querySelector(".decision-caption").classList.add("has-invitation");
-        if (!reduced.matches) $2("decisionHint").animate([{ opacity: 0, transform: "translateY(6px)" }, { opacity: 1, transform: "translateY(0)" }], { duration: 800, easing: "cubic-bezier(.22,1,.36,1)" });
+        $2("decisionInvitation").innerHTML = '<a href="' + loginURL2() + '"><strong>\u767B\u5F55\u65F6\u5E8F</strong><span>\u770B\u89C1\u6295\u8D44\u7684\u53E6\u4E00\u9762<span aria-hidden="true"> \u2197</span></span></a>';
+        $2("decisionInvitation").hidden = false;
+        document.querySelector(".decision-mode").classList.add("has-invitation");
+        if (!reduced.matches) $2("decisionInvitation").animate([{ opacity: 0, transform: "translateY(6px)" }, { opacity: 1, transform: "translateY(0)" }], { duration: 800, easing: "cubic-bezier(.22,1,.36,1)" });
       }
     }
   }

@@ -9,7 +9,7 @@ const num=n=>Number(n).toLocaleString('zh-CN',{maximumFractionDigits:3});
 export function initExitMode(onChange){
  const orderCandidates=createCandidateOrder();
  const nav=document.querySelector('.market-navigation');
- nav.insertAdjacentHTML('afterend',`<section class="decision-mode" aria-label="研究模式"><div class="decision-caption"><h2 class="decision-title" id="decisionTitle" tabindex="-1"><span class="decision-kicker">留意</span><span>这些股票或基金</span><span class="decision-emphasis">机会正在浮现</span></h2><p id="decisionHint" role="status" hidden></p></div><div class="decision-switch" role="group" aria-label="切换研究模式"><i aria-hidden="true"></i><div class="decision-label"><span id="decisionLabel">${mysteryMark}</span><small id="decisionLabelEnglish" hidden>DISCOVER</small></div><button type="button" data-decision="exit" aria-pressed="false" aria-label="查看卖出候选（需要登录）"><span class="portal-aura" aria-hidden="true"></span><span class="portal-art" aria-hidden="true"><img class="portal-mark portal-closed" src="/stone-portal.png" width="142" height="164" alt="" draggable="false"><img class="portal-mark portal-open" src="/stone-portal-open.png" width="142" height="164" alt="" draggable="false"></span></button></div></section>
+ nav.insertAdjacentHTML('afterend',`<section class="decision-mode" aria-label="研究模式"><div class="decision-caption"><h2 class="decision-title" id="decisionTitle" tabindex="-1"><span class="decision-kicker">留意</span><span>这些股票或基金</span><span class="decision-emphasis">机会正在浮现</span></h2><p id="decisionHint" role="status" hidden></p></div><div id="decisionInvitation" class="decision-invitation" role="status" hidden></div><div class="decision-switch" role="group" aria-label="切换研究模式"><i aria-hidden="true"></i><div class="decision-label"><span id="decisionLabel">${mysteryMark}</span><small id="decisionLabelEnglish" hidden>DISCOVER</small></div><button type="button" data-decision="exit" aria-pressed="false" aria-label="查看卖出候选（需要登录）"><span class="portal-aura" aria-hidden="true"></span><span class="portal-art" aria-hidden="true"><img class="portal-mark portal-closed" src="/stone-portal.png" width="142" height="164" alt="" draggable="false"><img class="portal-mark portal-open" src="/stone-portal-open.png" width="142" height="164" alt="" draggable="false"></span></button></div></section>
  <section class="exit-workspace" id="exit-workspace" hidden aria-labelledby="exitTitle"><header class="exit-heading"><div><h2 id="exitTitle">A股</h2><p>查看出现退出信号的股票和基金，辅助判断减仓与离场时机。</p></div><a id="exitHoldingsLink" href="/portfolio?market=cn">管理我的持仓</a></header><div class="exit-toolbar"><div class="exit-scope" role="group" aria-label="检查范围"><button data-exit-scope="market" aria-pressed="true">市场观察池</button><button data-exit-scope="holdings" aria-pressed="false">我的持仓</button></div><label><span id="exitSearchLabel">搜索股票</span><input id="exitSearch" type="search" placeholder="名称或代码" autocomplete="off"></label></div><p id="exitMeta" class="exit-meta" role="status"></p><div id="exitStats" class="exit-stats"></div><div id="exitRules" class="exit-rules"></div><div id="exitCards" class="exit-grid"></div><button id="exitMore" hidden>查看更多</button><p class="exit-footnote" id="exitFootnote">市场候选每次打开随机展示，顺序不代表卖出优先级。只展示同时符合 R01 与向下 R02 的卖出候选，使用最近30自然日的行情观察期。候选不等于必须卖出；未入选也不代表可以放心持有。规则尚未完成收益回测，不自动执行交易。</p></section>`);
  document.body.insertAdjacentHTML('beforeend',`<dialog id="exitTransition" aria-labelledby="exitQuote"><span class="transition-brand">时序 <small>SHIXU</small></span><div class="exit-quote" id="exitQuote"><span>投资的远见</span><span>不止于发现价值</span><strong>更在于进退有据</strong></div><div class="transition-bottom"><span>KNOW WHEN TO EXIT</span><button id="skipExitTransition" type="button" disabled aria-hidden="true">看见另一面</button></div></dialog>`);
  const $=id=>document.getElementById(id),dialog=$('exitTransition'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
@@ -19,7 +19,9 @@ export function initExitMode(onChange){
  let active=false,market='cn',data=null,scope='market',limit=9,version=0,busy=false,skip=null,animations=[];
  const loginURL=()=>'/login?return_to='+encodeURIComponent('/?market='+market+'&view=exit');
  function paint(){
-  document.querySelector('.decision-caption').classList.remove('has-error','has-invitation');
+  document.querySelector('.decision-caption').classList.remove('has-error');
+  document.querySelector('.decision-mode').classList.remove('has-invitation');
+  $('decisionInvitation').hidden=true;$('decisionInvitation').textContent='';
   $('decisionHint').hidden=true;$('decisionHint').textContent='';
   document.body.classList.toggle('exit-mode',active);
   $('exit-workspace').hidden=!active;
@@ -41,7 +43,9 @@ export function initExitMode(onChange){
   let guestReturn=false;
   const returning=!next;
   const buttons=[...document.querySelectorAll('[data-decision]')];buttons.forEach(b=>b.disabled=true);
-  document.querySelector('.decision-caption').classList.remove('has-error','has-invitation');
+  document.querySelector('.decision-caption').classList.remove('has-error');
+  document.querySelector('.decision-mode').classList.remove('has-invitation');
+  $('decisionInvitation').hidden=true;$('decisionInvitation').textContent='';
   try{
    dialog.classList.toggle('is-returning',returning);
    if(returning){
@@ -95,10 +99,10 @@ export function initExitMode(onChange){
    buttons.forEach(b=>b.disabled=false);busy=false;
    if(active)$('decisionTitle').focus({preventScroll:true});else (trigger||document.querySelector('[data-decision="exit"]')).focus({preventScroll:true});
    if(guestReturn&&!active){
-    $('decisionHint').hidden=false;
-    $('decisionHint').innerHTML='<a href="'+loginURL()+'">登录时序，看见投资的另一面。</a>';
-    document.querySelector('.decision-caption').classList.add('has-invitation');
-    if(!reduced.matches)$('decisionHint').animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:800,easing:'cubic-bezier(.22,1,.36,1)'});
+    $('decisionInvitation').innerHTML='<a href="'+loginURL()+'"><strong>登录时序</strong><span>看见投资的另一面<span aria-hidden="true"> ↗</span></span></a>';
+    $('decisionInvitation').hidden=false;
+    document.querySelector('.decision-mode').classList.add('has-invitation');
+    if(!reduced.matches)$('decisionInvitation').animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:800,easing:'cubic-bezier(.22,1,.36,1)'});
    }
   }
  }
