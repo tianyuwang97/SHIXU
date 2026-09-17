@@ -5,7 +5,7 @@
 .decision-caption.has-error{display:block!important;color:#ad542f}
 /* Equal outer columns keep the guest invitation at the center of the whole band. */
 .decision-mode.has-invitation{display:grid;grid-template-columns:minmax(0,1fr) 250px minmax(0,1fr)}
-.decision-mode.has-invitation>.decision-switch{justify-self:end}
+.decision-mode.has-invitation>.decision-switch{justify-self:end;margin-top:0}
 .decision-invitation[hidden]{display:none}
 .decision-invitation{width:250px;justify-self:center;text-align:center}
 .decision-invitation a{display:flex;flex-direction:column;align-items:center;gap:8px;padding:21px 16px;border:1px solid #cbb99d;border-radius:22px;background:#e5d6bf;color:#113d32;text-decoration:none;box-shadow:inset 0 1px 0 #fff8,0 8px 24px #786b551a;transition:background .2s,box-shadow .2s,transform .2s}
@@ -141,5 +141,5 @@ body.exit-mode .hd-island,body.exit-mode.is-compact .hd-island{background:#18291
 .decision-label .mystery-mark{display:block;width:64px;height:80px;object-fit:contain;user-select:none;filter:drop-shadow(0 4px 5px #163f2912)}
 
 @media(max-width:1199px){.decision-mode.has-invitation{grid-template-columns:minmax(0,1fr) auto}.decision-mode.has-invitation>.decision-caption{grid-column:1;grid-row:1}.decision-mode.has-invitation>.decision-switch{grid-column:2;grid-row:1}.decision-mode.has-invitation>.decision-invitation{grid-column:1 / -1;grid-row:2}}
-@media(max-width:700px){.decision-mode.has-invitation{grid-template-columns:minmax(0,1fr)}.decision-mode.has-invitation>.decision-switch{grid-column:1;grid-row:2;justify-self:stretch}.decision-mode.has-invitation>.decision-invitation{grid-column:1;grid-row:3;width:min(100%,300px);margin-top:8px}}
+@media(max-width:700px){.decision-mode.has-invitation{grid-template-columns:minmax(0,1fr)}.decision-mode.has-invitation>.decision-switch{grid-column:1;grid-row:2;justify-self:stretch;margin-top:32px}.decision-mode.has-invitation>.decision-invitation{grid-column:1;grid-row:3;width:min(100%,300px);margin-top:8px}}
 @media(prefers-reduced-motion:reduce){.decision-invitation a{transition:none}.decision-invitation a:hover{transform:none}}
