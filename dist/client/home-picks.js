@@ -1898,7 +1898,7 @@ function initExitMode(onChange) {
     $2("decisionLabel").innerHTML = active ? "\u5BFB\u627E\u673A\u4F1A" : mysteryMark;
     $2("decisionLabelEnglish").hidden = !active;
     document.querySelector("[data-decision=exit]").setAttribute("aria-label", active ? "\u8FD4\u56DE\u5BFB\u627E\u673A\u4F1A" : "\u67E5\u770B\u5356\u51FA\u5019\u9009\uFF08\u9700\u8981\u767B\u5F55\uFF09");
-    $2("decisionTitle").innerHTML = active ? '<span class="decision-kicker">\u9192\u9192</span><span>\u6301\u6709\u8FD9\u4E9B\u80A1\u7968\u6216\u57FA\u91D1</span><span class="decision-emphasis">\u8BE5\u51C6\u5907\u9000\u51FA\u4E86</span>' : '<span>\u8FD9\u4E9B\u80A1\u7968\u6216\u57FA\u91D1</span><span class="decision-emphasis">\u673A\u4F1A\u6B63\u5728\u6D6E\u73B0</span>';
+    $2("decisionTitle").innerHTML = active ? '<span>\u6301\u6709\u8FD9\u4E9B\u80A1\u7968\u6216\u57FA\u91D1</span><span class="decision-emphasis">\u8BE5\u51C6\u5907\u9000\u51FA\u4E86</span>' : '<span>\u8FD9\u4E9B\u80A1\u7968\u6216\u57FA\u91D1</span><span class="decision-emphasis">\u673A\u4F1A\u6B63\u5728\u6D6E\u73B0</span>';
     document.getElementById("marketWorkspaces").hidden = active;
     document.dispatchEvent(new CustomEvent("shixu:mode", { detail: { exit: active } }));
   }

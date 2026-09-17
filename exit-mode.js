@@ -30,7 +30,7 @@ export function initExitMode(onChange){
   $('decisionLabel').innerHTML=active?'寻找机会':mysteryMark;
   $('decisionLabelEnglish').hidden=!active;
   document.querySelector('[data-decision=exit]').setAttribute('aria-label',active?'返回寻找机会':'查看卖出候选（需要登录）');
-  $('decisionTitle').innerHTML=active?'<span class="decision-kicker">醒醒</span><span>持有这些股票或基金</span><span class="decision-emphasis">该准备退出了</span>':'<span>这些股票或基金</span><span class="decision-emphasis">机会正在浮现</span>';
+  $('decisionTitle').innerHTML=active?'<span>持有这些股票或基金</span><span class="decision-emphasis">该准备退出了</span>':'<span>这些股票或基金</span><span class="decision-emphasis">机会正在浮现</span>';
   document.getElementById('marketWorkspaces').hidden=active;
   document.dispatchEvent(new CustomEvent('shixu:mode',{detail:{exit:active}}));
  }
