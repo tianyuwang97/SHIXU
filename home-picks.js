@@ -1,3 +1,4 @@
+import {opportunityChart as chart} from './opportunity-chart.mjs';
 import {companyProfile,companyIntro} from './company-intro.mjs';
 import {createCandidateOrder} from './candidate-order.mjs';
 const orderCandidates=createCandidateOrder();
@@ -23,7 +24,6 @@ function setMarket(next,writeURL=true){
  if(hasPicks){market=next.toUpperCase();$('stockPickTitle').textContent=`近30天 · ${marketName()}双规则候选`;if(!exitMode.active)load();}
 }
 
-function chart(s){const p=s.points,vals=p.map(v=>(v[1]-1)*100),lo=Math.min(0,...vals),hi=Math.max(0,...vals),span=Math.max(hi-lo,.1),start=Date.parse(s.start),x=i=>8+(Date.parse(p[i][0])-start)/(29*86400000)*284,y=v=>72-(v-lo)/span*60;return `<svg viewBox="0 0 300 88" role="img" aria-label="${esc(s.name)}近30自然日调整收盘走势"><title>${esc(s.name)} · ${s.start}—${s.asof} · ${pct(s.change)}</title><path d="M8 ${y(0)}H292" stroke="#d1dfd8" stroke-dasharray="3 3"/><polyline fill="none" stroke="#237b65" stroke-width="2.5" points="${vals.map((v,i)=>x(i).toFixed(2)+','+y(v).toFixed(2)).join(' ')}"/></svg>`;}
 function companyHeading(s){const p=companyProfile(s,market);return `<h3>${esc(p?.name||s.name)}</h3>${p?`<p class="company-english">${esc(s.name)}</p>`:''}${researchButtons({market:market.toLowerCase(),code:s.code,name:p?.name||s.name})}`;}
 document.addEventListener('click',e=>{const a=e.target.closest('.peer-entry');if(!a||!data)return;const code=new URL(a.href).searchParams.get('code'),s=data.matches.find(s=>s.code===code);if(s)visit({market:market.toLowerCase(),code:s.code,name:s.name});});
 const loginURL=()=>'/login?return_to='+encodeURIComponent(location.pathname+location.search+'#stock-picks');

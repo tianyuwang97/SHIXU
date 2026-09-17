@@ -10,3 +10,5 @@
 @media(max-width:360px){.market-actions{grid-template-columns:1fr}.home-top-note{display:none}}
 
 .pick-rules a{display:inline-flex;align-items:center;padding:10px 16px;border-radius:999px;background:#e7e4fc;color:#514596;text-decoration:none;font-weight:600}
+
+.pick-chart-key{font-size:11px;color:#718773;line-height:1.5;margin:0 0 6px}

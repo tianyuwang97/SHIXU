@@ -8,7 +8,7 @@ export function publicPicks(snapshot){
  const keys=['expectedAsOf','market','currency','priceBasis','universeSources','asof','dailyAsOf','checkedAt','universe','universeAsOf','universeSource','total','evaluated','unknown'];
  return {...Object.fromEntries(keys.map(k=>[k,snapshot[k]])),matches:snapshot.matches.map(publicMatch),excluded:snapshot.excluded.map(({code,name})=>({code,name,reason:'数据不足或待核实'}))};
 }
-export function memberPicks(snapshot){return {...publicPicks(snapshot),authenticated:true,rules:STOCK_RULES,matches:snapshot.matches.map(s=>({...publicMatch(s),explanation:`最近30自然日振幅≤10%，首尾涨跌幅在−5%至+5%。使用本次30自然日中的前15自然日 ${s.signal.box.rangeStart}—${s.signal.box.rangeEnd} 固定横盘上下沿；后15自然日内，${s.signal.box.firstBreakDate}首次突破；下一交易日收盘继续高于原上沿，${s.signal.box.confirmDate}确认，截至${s.asof}仍未跌回。上下沿只取前半段，不使用所选期间之前的突破信号，也不随后半段走势移动。`}))};}
+export function memberPicks(snapshot){return {...publicPicks(snapshot),authenticated:true,rules:STOCK_RULES,matches:snapshot.matches.map(s=>({...publicMatch(s),chartBox:{lower:s.signal.box.lower,upper:s.signal.box.upper,rangeStart:s.signal.box.rangeStart,rangeEnd:s.signal.box.rangeEnd},explanation:`最近30自然日振幅≤10%，首尾涨跌幅在−5%至+5%。使用本次30自然日中的前15自然日 ${s.signal.box.rangeStart}—${s.signal.box.rangeEnd} 固定横盘上下沿；后15自然日内，${s.signal.box.firstBreakDate}首次突破；下一交易日收盘继续高于原上沿，${s.signal.box.confirmDate}确认，截至${s.asof}仍未跌回。上下沿只取前半段，不使用所选期间之前的突破信号，也不随后半段走势移动。`}))};}
 export async function rulesResponse(request,env){
  if(request.method!=='GET')return authJSON({error:'请求方式无效'},405);
  const user=await authenticatedUser(request,env);return authJSON({authenticated:!!user,rules:user?STOCK_RULES:STOCK_RULES.map(({id})=>({id}))});
