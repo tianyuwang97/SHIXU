@@ -1327,8 +1327,446 @@ var us_company_profiles_default = {
         url: "https://stockanalysis.com/stocks/amzn/company/"
       }
     ]
+  },
+  AEP: {
+    name: "\u7F8E\u56FD\u7535\u529B",
+    industry: "\u7535\u529B\u516C\u7528\u4E8B\u4E1A",
+    summary: "\u901A\u8FC7\u53D1\u7535\u548C\u8F93\u914D\u7535\u7F51\u7EDC\u5411\u5BB6\u5EAD\u4E0E\u4F01\u4E1A\u4F9B\u7535\uFF0C\u4E1A\u52A1\u56F4\u7ED5\u7535\u529B\u8BBE\u65BD\u7684\u5EFA\u8BBE\u3001\u7EF4\u62A4\u548C\u8FD0\u8425\u5C55\u5F00\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.aep.com/about/"
+      }
+    ]
+  },
+  AIG: {
+    name: "\u7F8E\u56FD\u56FD\u9645\u96C6\u56E2",
+    industry: "\u8D22\u4EA7\u4E0E\u610F\u5916\u9669",
+    summary: "\u4E3A\u4F01\u4E1A\u548C\u4E2A\u4EBA\u63D0\u4F9B\u8D22\u4EA7\u3001\u8D23\u4EFB\u53CA\u610F\u5916\u5065\u5EB7\u7B49\u4FDD\u9669\uFF0C\u5E2E\u52A9\u5BA2\u6237\u8F6C\u79FB\u7ECF\u8425\u548C\u751F\u6D3B\u4E2D\u7684\u98CE\u9669\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.aig.com/about"
+      }
+    ]
+  },
+  AMT: {
+    name: "\u7F8E\u56FD\u7535\u5854",
+    industry: "\u901A\u4FE1\u57FA\u7840\u8BBE\u65BD",
+    summary: "\u6301\u6709\u3001\u5F00\u53D1\u548C\u8FD0\u8425\u4F9B\u591A\u5BB6\u5BA2\u6237\u5171\u7528\u7684\u901A\u4FE1\u7AD9\u70B9\uFF0C\u5E76\u7ECF\u8425\u7F8E\u56FD\u6570\u636E\u4E2D\u5FC3\u8BBE\u65BD\uFF0C\u4E3A\u901A\u4FE1\u7F51\u7EDC\u63D0\u4F9B\u57FA\u7840\u8BBE\u65BD\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "Stock Analysis \u516C\u53F8\u8D44\u6599",
+        url: "https://stockanalysis.com/stocks/amt/company/"
+      }
+    ]
+  },
+  ATO: {
+    name: "\u963F\u7279\u83AB\u65AF\u80FD\u6E90",
+    industry: "\u5929\u7136\u6C14\u516C\u7528\u4E8B\u4E1A",
+    summary: "\u5411\u5C45\u6C11\u548C\u4F01\u4E1A\u8F93\u9001\u5929\u7136\u6C14\uFF0C\u7ECF\u8425\u5929\u7136\u6C14\u914D\u9001\u3001\u7BA1\u9053\u548C\u50A8\u5B58\u8BBE\u65BD\uFF0C\u5E76\u6301\u7EED\u7EF4\u62A4\u548C\u5347\u7EA7\u4F9B\u6C14\u7F51\u7EDC\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.atmosenergy.com/company/about-atmos-energy/"
+      }
+    ]
+  },
+  BMY: {
+    name: "\u767E\u65F6\u7F8E\u65BD\u8D35\u5B9D",
+    industry: "\u751F\u7269\u5236\u836F",
+    summary: "\u7814\u53D1\u548C\u9500\u552E\u5904\u65B9\u836F\uFF0C\u4E1A\u52A1\u6D89\u53CA\u80BF\u7624\u3001\u8840\u6DB2\u75BE\u75C5\u3001\u514D\u75AB\u53CA\u5FC3\u8840\u7BA1\u7B49\u6CBB\u7597\u9886\u57DF\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.bms.com/"
+      }
+    ]
+  },
+  CCI: {
+    name: "\u51A0\u57CE\u56FD\u9645",
+    industry: "\u901A\u4FE1\u57FA\u7840\u8BBE\u65BD",
+    summary: "\u7ECF\u8425\u901A\u4FE1\u57FA\u7840\u8BBE\u65BD\uFF0C\u4E3A\u65E0\u7EBF\u7F51\u7EDC\u5BA2\u6237\u63D0\u4F9B\u7AD9\u70B9\u53CA\u76F8\u5173\u8FDE\u63A5\u670D\u52A1\uFF0C\u652F\u6301\u79FB\u52A8\u901A\u4FE1\u7F51\u7EDC\u8986\u76D6\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.crowncastle.com/"
+      }
+    ]
+  },
+  CHD: {
+    name: "\u5207\u8FDF\u675C\u5A01",
+    industry: "\u5BB6\u5EAD\u4E0E\u4E2A\u4EBA\u62A4\u7406",
+    summary: "\u751F\u4EA7\u548C\u9500\u552E\u5BB6\u5EAD\u6E05\u6D01\u53CA\u4E2A\u4EBA\u62A4\u7406\u6D88\u8D39\u54C1\uFF0C\u4EA7\u54C1\u7528\u4E8E\u8863\u7269\u6E05\u6D01\u3001\u53E3\u8154\u62A4\u7406\u7B49\u65E5\u5E38\u573A\u666F\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://churchdwight.com/"
+      }
+    ]
+  },
+  CL: {
+    name: "\u9AD8\u9732\u6D01\u68D5\u6984",
+    industry: "\u65E5\u7528\u6D88\u8D39\u54C1",
+    summary: "\u7ECF\u8425\u53E3\u8154\u62A4\u7406\u3001\u4E2A\u4EBA\u62A4\u7406\u3001\u5BB6\u5C45\u6E05\u6D01\u53CA\u5BA0\u7269\u8425\u517B\u4EA7\u54C1\uFF0C\u65D7\u4E0B\u5305\u62EC\u9AD8\u9732\u6D01\u548C\u5E0C\u5C14\u601D\u7B49\u54C1\u724C\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.colgatepalmolive.com/en-us"
+      }
+    ]
+  },
+  DUK: {
+    name: "\u675C\u514B\u80FD\u6E90",
+    industry: "\u7535\u529B\u4E0E\u5929\u7136\u6C14",
+    summary: "\u901A\u8FC7\u7535\u529B\u548C\u5929\u7136\u6C14\u516C\u7528\u4E8B\u4E1A\u5411\u5BB6\u5EAD\u53CA\u4F01\u4E1A\u4F9B\u80FD\uFF0C\u540C\u65F6\u6295\u8D44\u7535\u7F51\u5347\u7EA7\u548C\u53D1\u7535\u8BBE\u65BD\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.duke-energy.com/our-company/about-us?id=1921"
+      }
+    ]
+  },
+  ECL: {
+    name: "\u827A\u5EB7",
+    industry: "\u6C34\u5904\u7406\u4E0E\u536B\u751F\u670D\u52A1",
+    summary: "\u4E3A\u98DF\u54C1\u3001\u9152\u5E97\u3001\u533B\u7597\u548C\u5DE5\u4E1A\u5BA2\u6237\u63D0\u4F9B\u6C34\u5904\u7406\u3001\u6E05\u6D01\u536B\u751F\u53CA\u611F\u67D3\u9884\u9632\u4EA7\u54C1\u4E0E\u670D\u52A1\uFF0C\u5E2E\u52A9\u5BA2\u6237\u7BA1\u7406\u7528\u6C34\u548C\u8FD0\u8425\u73AF\u5883\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.ecolab.com/en-us/about"
+      }
+    ]
+  },
+  ED: {
+    name: "\u8054\u5408\u7231\u8FEA\u751F",
+    industry: "\u7EFC\u5408\u516C\u7528\u4E8B\u4E1A",
+    summary: "\u901A\u8FC7\u53D7\u76D1\u7BA1\u7684\u516C\u7528\u4E8B\u4E1A\u63D0\u4F9B\u7535\u529B\u3001\u5929\u7136\u6C14\u53CA\u84B8\u6C7D\u670D\u52A1\uFF0C\u5E76\u7ECF\u8425\u76F8\u5173\u80FD\u6E90\u8F93\u9001\u8BBE\u65BD\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.conedison.com/en/about-us/our-businesses"
+      }
+    ]
+  },
+  EQT: {
+    name: "EQT \u5929\u7136\u6C14",
+    industry: "\u5929\u7136\u6C14\u751F\u4EA7",
+    summary: "\u4ECE\u4E8B\u5929\u7136\u6C14\u751F\u4EA7\u53CA\u76F8\u5173\u4E2D\u6E38\u4E1A\u52A1\uFF0C\u901A\u8FC7\u751F\u4EA7\u548C\u8F93\u9001\u73AF\u8282\u4E3A\u80FD\u6E90\u5E02\u573A\u4F9B\u5E94\u5929\u7136\u6C14\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.eqt.com/"
+      }
+    ]
+  },
+  EVRG: {
+    name: "Evergy \u7535\u529B",
+    industry: "\u7535\u529B\u516C\u7528\u4E8B\u4E1A",
+    summary: "\u5728\u7F8E\u56FD\u582A\u8428\u65AF\u5DDE\u548C\u5BC6\u82CF\u91CC\u5DDE\u63D0\u4F9B\u53D7\u76D1\u7BA1\u7684\u7535\u529B\u670D\u52A1\uFF0C\u9762\u5411\u5C45\u6C11\u3001\u793E\u533A\u548C\u4F01\u4E1A\u4F9B\u7535\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.evergy.com/about-evergy/our-company/company-facts"
+      }
+    ]
+  },
+  EXE: {
+    name: "Expand Energy \u80FD\u6E90",
+    industry: "\u5929\u7136\u6C14\u80FD\u6E90",
+    summary: "\u7ECF\u8425\u5929\u7136\u6C14\u751F\u4EA7\u4E1A\u52A1\uFF0C\u4E3B\u8981\u8FD0\u8425\u533A\u57DF\u5305\u62EC\u963F\u5DF4\u62C9\u5951\u4E9A\u548C\u6D77\u6069\u65AF\u7EF4\u5C14\uFF0C\u5E76\u53D1\u5C55\u5929\u7136\u6C14\u4F9B\u5E94\u4E0E\u5E02\u573A\u670D\u52A1\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.expandenergy.com/"
+      }
+    ]
+  },
+  FAST: {
+    name: "\u6CD5\u601D\u8BFA",
+    industry: "\u5DE5\u4E1A\u7528\u54C1\u4F9B\u5E94",
+    summary: "\u5411\u4F01\u4E1A\u4F9B\u5E94\u5DE5\u4E1A\u7528\u54C1\uFF0C\u5E76\u63D0\u4F9B\u5E93\u5B58\u3001\u7269\u6D41\u548C\u4F9B\u5E94\u94FE\u7BA1\u7406\u670D\u52A1\uFF0C\u5E2E\u52A9\u5BA2\u6237\u7EF4\u6301\u65E5\u5E38\u751F\u4EA7\u53CA\u8BBE\u5907\u7EF4\u62A4\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.fastenal.com/fast/about-us"
+      }
+    ]
+  },
+  FE: {
+    name: "\u7B2C\u4E00\u80FD\u6E90",
+    industry: "\u7535\u529B\u516C\u7528\u4E8B\u4E1A",
+    summary: "\u901A\u8FC7\u65D7\u4E0B\u7535\u529B\u516C\u53F8\u7ECF\u8425\u8F93\u914D\u7535\u7F51\u7EDC\uFF0C\u4E3A\u5BB6\u5EAD\u548C\u4F01\u4E1A\u63D0\u4F9B\u7535\u529B\u8F93\u9001\u670D\u52A1\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.firstenergycorp.com/fehome.html"
+      }
+    ]
+  },
+  FISV: {
+    name: "\u8D39\u54F2\u91D1\u878D\u670D\u52A1",
+    industry: "\u91D1\u878D\u79D1\u6280\u4E0E\u652F\u4ED8",
+    summary: "\u4E3A\u91D1\u878D\u673A\u6784\u548C\u5546\u6237\u63D0\u4F9B\u652F\u4ED8\u5904\u7406\u3001\u94F6\u884C\u6280\u672F\u53CA\u5546\u4E1A\u7BA1\u7406\u5DE5\u5177\uFF0C\u652F\u6301\u6536\u6B3E\u548C\u91D1\u878D\u4E1A\u52A1\u6570\u5B57\u5316\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.fiserv.com/"
+      }
+    ]
+  },
+  KMI: {
+    name: "\u91D1\u5FB7\u6469\u6839",
+    industry: "\u80FD\u6E90\u7BA1\u9053\u4E0E\u50A8\u8FD0",
+    summary: "\u7ECF\u8425\u5929\u7136\u6C14\u53CA\u5176\u4ED6\u80FD\u6E90\u4EA7\u54C1\u7684\u7BA1\u9053\u548C\u50A8\u8FD0\u8BBE\u65BD\uFF0C\u4E3A\u5BA2\u6237\u63D0\u4F9B\u8FD0\u8F93\u3001\u50A8\u5B58\u53CA\u88C5\u5378\u7B49\u57FA\u7840\u8BBE\u65BD\u670D\u52A1\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://ir.kindermorgan.com/home/"
+      }
+    ]
+  },
+  L: {
+    name: "Loews \u6D1B\u65AF\u96C6\u56E2",
+    industry: "\u591A\u5143\u5316\u63A7\u80A1",
+    summary: "\u901A\u8FC7\u65D7\u4E0B\u4F01\u4E1A\u7ECF\u8425\u4FDD\u9669\u3001\u80FD\u6E90\u7BA1\u9053\u3001\u9152\u5E97\u53CA\u5305\u88C5\u4E1A\u52A1\uFF0C\u4EE5\u63A7\u80A1\u516C\u53F8\u7684\u65B9\u5F0F\u53C2\u4E0E\u591A\u4E2A\u884C\u4E1A\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.loews.com/"
+      }
+    ]
+  },
+  LIN: {
+    name: "\u6797\u5FB7",
+    industry: "\u5DE5\u4E1A\u6C14\u4F53\u4E0E\u5DE5\u7A0B",
+    summary: "\u4F9B\u5E94\u5DE5\u4E1A\u548C\u533B\u7597\u7B49\u9886\u57DF\u4F7F\u7528\u7684\u6C14\u4F53\uFF0C\u5E76\u63D0\u4F9B\u6C14\u4F53\u5904\u7406\u76F8\u5173\u5DE5\u7A0B\u4E0E\u6280\u672F\uFF0C\u670D\u52A1\u5236\u9020\u3001\u533B\u7597\u548C\u7535\u5B50\u7B49\u884C\u4E1A\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.linde.com/"
+      }
+    ]
+  },
+  MCD: {
+    name: "\u9EA6\u5F53\u52B3",
+    industry: "\u8FDE\u9501\u9910\u996E",
+    summary: "\u7ECF\u8425\u5168\u7403\u5FEB\u9910\u54C1\u724C\uFF0C\u901A\u8FC7\u76F4\u8425\u548C\u7279\u8BB8\u7ECF\u8425\u9910\u5385\u5411\u6D88\u8D39\u8005\u63D0\u4F9B\u9910\u996E\uFF0C\u5E76\u5411\u52A0\u76DF\u4F53\u7CFB\u63D0\u4F9B\u54C1\u724C\u53CA\u8FD0\u8425\u652F\u6301\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://corporate.mcdonalds.com/corpmcd/home.html"
+      }
+    ]
+  },
+  MSCI: {
+    name: "\u660E\u665F",
+    industry: "\u6295\u8D44\u6570\u636E\u4E0E\u6307\u6570",
+    summary: "\u5411\u6295\u8D44\u673A\u6784\u63D0\u4F9B\u6307\u6570\u3001\u6295\u8D44\u7EC4\u5408\u5206\u6790\u53CA\u7814\u7A76\u6570\u636E\u5DE5\u5177\uFF0C\u5E2E\u52A9\u5BA2\u6237\u6BD4\u8F83\u5E02\u573A\u8868\u73B0\u548C\u8BC4\u4F30\u6295\u8D44\u98CE\u9669\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.msci.com/"
+      }
+    ]
+  },
+  NFLX: {
+    name: "\u5948\u98DE",
+    industry: "\u6D41\u5A92\u4F53\u5A31\u4E50",
+    summary: "\u5411\u7528\u6237\u63D0\u4F9B\u5F71\u89C6\u53CA\u5176\u4ED6\u5A31\u4E50\u5185\u5BB9\uFF0C\u901A\u8FC7\u5728\u7EBF\u5E73\u53F0\u5206\u53D1\u5267\u96C6\u3001\u7535\u5F71\u7B49\u4F5C\u54C1\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://about.netflix.com/en"
+      }
+    ]
+  },
+  NI: {
+    name: "NiSource \u80FD\u6E90",
+    industry: "\u5929\u7136\u6C14\u4E0E\u7535\u529B",
+    summary: "\u901A\u8FC7\u65D7\u4E0B\u516C\u7528\u4E8B\u4E1A\u63D0\u4F9B\u5929\u7136\u6C14\u548C\u7535\u529B\u670D\u52A1\uFF0C\u7ECF\u8425\u652F\u6301\u793E\u533A\u53CA\u4F01\u4E1A\u7528\u80FD\u7684\u57FA\u7840\u8BBE\u65BD\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.nisource.com/"
+      }
+    ]
+  },
+  OTIS: {
+    name: "\u5965\u7684\u65AF",
+    industry: "\u7535\u68AF\u4E0E\u81EA\u52A8\u6276\u68AF",
+    summary: "\u8BBE\u8BA1\u3001\u5236\u9020\u548C\u5B89\u88C5\u7535\u68AF\u3001\u81EA\u52A8\u6276\u68AF\u53CA\u81EA\u52A8\u4EBA\u884C\u9053\uFF0C\u5E76\u4E3A\u65E2\u6709\u8BBE\u5907\u63D0\u4F9B\u7EF4\u62A4\u548C\u66F4\u65B0\u6539\u9020\u670D\u52A1\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.otis.com/en/us/"
+      }
+    ]
+  },
+  PEP: {
+    name: "\u767E\u4E8B\u516C\u53F8",
+    industry: "\u98DF\u54C1\u4E0E\u996E\u6599",
+    summary: "\u7ECF\u8425\u996E\u6599\u548C\u4F11\u95F2\u98DF\u54C1\u4E1A\u52A1\uFF0C\u65D7\u4E0B\u4EA7\u54C1\u6DB5\u76D6\u767E\u4E8B\u996E\u6599\u3001\u4E50\u4E8B\u85AF\u7247\u548C\u6842\u683C\u98DF\u54C1\u7B49\u6D88\u8D39\u54C1\u724C\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.pepsico.com/"
+      }
+    ]
+  },
+  REG: {
+    name: "Regency \u5546\u4E1A\u5730\u4EA7",
+    industry: "\u8D2D\u7269\u4E2D\u5FC3\u5730\u4EA7",
+    summary: "\u6301\u6709\u3001\u8FD0\u8425\u548C\u5F00\u53D1\u8D2D\u7269\u4E2D\u5FC3\uFF0C\u8BB8\u591A\u7269\u4E1A\u4EE5\u8D85\u5E02\u4E3A\u6838\u5FC3\u79DF\u6237\uFF0C\u9762\u5411\u5468\u8FB9\u793E\u533A\u63D0\u4F9B\u8D2D\u7269\u548C\u751F\u6D3B\u670D\u52A1\u7A7A\u95F4\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.regencycenters.com/"
+      }
+    ]
+  },
+  SBAC: {
+    name: "SBA \u901A\u4FE1",
+    industry: "\u901A\u4FE1\u57FA\u7840\u8BBE\u65BD",
+    summary: "\u5EFA\u8BBE\u3001\u6301\u6709\u548C\u51FA\u79DF\u901A\u4FE1\u94C1\u5854\u53CA\u7AD9\u70B9\uFF0C\u5E76\u63D0\u4F9B\u7AD9\u70B9\u5F00\u53D1\u3001\u65BD\u5DE5\u3001\u7EF4\u62A4\u548C\u8FD0\u8425\u670D\u52A1\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.sbasite.com/"
+      }
+    ]
+  },
+  VICI: {
+    name: "VICI \u5730\u4EA7",
+    industry: "\u4F53\u9A8C\u5F0F\u5546\u4E1A\u5730\u4EA7",
+    summary: "\u6301\u6709\u535A\u5F69\u3001\u9152\u5E97\u3001\u5A31\u4E50\u548C\u4F11\u95F2\u7C7B\u7269\u4E1A\uFF0C\u5E76\u901A\u8FC7\u957F\u671F\u79DF\u8D41\u5411\u8FD0\u8425\u5546\u63D0\u4F9B\u7ECF\u8425\u573A\u6240\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://viciproperties.com/about-us/"
+      }
+    ]
+  },
+  WM: {
+    name: "\u7F8E\u56FD\u5E9F\u7269\u7BA1\u7406",
+    industry: "\u73AF\u5883\u4E0E\u5E9F\u7269\u5904\u7406",
+    summary: "\u63D0\u4F9B\u5783\u573E\u6536\u8FD0\u3001\u8F6C\u8FD0\u3001\u56DE\u6536\u53CA\u5904\u7F6E\u670D\u52A1\uFF0C\u540C\u65F6\u7ECF\u8425\u586B\u57CB\u6C14\u80FD\u6E90\u9879\u76EE\u548C\u7279\u6B8A\u5E9F\u7269\u5904\u7406\u7B49\u4E1A\u52A1\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "Stock Analysis \u516C\u53F8\u8D44\u6599",
+        url: "https://stockanalysis.com/stocks/wm/company/"
+      }
+    ]
+  },
+  WMB: {
+    name: "\u5A01\u5EC9\u59C6\u65AF\u516C\u53F8",
+    industry: "\u5929\u7136\u6C14\u57FA\u7840\u8BBE\u65BD",
+    summary: "\u7ECF\u8425\u5929\u7136\u6C14\u76F8\u5173\u57FA\u7840\u8BBE\u65BD\uFF0C\u4E3A\u80FD\u6E90\u5BA2\u6237\u63D0\u4F9B\u5929\u7136\u6C14\u96C6\u8F93\u3001\u5904\u7406\u548C\u8FD0\u8F93\u670D\u52A1\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.williams.com/"
+      }
+    ]
+  },
+  ZBH: {
+    name: "\u6377\u8FC8\u90A6\u7F8E",
+    industry: "\u9AA8\u79D1\u533B\u7597\u5668\u68B0",
+    summary: "\u63D0\u4F9B\u9AA8\u79D1\u76F8\u5173\u533B\u7597\u5668\u68B0\u548C\u6280\u672F\uFF0C\u5305\u62EC\u5173\u8282\u7F6E\u6362\u53CA\u914D\u5957\u624B\u672F\u89E3\u51B3\u65B9\u6848\uFF0C\u670D\u52A1\u533B\u751F\u548C\u533B\u7597\u673A\u6784\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.zimmerbiomet.com/en"
+      }
+    ]
+  },
+  ZTS: {
+    name: "\u7855\u817E",
+    industry: "\u52A8\u7269\u4FDD\u5065",
+    summary: "\u4E3A\u5BA0\u7269\u548C\u517B\u6B96\u52A8\u7269\u7814\u53D1\u5E76\u63D0\u4F9B\u836F\u54C1\u3001\u75AB\u82D7\u53CA\u8BCA\u65AD\u7B49\u4EA7\u54C1\uFF0C\u670D\u52A1\u517D\u533B\u548C\u52A8\u7269\u517B\u6B96\u5BA2\u6237\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "\u516C\u53F8\u5B98\u7F51 \xB7 \u4E1A\u52A1\u8D44\u6599",
+        url: "https://www.zoetis.com/"
+      }
+    ]
+  },
+  GOOGL: {
+    name: "Alphabet \u8C37\u6B4C\u6BCD\u516C\u53F8 C\u7C7B\uFF08A\u7C7B\u80A1\uFF09",
+    industry: "\u4E92\u8054\u7F51\u4E0E\u4E91\u8BA1\u7B97",
+    summary: "\u65D7\u4E0B\u8C37\u6B4C\u63D0\u4F9B\u641C\u7D22\u3001YouTube\u3001Android \u7B49\u4EA7\u54C1\uFF0C\u5E76\u7ECF\u8425\u6570\u5B57\u5E7F\u544A\u3001Google Cloud \u4E91\u670D\u52A1\u53CA\u5176\u4ED6\u6280\u672F\u4E1A\u52A1\u3002",
+    checkedAt: "2026-09-17",
+    sources: [
+      {
+        label: "Stock Analysis \u516C\u53F8\u8D44\u6599",
+        url: "https://stockanalysis.com/stocks/goog/company/"
+      }
+    ]
   }
 };
+
+// company-intro.mjs
+var esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+var companyProfile = (row, market2) => market2.toUpperCase() === "US" ? us_company_profiles_default[row.code] : null;
+function companyIntro(row, market2) {
+  if (market2.toUpperCase() !== "US") return "";
+  const p = companyProfile(row, market2);
+  if (!p) return '<section class="company-intro company-intro-pending"><p>\u8FD9\u5BB6\u516C\u53F8\u7684\u4E2D\u6587\u4E1A\u52A1\u7B80\u4ECB\u5F85\u8865\u5145\u3002</p></section>';
+  return `<section class="company-intro" aria-label="${esc(p.name)}\u516C\u53F8\u7B80\u4ECB"><span class="company-industry">${esc(p.industry)}</span><p>${esc(p.summary)}</p><details class="company-sources"><summary>\u7B80\u4ECB\u6765\u6E90 \xB7 ${esc(p.checkedAt)}\u6838\u5BF9</summary><p>\u6309\u516C\u5F00\u516C\u53F8\u8D44\u6599\u6574\u7406\u7684\u4E1A\u52A1\u4ECB\u7ECD\uFF1B\u6838\u5BF9\u65E5\u671F\u72EC\u7ACB\u4E8E\u884C\u60C5\u622A\u6B62\u65E5\u3002</p>${p.sources.map((source) => `<a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.label)}</a>`).join(" \xB7 ")}</details></section>`;
+}
+
+// candidate-order.mjs
+function createCandidateOrder(random = Math.random) {
+  const orders = /* @__PURE__ */ new Map();
+  return (rows, key) => {
+    const previous = orders.get(key) || [];
+    const codes = new Set(rows.map((row) => row.code));
+    const retained = previous.filter((code) => codes.has(code));
+    const known = new Set(retained);
+    const added = [...codes].filter((code) => !known.has(code));
+    for (let i = added.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1));
+      [added[i], added[j]] = [added[j], added[i]];
+    }
+    const order = [...retained, ...added];
+    orders.set(key, order);
+    const current = new Map(rows.map((row) => [row.code, row]));
+    return order.map((code) => current.get(code));
+  };
+}
 
 // research-store.mjs
 var STORAGE_KEY = "shixu-research-v1";
@@ -1403,14 +1841,15 @@ function researchButtons(item) {
 }
 
 // exit-mode.js
-var esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+var esc2 = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 var names = { cn: "A\u80A1", us: "\u7F8E\u80A1", hk: "\u6E2F\u80A1", fund: "\u57FA\u91D1" };
 var pct = (n) => Number.isFinite(n) ? (n >= 0 ? "+" : "") + (n * 100).toFixed(2) + "%" : "\u2014";
 var num = (n) => Number(n).toLocaleString("zh-CN", { maximumFractionDigits: 3 });
 function initExitMode(onChange) {
+  const orderCandidates2 = createCandidateOrder();
   const nav = document.querySelector(".market-navigation");
   nav.insertAdjacentHTML("afterend", `<section class="decision-mode" aria-label="\u7814\u7A76\u6A21\u5F0F"><div class="decision-caption"><span>YOUR NEXT MOVE</span><p id="decisionHint">\u4F60\u7684\u4E0B\u4E00\u6B65</p></div><div class="decision-switch" role="group" aria-label="\u5207\u6362\u7814\u7A76\u6A21\u5F0F"><i aria-hidden="true"></i><div class="decision-label"><span id="decisionLabel">?</span><small id="decisionLabelEnglish" hidden>DISCOVER</small></div><button type="button" data-decision="exit" aria-pressed="false" aria-label="\u67E5\u770B\u5356\u51FA\u5019\u9009\uFF08\u9700\u8981\u767B\u5F55\uFF09"><span class="portal-aura" aria-hidden="true"></span><span class="portal-art" aria-hidden="true"><img class="portal-mark portal-closed" src="/stone-portal.png" width="142" height="164" alt="" draggable="false"><img class="portal-mark portal-open" src="/stone-portal-open.png" width="142" height="164" alt="" draggable="false"></span></button></div></section>
- <section class="exit-workspace" id="exit-workspace" hidden aria-labelledby="exitTitle"><header class="exit-heading"><div><span class="exit-eyebrow">KNOW WHEN TO EXIT</span><h1 id="exitTitle" tabindex="-1">A\u80A1 \xB7 \u5356\u70B9\u68C0\u67E5</h1><p>\u91CD\u65B0\u68C0\u67E5\uFF0C\u6700\u521D\u4E70\u5165\u7684\u7406\u7531\u3002</p></div><a id="exitHoldingsLink" href="/portfolio?market=cn">\u7BA1\u7406\u6211\u7684\u6301\u4ED3</a></header><div class="exit-toolbar"><div class="exit-scope" role="group" aria-label="\u68C0\u67E5\u8303\u56F4"><button data-exit-scope="market" aria-pressed="true">\u5E02\u573A\u89C2\u5BDF\u6C60</button><button data-exit-scope="holdings" aria-pressed="false">\u6211\u7684\u6301\u4ED3</button></div><label><span id="exitSearchLabel">\u641C\u7D22\u80A1\u7968</span><input id="exitSearch" type="search" placeholder="\u540D\u79F0\u6216\u4EE3\u7801" autocomplete="off"></label></div><p id="exitMeta" class="exit-meta" role="status"></p><div id="exitStats" class="exit-stats"></div><div id="exitRules" class="exit-rules"></div><div id="exitCards" class="exit-grid"></div><button id="exitMore" hidden>\u67E5\u770B\u66F4\u591A</button><p class="exit-footnote" id="exitFootnote">\u53EA\u5C55\u793A\u540C\u65F6\u7B26\u5408 R01 \u4E0E\u5411\u4E0B R02 \u7684\u5356\u51FA\u5019\u9009\uFF0C\u4F7F\u7528\u6700\u8FD130\u81EA\u7136\u65E5\u7684\u884C\u60C5\u89C2\u5BDF\u671F\u3002\u5019\u9009\u4E0D\u7B49\u4E8E\u5FC5\u987B\u5356\u51FA\uFF1B\u672A\u5165\u9009\u4E5F\u4E0D\u4EE3\u8868\u53EF\u4EE5\u653E\u5FC3\u6301\u6709\u3002\u89C4\u5219\u5C1A\u672A\u5B8C\u6210\u6536\u76CA\u56DE\u6D4B\uFF0C\u4E0D\u81EA\u52A8\u6267\u884C\u4EA4\u6613\u3002</p></section>`);
+ <section class="exit-workspace" id="exit-workspace" hidden aria-labelledby="exitTitle"><header class="exit-heading"><div><span class="exit-eyebrow">KNOW WHEN TO EXIT</span><h1 id="exitTitle" tabindex="-1">A\u80A1 \xB7 \u5356\u70B9\u68C0\u67E5</h1><p>\u91CD\u65B0\u68C0\u67E5\uFF0C\u6700\u521D\u4E70\u5165\u7684\u7406\u7531\u3002</p></div><a id="exitHoldingsLink" href="/portfolio?market=cn">\u7BA1\u7406\u6211\u7684\u6301\u4ED3</a></header><div class="exit-toolbar"><div class="exit-scope" role="group" aria-label="\u68C0\u67E5\u8303\u56F4"><button data-exit-scope="market" aria-pressed="true">\u5E02\u573A\u89C2\u5BDF\u6C60</button><button data-exit-scope="holdings" aria-pressed="false">\u6211\u7684\u6301\u4ED3</button></div><label><span id="exitSearchLabel">\u641C\u7D22\u80A1\u7968</span><input id="exitSearch" type="search" placeholder="\u540D\u79F0\u6216\u4EE3\u7801" autocomplete="off"></label></div><p id="exitMeta" class="exit-meta" role="status"></p><div id="exitStats" class="exit-stats"></div><div id="exitRules" class="exit-rules"></div><div id="exitCards" class="exit-grid"></div><button id="exitMore" hidden>\u67E5\u770B\u66F4\u591A</button><p class="exit-footnote" id="exitFootnote">\u5E02\u573A\u5019\u9009\u6BCF\u6B21\u6253\u5F00\u968F\u673A\u5C55\u793A\uFF0C\u987A\u5E8F\u4E0D\u4EE3\u8868\u5356\u51FA\u4F18\u5148\u7EA7\u3002\u53EA\u5C55\u793A\u540C\u65F6\u7B26\u5408 R01 \u4E0E\u5411\u4E0B R02 \u7684\u5356\u51FA\u5019\u9009\uFF0C\u4F7F\u7528\u6700\u8FD130\u81EA\u7136\u65E5\u7684\u884C\u60C5\u89C2\u5BDF\u671F\u3002\u5019\u9009\u4E0D\u7B49\u4E8E\u5FC5\u987B\u5356\u51FA\uFF1B\u672A\u5165\u9009\u4E5F\u4E0D\u4EE3\u8868\u53EF\u4EE5\u653E\u5FC3\u6301\u6709\u3002\u89C4\u5219\u5C1A\u672A\u5B8C\u6210\u6536\u76CA\u56DE\u6D4B\uFF0C\u4E0D\u81EA\u52A8\u6267\u884C\u4EA4\u6613\u3002</p></section>`);
   document.body.insertAdjacentHTML("beforeend", `<dialog id="exitTransition" aria-labelledby="exitQuote"><span class="transition-brand">\u65F6\u5E8F <small>SHIXU</small></span><div class="exit-quote" id="exitQuote"><span>\u6295\u8D44\u7684\u8FDC\u89C1</span><span>\u4E0D\u6B62\u4E8E\u53D1\u73B0\u4EF7\u503C</span><strong>\u66F4\u5728\u4E8E\u8FDB\u9000\u6709\u636E</strong></div><div class="transition-bottom"><span>KNOW WHEN TO EXIT</span><button id="skipExitTransition" type="button">\u770B\u89C1\u53E6\u4E00\u9762</button></div></dialog>`);
   const $2 = (id) => document.getElementById(id), dialog = $2("exitTransition"), reduced = matchMedia("(prefers-reduced-motion: reduce)");
   const openGate = document.querySelector(".portal-open");
@@ -1543,20 +1982,21 @@ function initExitMode(onChange) {
     if (!data2.authenticated || !row.points?.length) return "";
     const p = row.points, values = p.map((p2) => p2[1]), lo = Math.min(...values, row.box?.lower ?? Infinity), hi = Math.max(...values, row.box?.upper ?? -Infinity), span = Math.max(hi - lo, 0.01), x = (i) => 10 + i / Math.max(1, p.length - 1) * 340, y = (v) => 108 - (v - lo) / span * 88;
     const lines = row.box ? `<rect x="10" y="${y(row.box.upper)}" width="340" height="${Math.max(1, y(row.box.lower) - y(row.box.upper))}" fill="#edac7220"/><path d="M10 ${y(row.box.upper)}H350 M10 ${y(row.box.lower)}H350" stroke="#eeb47f" stroke-dasharray="4 5"/>` : "";
-    return `<figure class="exit-chart"><svg viewBox="0 0 360 128" role="img" aria-label="${esc(row.name)}\u8C03\u6574\u6536\u76D8\u8D70\u52BF\u4E0E\u539F\u56FA\u5B9A\u533A\u95F4"><title>${esc(p[0][0])} \u81F3 ${esc(p.at(-1)[0])}\uFF0C\u865A\u7EBF\u4E3A\u539F\u533A\u95F4\u4E0A\u4E0B\u6CBF</title>${lines}<polyline points="${values.map((v, i) => `${x(i)},${y(v)}`).join(" ")}" fill="none" stroke="#e8eee5" stroke-width="2.2"/><circle cx="350" cy="${y(values.at(-1))}" r="3" fill="#f1b57b"/></svg><figcaption><span>${esc(p[0][0])}</span><span>${esc(p.at(-1)[0])}</span></figcaption></figure>`;
+    return `<figure class="exit-chart"><svg viewBox="0 0 360 128" role="img" aria-label="${esc2(row.name)}\u8C03\u6574\u6536\u76D8\u8D70\u52BF\u4E0E\u539F\u56FA\u5B9A\u533A\u95F4"><title>${esc2(p[0][0])} \u81F3 ${esc2(p.at(-1)[0])}\uFF0C\u865A\u7EBF\u4E3A\u539F\u533A\u95F4\u4E0A\u4E0B\u6CBF</title>${lines}<polyline points="${values.map((v, i) => `${x(i)},${y(v)}`).join(" ")}" fill="none" stroke="#e8eee5" stroke-width="2.2"/><circle cx="350" cy="${y(values.at(-1))}" r="3" fill="#f1b57b"/></svg><figcaption><span>${esc2(p[0][0])}</span><span>${esc2(p.at(-1)[0])}</span></figcaption></figure>`;
   }
   function card(r) {
+    const profile = companyProfile(r, market2), displayName = profile?.name || r.name;
     const signals = r.signals || [], triggered = signals.length > 0, title = r.status === "unknown" ? "\u6570\u636E\u5F85\u6838\u5B9E" : triggered ? "\u7B26\u5408\u5356\u51FA\u7B5B\u9009" : "\u672A\u540C\u65F6\u7B26\u5408\u4E24\u6761\u89C4\u5219";
-    return `<article class="exit-card ${triggered ? "is-triggered" : ""}"><header><div><span>${esc(r.code)} \xB7 ${names[market2]}</span><h2>${esc(r.name)}</h2></div><span class="exit-state">${title}</span></header><div class="exit-return"><b>${pct(r.change)}</b><span>\u8FD130\u65E5\u533A\u95F4\u6DA8\u8DCC \xB7 \u975E\u6301\u4ED3\u76C8\u4E8F</span></div>${signals.length ? `<div class="exit-signals">${signals.map((s) => `<span>${esc(s.id)}${data2.authenticated ? " \xB7 " + esc(data2.rules.find((r2) => r2.id === s.id)?.name || "") : ""}<small>${esc(s.date)} \u89E6\u53D1</small></span>`).join("")}</div>` : ""}${plot(r)}${r.status === "unknown" ? `<p>${esc(r.reason || "\u672A\u8986\u76D6\u6B64\u80A1\u7968\uFF0C\u6682\u4E0D\u80FD\u5224\u65AD\u3002")}</p>` : data2.authenticated ? `<details><summary>\u67E5\u770B\u5224\u65AD\u4F9D\u636E</summary><p>${esc(r.explanation)}</p>${r.box ? `<p>\u539F\u4E0A\u6CBF ${num(r.box.upper)} \xB7 \u539F\u4E0B\u6CBF ${num(r.box.lower)}<br>\u6700\u65B0\u89C2\u5BDF\u503C ${num(r.latest)} \xB7 ${esc(data2.priceBasis)}<br>\u4EE5\u4E0A\u4E3A\u540C\u4E00\u8C03\u6574\u53E3\u5F84\uFF0C\u4E0D\u662F\u5B9E\u65F6\u59D4\u6258\u4EF7\u3002</p>` : ""}<p>\u4E24\u6761\u89C4\u5219\u5FC5\u987B\u540C\u65F6\u6EE1\u8DB3\u3002</p></details>` : `<p><a href="${loginURL2()}">\u767B\u5F55\u67E5\u770B\u6761\u4EF6\u3001\u5173\u952E\u4F4D\u7F6E\u4E0E\u8D70\u52BF\u56FE</a></p>`}<footer>${researchButtons({ market: market2, code: r.code, name: r.name })}<a href="${market2 === "fund" ? "/compare?code=" + encodeURIComponent(r.code) : "/stock-peers?market=" + market2 + "&code=" + encodeURIComponent(r.code)}">\u540C\u677F\u5757\u5BF9\u6BD4</a></footer></article>`;
+    return `<article class="exit-card ${triggered ? "is-triggered" : ""}"><header><div><span>${esc2(r.code)} \xB7 ${names[market2]}</span><h2>${esc2(displayName)}</h2>${profile ? `<p class="company-english">${esc2(r.name)}</p>` : ""}</div><span class="exit-state">${title}</span></header>${companyIntro(r, market2)}<div class="exit-return"><b>${pct(r.change)}</b><span>\u8FD130\u65E5\u533A\u95F4\u6DA8\u8DCC \xB7 \u975E\u6301\u4ED3\u76C8\u4E8F</span></div>${signals.length ? `<div class="exit-signals">${signals.map((s) => `<span>${esc2(s.id)}${data2.authenticated ? " \xB7 " + esc2(data2.rules.find((r2) => r2.id === s.id)?.name || "") : ""}<small>${esc2(s.date)} \u89E6\u53D1</small></span>`).join("")}</div>` : ""}${plot(r)}${r.status === "unknown" ? `<p>${esc2(r.reason || "\u672A\u8986\u76D6\u6B64\u80A1\u7968\uFF0C\u6682\u4E0D\u80FD\u5224\u65AD\u3002")}</p>` : data2.authenticated ? `<details><summary>\u67E5\u770B\u5224\u65AD\u4F9D\u636E</summary><p>${esc2(r.explanation)}</p>${r.box ? `<p>\u539F\u4E0A\u6CBF ${num(r.box.upper)} \xB7 \u539F\u4E0B\u6CBF ${num(r.box.lower)}<br>\u6700\u65B0\u89C2\u5BDF\u503C ${num(r.latest)} \xB7 ${esc2(data2.priceBasis)}<br>\u4EE5\u4E0A\u4E3A\u540C\u4E00\u8C03\u6574\u53E3\u5F84\uFF0C\u4E0D\u662F\u5B9E\u65F6\u59D4\u6258\u4EF7\u3002</p>` : ""}<p>\u4E24\u6761\u89C4\u5219\u5FC5\u987B\u540C\u65F6\u6EE1\u8DB3\u3002</p></details>` : `<p><a href="${loginURL2()}">\u767B\u5F55\u67E5\u770B\u6761\u4EF6\u3001\u5173\u952E\u4F4D\u7F6E\u4E0E\u8D70\u52BF\u56FE</a></p>`}<footer>${researchButtons({ market: market2, code: r.code, name: displayName })}<a href="${market2 === "fund" ? "/compare?code=" + encodeURIComponent(r.code) : "/stock-peers?market=" + market2 + "&code=" + encodeURIComponent(r.code)}">\u540C\u677F\u5757\u5BF9\u6BD4</a></footer></article>`;
   }
   function render2() {
     if (!data2) return;
     const triggered = data2.rows.filter((r) => r.signals.length), q = $2("exitSearch").value.trim().toLowerCase(), owned = holdings();
     let rows = scope === "holdings" ? owned.map((r) => data2.rows.find((s) => s.code === r.code) || { code: r.code, name: r.name, status: "unknown", signals: [], reason: "\u4E0D\u5728\u5F53\u524D\u884C\u60C5\u89C2\u5BDF\u6C60\u4E2D\uFF0C\u6682\u4E0D\u80FD\u68C0\u67E5\u9000\u51FA\u6761\u4EF6\u3002" }) : triggered;
-    rows = rows.filter((r) => !q || (r.code + " " + r.name).toLowerCase().includes(q)).sort((a, b) => String(b.signals?.at(-1)?.date || "").localeCompare(a.signals?.at(-1)?.date || "") || a.code.localeCompare(b.code));
+    rows = rows.filter((r) => !q || [r.code, r.name, companyProfile(r, market2)?.name].join(" ").toLowerCase().includes(q));
     $2("exitMeta").textContent = `${market2 === "fund" ? "\u51C0\u503C" : "\u884C\u60C5"}\u622A\u6B62 ${data2.asof} \xB7 ${data2.total}\u53EA\u89C2\u5BDF\u6C60 \xB7 ${data2.evaluated}\u53EA\u5B8C\u6210\u5224\u65AD \xB7 ${data2.unknown}\u53EA\u5F85\u6838\u5B9E \xB7 ${scope === "holdings" ? owned.length + "\u53EA\u672C\u5730\u6301\u4ED3 / " : ""}\u975E\u5B9E\u65F6\u884C\u60C5 \xB7 \u53EF\u7528\u5386\u53F2 ${data2.historyStart} \u8D77`;
     $2("exitStats").innerHTML = `<div><span>\u540C\u65F6\u7B26\u5408\u4E24\u6761</span><b>${data2.matched}<small>\u53EA</small></b></div><div><span>\u5F85\u6838\u5B9E</span><b>${data2.unknown}<small>\u53EA</small></b></div><div><span>\u89C2\u5BDF\u671F\u95F4</span><b>30<small>\u81EA\u7136\u65E5</small></b></div>`;
-    $2("exitRules").innerHTML = data2.rules.map((r) => `<span>${esc(r.id)}${r.description ? " \xB7 " + esc(r.description) : ""}</span>`).join("") + (data2.authenticated ? "" : `<a href="${loginURL2()}">\u767B\u5F55\u67E5\u770B\u5B8C\u6574\u89C4\u5219</a>`);
+    $2("exitRules").innerHTML = data2.rules.map((r) => `<span>${esc2(r.id)}${r.description ? " \xB7 " + esc2(r.description) : ""}</span>`).join("") + (data2.authenticated ? "" : `<a href="${loginURL2()}">\u767B\u5F55\u67E5\u770B\u5B8C\u6574\u89C4\u5219</a>`);
     $2("exitCards").innerHTML = rows.length ? rows.slice(0, limit2).map(card).join("") : `<div class="exit-empty"><h2>${q ? "\u6CA1\u6709\u5339\u914D\u7684\u4EA7\u54C1" : scope === "holdings" ? "\u8FD8\u6CA1\u6709\u5F55\u5165\u8FD9\u4E2A\u5E02\u573A\u7684\u6301\u4ED3" : "\u6CA1\u6709\u540C\u65F6\u7B26\u5408\u4E24\u6761\u89C4\u5219\u7684\u5019\u9009"}</h2><p>${q ? "\u6362\u4E00\u4E2A\u540D\u79F0\u6216\u4EE3\u7801\u8BD5\u8BD5\u3002" : scope === "holdings" ? "\u5F55\u5165\u6301\u4ED3\u540E\uFF0C\u53EF\u4EE5\u5728\u8FD9\u91CC\u4E00\u8D77\u68C0\u67E5\u5DF2\u7B26\u5408\u3001\u672A\u7B26\u5408\u548C\u8D44\u6599\u4E0D\u8DB3\u7684\u4EA7\u54C1\u3002" : "\u672C\u89C2\u5BDF\u6C60\u5F53\u524D\u6CA1\u6709\u540C\u65F6\u7B26\u5408 R01 \u4E0E\u5411\u4E0B R02 \u7684\u5356\u51FA\u5019\u9009\u3002\u6570\u636E\u4E0D\u8DB3\u7684\u4EA7\u54C1\u4E0D\u53C2\u4E0E\u5339\u914D\u3002"}</p>${scope === "holdings" && !q ? `<a href="/portfolio?market=${market2}">\u5F55\u5165\u6211\u7684\u6301\u4ED3</a>` : ""}</div>`;
     $2("exitMore").hidden = rows.length <= limit2;
     $2("exitMore").textContent = `\u518D\u770B ${Math.min(9, rows.length - limit2)} \u53EA`;
@@ -1595,7 +2035,7 @@ function initExitMode(onChange) {
       const next = await response.json();
       if (next.market !== selected.toUpperCase() || !Array.isArray(next.rows)) throw Error();
       if (id !== version || !active) return;
-      data2 = next;
+      data2 = { ...next, rows: orderCandidates2(next.rows, selected + ":" + scope) };
       render2();
     } catch {
       if (id !== version || !active) return;
@@ -1648,8 +2088,9 @@ function initExitMode(onChange) {
 }
 
 // home-picks.js
+var orderCandidates = createCandidateOrder();
 var $ = (id) => document.getElementById(id);
-var esc2 = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+var esc3 = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 var pct2 = (n) => (n >= 0 ? "+" : "") + (n * 100).toFixed(2) + "%";
 var PREVIEW_COUNT = 3;
 var data;
@@ -1692,11 +2133,11 @@ function setMarket(next, writeURL = true) {
 }
 function chart(s) {
   const p = s.points, vals = p.map((v) => (v[1] - 1) * 100), lo = Math.min(0, ...vals), hi = Math.max(0, ...vals), span = Math.max(hi - lo, 0.1), start = Date.parse(s.start), x = (i) => 8 + (Date.parse(p[i][0]) - start) / (29 * 864e5) * 284, y = (v) => 72 - (v - lo) / span * 60;
-  return `<svg viewBox="0 0 300 88" role="img" aria-label="${esc2(s.name)}\u8FD130\u81EA\u7136\u65E5\u8C03\u6574\u6536\u76D8\u8D70\u52BF"><title>${esc2(s.name)} \xB7 ${s.start}\u2014${s.asof} \xB7 ${pct2(s.change)}</title><path d="M8 ${y(0)}H292" stroke="#d1dfd8" stroke-dasharray="3 3"/><polyline fill="none" stroke="#237b65" stroke-width="2.5" points="${vals.map((v, i) => x(i).toFixed(2) + "," + y(v).toFixed(2)).join(" ")}"/></svg>`;
+  return `<svg viewBox="0 0 300 88" role="img" aria-label="${esc3(s.name)}\u8FD130\u81EA\u7136\u65E5\u8C03\u6574\u6536\u76D8\u8D70\u52BF"><title>${esc3(s.name)} \xB7 ${s.start}\u2014${s.asof} \xB7 ${pct2(s.change)}</title><path d="M8 ${y(0)}H292" stroke="#d1dfd8" stroke-dasharray="3 3"/><polyline fill="none" stroke="#237b65" stroke-width="2.5" points="${vals.map((v, i) => x(i).toFixed(2) + "," + y(v).toFixed(2)).join(" ")}"/></svg>`;
 }
 function companyHeading(s) {
-  const p = market === "US" ? us_company_profiles_default[s.code] : null;
-  return `<h3>${esc2(p?.name || s.name)}</h3>${p ? `<p class="company-english">${esc2(s.name)}</p>` : ""}${researchButtons({ market: market.toLowerCase(), code: s.code, name: p?.name || s.name })}`;
+  const p = companyProfile(s, market);
+  return `<h3>${esc3(p?.name || s.name)}</h3>${p ? `<p class="company-english">${esc3(s.name)}</p>` : ""}${researchButtons({ market: market.toLowerCase(), code: s.code, name: p?.name || s.name })}`;
 }
 document.addEventListener("click", (e) => {
   const a = e.target.closest(".peer-entry");
@@ -1704,15 +2145,9 @@ document.addEventListener("click", (e) => {
   const code = new URL(a.href).searchParams.get("code"), s = data.matches.find((s2) => s2.code === code);
   if (s) visit({ market: market.toLowerCase(), code: s.code, name: s.name });
 });
-function companyIntro(s) {
-  if (market !== "US") return "";
-  const p = us_company_profiles_default[s.code];
-  if (!p) return '<section class="company-intro company-intro-pending"><p>\u8FD9\u5BB6\u516C\u53F8\u7684\u4E2D\u6587\u4E1A\u52A1\u7B80\u4ECB\u5F85\u8865\u5145\u3002</p></section>';
-  return `<section class="company-intro" aria-label="${esc2(p.name)}\u516C\u53F8\u7B80\u4ECB"><span class="company-industry">${esc2(p.industry)}</span><p>${esc2(p.summary)}</p><details class="company-sources"><summary>\u7B80\u4ECB\u6765\u6E90 \xB7 ${esc2(p.checkedAt)}\u6838\u5BF9</summary><p>\u6309\u516C\u5F00\u516C\u53F8\u8D44\u6599\u6574\u7406\u7684\u4E1A\u52A1\u4ECB\u7ECD\uFF1B\u6838\u5BF9\u65E5\u671F\u72EC\u7ACB\u4E8E\u884C\u60C5\u622A\u6B62\u65E5\u3002</p>${p.sources.map((source) => `<a href="${esc2(source.url)}" target="_blank" rel="noopener noreferrer">${esc2(source.label)}</a>`).join(" \xB7 ")}</details></section>`;
-}
 var loginURL = () => "/login?return_to=" + encodeURIComponent(location.pathname + location.search + "#stock-picks");
 function renderRules() {
-  $("stockRuleGuide").innerHTML = (data.rules || [{ id: "R01" }, { id: "R02" }]).map((r) => `<span>${esc2(r.id)}${r.description ? " \xB7 " + esc2(r.description) : ""}</span>`).join("") + (data.authenticated ? "" : `<a href="${loginURL()}">\u767B\u5F55\u67E5\u770B\u5B8C\u6574\u89C4\u5219</a>`);
+  $("stockRuleGuide").innerHTML = (data.rules || [{ id: "R01" }, { id: "R02" }]).map((r) => `<span>${esc3(r.id)}${r.description ? " \xB7 " + esc3(r.description) : ""}</span>`).join("") + (data.authenticated ? "" : `<a href="${loginURL()}">\u767B\u5F55\u67E5\u770B\u5B8C\u6574\u89C4\u5219</a>`);
   document.querySelectorAll(".hd-login").forEach((a) => {
     a.textContent = data.authenticated ? "\u8D26\u53F7" : "\u767B\u5F55";
     a.href = loginURL();
@@ -1722,11 +2157,11 @@ function render() {
   renderRules();
   $("stockPickMeta").textContent = `\u884C\u60C5\u622A\u6B62 ${data.asof} \xB7 ${data.total}\u53EA${marketName()}\u89C2\u5BDF\u6C60 \xB7 ${data.evaluated}\u53EA\u5B8C\u6210\u5224\u65AD \xB7 ${data.unknown}\u53EA\u5F85\u6838\u5B9E${market === "CN" && data.asof < data.dailyAsOf ? " \xB7 \u80A1\u7968\u5FEB\u7167\u66F4\u65B0\u6EDE\u540E" : ""}${market === "US" && data.expectedAsOf && data.asof < data.expectedAsOf ? " \xB7 " + data.expectedAsOf + "\u4EA4\u6613\u65E5\u6570\u636E\u5C1A\u672A\u9F50\u5907" : ""} \xB7 ${{ CN: "\u4E2D\u56FD\u4EA4\u6613\u65E5 / \u4EBA\u6C11\u5E01\u53E3\u5F84", US: "\u7F8E\u56FD\u4EA4\u6613\u65E5 / \u7F8E\u5143\u53E3\u5F84", HK: "\u9999\u6E2F\u4EA4\u6613\u65E5 / \u6E2F\u5E01\u53E3\u5F84" }[market]}`;
   $("stockPickCount").textContent = `${data.matches.length}\u53EA\u540C\u65F6\u7B26\u5408`;
-  $("stockPickCards").innerHTML = data.matches.length ? data.matches.slice(0, limit).map((s) => `<article class="stock-pick"><header><div><span>${esc2(s.code)} \xB7 ${marketName()}</span>${companyHeading(s)}</div><strong>${pct2(s.change)}<small>30\u65E5\u9996\u5C3E\u6DA8\u8DCC\u5E45</small></strong></header>${companyIntro(s)}<div class="pick-tags"><span>R01 \u2713</span><span>R02 \u2713</span></div>${chart(s)}<div class="pick-dates"><span>${s.start}</span><span>${s.asof}</span></div><p>\u533A\u95F4\u632F\u5E45 ${(s.amplitude * 100).toFixed(2)}%</p><details><summary>\u4E3A\u4EC0\u4E48\u5165\u9009\uFF1F</summary>${data.authenticated && s.explanation ? `<p>${esc2(s.explanation)}</p>` : `<p>\u540C\u65F6\u7B26\u5408 R01\u3001R02\u3002<a href="${loginURL()}">\u767B\u5F55\u67E5\u770B\u5177\u4F53\u6761\u4EF6</a></p>`}</details><a class="peer-entry" href="/stock-peers.html?market=${market.toLowerCase()}&code=${esc2(s.code)}">\u540C\u677F\u5757\u5BF9\u6BD4</a><a href="${esc2(s.source)}" target="_blank" rel="noopener noreferrer">\u67E5\u770B\u884C\u60C5\u6765\u6E90</a></article>`).join("") : `<p class="pick-empty">\u622A\u81F3${data.asof}\uFF0C\u5DF2\u5B8C\u6210\u5224\u65AD\u7684${data.evaluated}\u53EA\u80A1\u7968\u4E2D\uFF0C\u6CA1\u6709\u540C\u65F6\u6EE1\u8DB3\u4E24\u6761\u89C4\u5219\u7684\u5019\u9009\u3002${data.unknown ? "\u53E6\u6709" + data.unknown + "\u53EA\u6570\u636E\u5F85\u6838\u5B9E\u3002" : ""}</p>`;
+  $("stockPickCards").innerHTML = data.matches.length ? data.matches.slice(0, limit).map((s) => `<article class="stock-pick"><header><div><span>${esc3(s.code)} \xB7 ${marketName()}</span>${companyHeading(s)}</div><strong>${pct2(s.change)}<small>30\u65E5\u9996\u5C3E\u6DA8\u8DCC\u5E45</small></strong></header>${companyIntro(s, market)}<div class="pick-tags"><span>R01 \u2713</span><span>R02 \u2713</span></div>${chart(s)}<div class="pick-dates"><span>${s.start}</span><span>${s.asof}</span></div><p>\u533A\u95F4\u632F\u5E45 ${(s.amplitude * 100).toFixed(2)}%</p><details><summary>\u4E3A\u4EC0\u4E48\u5165\u9009\uFF1F</summary>${data.authenticated && s.explanation ? `<p>${esc3(s.explanation)}</p>` : `<p>\u540C\u65F6\u7B26\u5408 R01\u3001R02\u3002<a href="${loginURL()}">\u767B\u5F55\u67E5\u770B\u5177\u4F53\u6761\u4EF6</a></p>`}</details><a class="peer-entry" href="/stock-peers.html?market=${market.toLowerCase()}&code=${esc3(s.code)}">\u540C\u677F\u5757\u5BF9\u6BD4</a><a href="${esc3(s.source)}" target="_blank" rel="noopener noreferrer">\u67E5\u770B\u884C\u60C5\u6765\u6E90</a></article>`).join("") : `<p class="pick-empty">\u622A\u81F3${data.asof}\uFF0C\u5DF2\u5B8C\u6210\u5224\u65AD\u7684${data.evaluated}\u53EA\u80A1\u7968\u4E2D\uFF0C\u6CA1\u6709\u540C\u65F6\u6EE1\u8DB3\u4E24\u6761\u89C4\u5219\u7684\u5019\u9009\u3002${data.unknown ? "\u53E6\u6709" + data.unknown + "\u53EA\u6570\u636E\u5F85\u6838\u5B9E\u3002" : ""}</p>`;
   $("stockPickMore").hidden = data.matches.length <= PREVIEW_COUNT;
   $("stockPickMore").textContent = limit === PREVIEW_COUNT ? `\u67E5\u770B\u5168\u90E8 ${data.matches.length} \u53EA\u5019\u9009` : "\u6536\u8D77\uFF0C\u4FDD\u75593\u53EA\u9884\u89C8";
   $("stockPickMore").setAttribute("aria-expanded", String(limit > PREVIEW_COUNT));
-  $("stockPickCoverage").innerHTML = `\u630930\u65E5\u9996\u5C3E\u6DA8\u8DCC\u5E45\u4ECE\u9AD8\u5230\u4F4E\u5C55\u793A\u3002${market === "HK" ? `\u89C2\u5BDF\u6C60\u4E3A<a href="${esc2(data.universeSource)}" target="_blank" rel="noopener noreferrer">\u6E2F\u4EA4\u6240\u6E2F\u5E01\u4E3B\u677F\u53CAGEM\u666E\u901A\u80A1\u540D\u5355\uFF08${esc2(data.universeAsOf)}\uFF09</a>\uFF0C\u5171${data.total}\u53EA\uFF1B\u6709\u5B8C\u6574\u6536\u76D8\u5E8F\u5217\u7684${data.evaluated}\u53EA\u53C2\u4E0E\u5224\u65AD\uFF0C\u505C\u724C\u3001\u5386\u53F2\u4E0D\u8DB3\u53CA\u6570\u636E\u672A\u53D6\u5F97\u7684\u80A1\u7968\u5355\u5217\u5F85\u6838\u5B9E\u3002\u4F7F\u7528Yahoo Finance\u80A1\u606F\u4E0E\u62C6\u80A1\u8C03\u6574\u6536\u76D8\u5E8F\u5217\uFF0C\u6E2F\u5E01\u8BA1\u4EF7\uFF0C\u4E0D\u542B\u6C47\u7387\u53D8\u5316\u548C\u4EA4\u6613\u8D39\u7528\u3002` : market === "US" ? `\u89C2\u5BDF\u6C60\u4E3ASPY\u5B98\u65B9\u80A1\u7968\u6301\u4ED3\u4E0E\u7EB3\u65AF\u8FBE\u514B100\u6210\u5206\u7684\u53BB\u91CD\u5408\u96C6\uFF0C\u4E0D\u662F\u5168\u7F8E\u80A1\u3002${data.universeSources.map((s) => `<a href="${esc2(s.url)}" target="_blank" rel="noopener noreferrer">${esc2(s.label)}\uFF08${esc2(s.asof)}\uFF09</a>`).join(" \xB7 ")}\u3002\u4F7F\u7528Yahoo Finance\u63D0\u4F9B\u7684\u80A1\u606F\u4E0E\u62C6\u80A1\u8C03\u6574\u6536\u76D8\u5E8F\u5217\uFF0C\u7F8E\u5143\u8BA1\u4EF7\uFF0C\u4E0D\u542B\u4EBA\u6C11\u5E01\u6C47\u7387\u53D8\u5316\u53CA\u4EA4\u6613\u8D39\u7528\uFF1B\u4E0D\u542B\u76D8\u524D\u3001\u76D8\u540E\u6216\u672A\u6536\u76D8\u65E5\u3002` : `\u89C2\u5BDF\u6C60\u4E3A<a href="${esc2(data.universeSource)}" target="_blank" rel="noopener noreferrer">\u4E2D\u8BC1\u6307\u6570\u5B98\u65B9\u6CAA\u6DF1300\u6210\u5206\uFF08\u540D\u5355\u65E5\u671F${esc2(data.universeAsOf)}\uFF09</a>\uFF0C\u4E0D\u662F\u5168A\u80A1\u3002\u4F7F\u7528\u524D\u590D\u6743\u65E5\u6536\u76D8\u4EF7\uFF08\u975E\u5206\u7EA2\u518D\u6295\u8D44\u6536\u76CA\uFF09\uFF0C`}\u622A\u81F3${data.asof}\u7684\u6700\u8FD130\u4E2A\u81EA\u7136\u65E5\uFF1B\u5468\u672B\u4E0D\u8865\u70B9\u3002\u5B8C\u6574\u89C4\u5219\u53CA\u4E2A\u80A1\u5165\u9009\u4F9D\u636E\u767B\u5F55\u540E\u53EF\u89C1\u3002\u9875\u9762\u5C55\u793A\u89C4\u5219\u5339\u914D\u5019\u9009\uFF0C\u4E0D\u542B\u6536\u76CA\u9884\u6D4B\u6216\u81EA\u52A8\u4EA4\u6613\u3002${data.unknown ? "<details><summary>\u67E5\u770B\u5F85\u6838\u5B9E\u80A1\u7968</summary><p>" + data.excluded.map((s) => esc2(s.code + " " + s.name + "\uFF1A" + s.reason)).join("<br>") + "</p></details>" : ""}`;
+  $("stockPickCoverage").innerHTML = `\u6BCF\u6B21\u6253\u5F00\u968F\u673A\u5C55\u793A\u5019\u9009\uFF0C\u987A\u5E8F\u4E0D\u4EE3\u8868\u63A8\u8350\u4F18\u5148\u7EA7\u3002${market === "HK" ? `\u89C2\u5BDF\u6C60\u4E3A<a href="${esc3(data.universeSource)}" target="_blank" rel="noopener noreferrer">\u6E2F\u4EA4\u6240\u6E2F\u5E01\u4E3B\u677F\u53CAGEM\u666E\u901A\u80A1\u540D\u5355\uFF08${esc3(data.universeAsOf)}\uFF09</a>\uFF0C\u5171${data.total}\u53EA\uFF1B\u6709\u5B8C\u6574\u6536\u76D8\u5E8F\u5217\u7684${data.evaluated}\u53EA\u53C2\u4E0E\u5224\u65AD\uFF0C\u505C\u724C\u3001\u5386\u53F2\u4E0D\u8DB3\u53CA\u6570\u636E\u672A\u53D6\u5F97\u7684\u80A1\u7968\u5355\u5217\u5F85\u6838\u5B9E\u3002\u4F7F\u7528Yahoo Finance\u80A1\u606F\u4E0E\u62C6\u80A1\u8C03\u6574\u6536\u76D8\u5E8F\u5217\uFF0C\u6E2F\u5E01\u8BA1\u4EF7\uFF0C\u4E0D\u542B\u6C47\u7387\u53D8\u5316\u548C\u4EA4\u6613\u8D39\u7528\u3002` : market === "US" ? `\u89C2\u5BDF\u6C60\u4E3ASPY\u5B98\u65B9\u80A1\u7968\u6301\u4ED3\u4E0E\u7EB3\u65AF\u8FBE\u514B100\u6210\u5206\u7684\u53BB\u91CD\u5408\u96C6\uFF0C\u4E0D\u662F\u5168\u7F8E\u80A1\u3002${data.universeSources.map((s) => `<a href="${esc3(s.url)}" target="_blank" rel="noopener noreferrer">${esc3(s.label)}\uFF08${esc3(s.asof)}\uFF09</a>`).join(" \xB7 ")}\u3002\u4F7F\u7528Yahoo Finance\u63D0\u4F9B\u7684\u80A1\u606F\u4E0E\u62C6\u80A1\u8C03\u6574\u6536\u76D8\u5E8F\u5217\uFF0C\u7F8E\u5143\u8BA1\u4EF7\uFF0C\u4E0D\u542B\u4EBA\u6C11\u5E01\u6C47\u7387\u53D8\u5316\u53CA\u4EA4\u6613\u8D39\u7528\uFF1B\u4E0D\u542B\u76D8\u524D\u3001\u76D8\u540E\u6216\u672A\u6536\u76D8\u65E5\u3002` : `\u89C2\u5BDF\u6C60\u4E3A<a href="${esc3(data.universeSource)}" target="_blank" rel="noopener noreferrer">\u4E2D\u8BC1\u6307\u6570\u5B98\u65B9\u6CAA\u6DF1300\u6210\u5206\uFF08\u540D\u5355\u65E5\u671F${esc3(data.universeAsOf)}\uFF09</a>\uFF0C\u4E0D\u662F\u5168A\u80A1\u3002\u4F7F\u7528\u524D\u590D\u6743\u65E5\u6536\u76D8\u4EF7\uFF08\u975E\u5206\u7EA2\u518D\u6295\u8D44\u6536\u76CA\uFF09\uFF0C`}\u622A\u81F3${data.asof}\u7684\u6700\u8FD130\u4E2A\u81EA\u7136\u65E5\uFF1B\u5468\u672B\u4E0D\u8865\u70B9\u3002\u5B8C\u6574\u89C4\u5219\u53CA\u4E2A\u80A1\u5165\u9009\u4F9D\u636E\u767B\u5F55\u540E\u53EF\u89C1\u3002\u9875\u9762\u5C55\u793A\u89C4\u5219\u5339\u914D\u5019\u9009\uFF0C\u4E0D\u542B\u6536\u76CA\u9884\u6D4B\u6216\u81EA\u52A8\u4EA4\u6613\u3002${data.unknown ? "<details><summary>\u67E5\u770B\u5F85\u6838\u5B9E\u80A1\u7968</summary><p>" + data.excluded.map((s) => esc3(s.code + " " + s.name + "\uFF1A" + s.reason)).join("<br>") + "</p></details>" : ""}`;
 }
 async function load() {
   const version = ++requestVersion, selectedMarket = market;
@@ -1742,7 +2177,7 @@ async function load() {
     const next = await r.json();
     if (!Array.isArray(next.matches) || !next.asof || next.market !== selectedMarket) throw Error();
     if (version !== requestVersion) return;
-    data = next;
+    data = { ...next, matches: orderCandidates(next.matches, selectedMarket) };
     render();
   } catch {
     if (version !== requestVersion) return;

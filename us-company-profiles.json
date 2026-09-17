@@ -1326,5 +1326,413 @@
         "url": "https://stockanalysis.com/stocks/amzn/company/"
       }
     ]
+  },
+  "AEP": {
+    "name": "美国电力",
+    "industry": "电力公用事业",
+    "summary": "通过发电和输配电网络向家庭与企业供电，业务围绕电力设施的建设、维护和运营展开。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.aep.com/about/"
+      }
+    ]
+  },
+  "AIG": {
+    "name": "美国国际集团",
+    "industry": "财产与意外险",
+    "summary": "为企业和个人提供财产、责任及意外健康等保险，帮助客户转移经营和生活中的风险。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.aig.com/about"
+      }
+    ]
+  },
+  "AMT": {
+    "name": "美国电塔",
+    "industry": "通信基础设施",
+    "summary": "持有、开发和运营供多家客户共用的通信站点，并经营美国数据中心设施，为通信网络提供基础设施。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/amt/company/"
+      }
+    ]
+  },
+  "ATO": {
+    "name": "阿特莫斯能源",
+    "industry": "天然气公用事业",
+    "summary": "向居民和企业输送天然气，经营天然气配送、管道和储存设施，并持续维护和升级供气网络。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.atmosenergy.com/company/about-atmos-energy/"
+      }
+    ]
+  },
+  "BMY": {
+    "name": "百时美施贵宝",
+    "industry": "生物制药",
+    "summary": "研发和销售处方药，业务涉及肿瘤、血液疾病、免疫及心血管等治疗领域。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.bms.com/"
+      }
+    ]
+  },
+  "CCI": {
+    "name": "冠城国际",
+    "industry": "通信基础设施",
+    "summary": "经营通信基础设施，为无线网络客户提供站点及相关连接服务，支持移动通信网络覆盖。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.crowncastle.com/"
+      }
+    ]
+  },
+  "CHD": {
+    "name": "切迟杜威",
+    "industry": "家庭与个人护理",
+    "summary": "生产和销售家庭清洁及个人护理消费品，产品用于衣物清洁、口腔护理等日常场景。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://churchdwight.com/"
+      }
+    ]
+  },
+  "CL": {
+    "name": "高露洁棕榄",
+    "industry": "日用消费品",
+    "summary": "经营口腔护理、个人护理、家居清洁及宠物营养产品，旗下包括高露洁和希尔思等品牌。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.colgatepalmolive.com/en-us"
+      }
+    ]
+  },
+  "DUK": {
+    "name": "杜克能源",
+    "industry": "电力与天然气",
+    "summary": "通过电力和天然气公用事业向家庭及企业供能，同时投资电网升级和发电设施。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.duke-energy.com/our-company/about-us?id=1921"
+      }
+    ]
+  },
+  "ECL": {
+    "name": "艺康",
+    "industry": "水处理与卫生服务",
+    "summary": "为食品、酒店、医疗和工业客户提供水处理、清洁卫生及感染预防产品与服务，帮助客户管理用水和运营环境。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.ecolab.com/en-us/about"
+      }
+    ]
+  },
+  "ED": {
+    "name": "联合爱迪生",
+    "industry": "综合公用事业",
+    "summary": "通过受监管的公用事业提供电力、天然气及蒸汽服务，并经营相关能源输送设施。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.conedison.com/en/about-us/our-businesses"
+      }
+    ]
+  },
+  "EQT": {
+    "name": "EQT 天然气",
+    "industry": "天然气生产",
+    "summary": "从事天然气生产及相关中游业务，通过生产和输送环节为能源市场供应天然气。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.eqt.com/"
+      }
+    ]
+  },
+  "EVRG": {
+    "name": "Evergy 电力",
+    "industry": "电力公用事业",
+    "summary": "在美国堪萨斯州和密苏里州提供受监管的电力服务，面向居民、社区和企业供电。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.evergy.com/about-evergy/our-company/company-facts"
+      }
+    ]
+  },
+  "EXE": {
+    "name": "Expand Energy 能源",
+    "industry": "天然气能源",
+    "summary": "经营天然气生产业务，主要运营区域包括阿巴拉契亚和海恩斯维尔，并发展天然气供应与市场服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.expandenergy.com/"
+      }
+    ]
+  },
+  "FAST": {
+    "name": "法思诺",
+    "industry": "工业用品供应",
+    "summary": "向企业供应工业用品，并提供库存、物流和供应链管理服务，帮助客户维持日常生产及设备维护。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.fastenal.com/fast/about-us"
+      }
+    ]
+  },
+  "FE": {
+    "name": "第一能源",
+    "industry": "电力公用事业",
+    "summary": "通过旗下电力公司经营输配电网络，为家庭和企业提供电力输送服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.firstenergycorp.com/fehome.html"
+      }
+    ]
+  },
+  "FISV": {
+    "name": "费哲金融服务",
+    "industry": "金融科技与支付",
+    "summary": "为金融机构和商户提供支付处理、银行技术及商业管理工具，支持收款和金融业务数字化。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.fiserv.com/"
+      }
+    ]
+  },
+  "KMI": {
+    "name": "金德摩根",
+    "industry": "能源管道与储运",
+    "summary": "经营天然气及其他能源产品的管道和储运设施，为客户提供运输、储存及装卸等基础设施服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://ir.kindermorgan.com/home/"
+      }
+    ]
+  },
+  "L": {
+    "name": "Loews 洛斯集团",
+    "industry": "多元化控股",
+    "summary": "通过旗下企业经营保险、能源管道、酒店及包装业务，以控股公司的方式参与多个行业。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.loews.com/"
+      }
+    ]
+  },
+  "LIN": {
+    "name": "林德",
+    "industry": "工业气体与工程",
+    "summary": "供应工业和医疗等领域使用的气体，并提供气体处理相关工程与技术，服务制造、医疗和电子等行业。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.linde.com/"
+      }
+    ]
+  },
+  "MCD": {
+    "name": "麦当劳",
+    "industry": "连锁餐饮",
+    "summary": "经营全球快餐品牌，通过直营和特许经营餐厅向消费者提供餐饮，并向加盟体系提供品牌及运营支持。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://corporate.mcdonalds.com/corpmcd/home.html"
+      }
+    ]
+  },
+  "MSCI": {
+    "name": "明晟",
+    "industry": "投资数据与指数",
+    "summary": "向投资机构提供指数、投资组合分析及研究数据工具，帮助客户比较市场表现和评估投资风险。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.msci.com/"
+      }
+    ]
+  },
+  "NFLX": {
+    "name": "奈飞",
+    "industry": "流媒体娱乐",
+    "summary": "向用户提供影视及其他娱乐内容，通过在线平台分发剧集、电影等作品。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://about.netflix.com/en"
+      }
+    ]
+  },
+  "NI": {
+    "name": "NiSource 能源",
+    "industry": "天然气与电力",
+    "summary": "通过旗下公用事业提供天然气和电力服务，经营支持社区及企业用能的基础设施。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.nisource.com/"
+      }
+    ]
+  },
+  "OTIS": {
+    "name": "奥的斯",
+    "industry": "电梯与自动扶梯",
+    "summary": "设计、制造和安装电梯、自动扶梯及自动人行道，并为既有设备提供维护和更新改造服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.otis.com/en/us/"
+      }
+    ]
+  },
+  "PEP": {
+    "name": "百事公司",
+    "industry": "食品与饮料",
+    "summary": "经营饮料和休闲食品业务，旗下产品涵盖百事饮料、乐事薯片和桂格食品等消费品牌。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.pepsico.com/"
+      }
+    ]
+  },
+  "REG": {
+    "name": "Regency 商业地产",
+    "industry": "购物中心地产",
+    "summary": "持有、运营和开发购物中心，许多物业以超市为核心租户，面向周边社区提供购物和生活服务空间。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.regencycenters.com/"
+      }
+    ]
+  },
+  "SBAC": {
+    "name": "SBA 通信",
+    "industry": "通信基础设施",
+    "summary": "建设、持有和出租通信铁塔及站点，并提供站点开发、施工、维护和运营服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.sbasite.com/"
+      }
+    ]
+  },
+  "VICI": {
+    "name": "VICI 地产",
+    "industry": "体验式商业地产",
+    "summary": "持有博彩、酒店、娱乐和休闲类物业，并通过长期租赁向运营商提供经营场所。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://viciproperties.com/about-us/"
+      }
+    ]
+  },
+  "WM": {
+    "name": "美国废物管理",
+    "industry": "环境与废物处理",
+    "summary": "提供垃圾收运、转运、回收及处置服务，同时经营填埋气能源项目和特殊废物处理等业务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/wm/company/"
+      }
+    ]
+  },
+  "WMB": {
+    "name": "威廉姆斯公司",
+    "industry": "天然气基础设施",
+    "summary": "经营天然气相关基础设施，为能源客户提供天然气集输、处理和运输服务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.williams.com/"
+      }
+    ]
+  },
+  "ZBH": {
+    "name": "捷迈邦美",
+    "industry": "骨科医疗器械",
+    "summary": "提供骨科相关医疗器械和技术，包括关节置换及配套手术解决方案，服务医生和医疗机构。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.zimmerbiomet.com/en"
+      }
+    ]
+  },
+  "ZTS": {
+    "name": "硕腾",
+    "industry": "动物保健",
+    "summary": "为宠物和养殖动物研发并提供药品、疫苗及诊断等产品，服务兽医和动物养殖客户。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "公司官网 · 业务资料",
+        "url": "https://www.zoetis.com/"
+      }
+    ]
+  },
+  "GOOGL": {
+    "name": "Alphabet 谷歌母公司 C类（A类股）",
+    "industry": "互联网与云计算",
+    "summary": "旗下谷歌提供搜索、YouTube、Android 等产品，并经营数字广告、Google Cloud 云服务及其他技术业务。",
+    "checkedAt": "2026-09-17",
+    "sources": [
+      {
+        "label": "Stock Analysis 公司资料",
+        "url": "https://stockanalysis.com/stocks/goog/company/"
+      }
+    ]
   }
 }

@@ -120,3 +120,12 @@ body.exit-mode .hd-island,body.exit-mode.is-compact .hd-island{background:#18291
 @media(max-width:1050px){.exit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.decision-switch{min-width:340px}}
 @media(max-width:700px){.decision-mode{flex-direction:column;align-items:stretch;gap:16px;padding:14px 0 22px}.decision-caption{display:none}.decision-switch{min-width:0;width:100%}.decision-switch button{padding:12px}.decision-switch button span{font-size:16px}.decision-switch button small{font-size:8px}.exit-heading{align-items:flex-start;flex-direction:column;gap:16px;margin-bottom:25px}.exit-heading h1{font-size:34px}.exit-heading p{font-size:15px}.exit-heading>a{padding:10px 17px}.exit-grid{grid-template-columns:1fr}.exit-stats>div{padding:16px 12px}.exit-stats b{font-size:27px}.exit-stats small{font-size:10px;margin-left:4px}.exit-stats span{font-size:11px}.exit-toolbar{align-items:stretch;flex-direction:column;gap:15px}.exit-scope{align-self:flex-start}.exit-toolbar input{width:100%}.exit-card{padding:22px}.exit-quote>strong{font-size:clamp(26px,6.6vw,42px)}.transition-bottom{align-items:center}.transition-bottom>span{font-size:8px;letter-spacing:.1em}#skipExitTransition{font-size:12px;padding:10px 14px}}
 @media(prefers-reduced-motion:reduce){.decision-switch>i,.decision-switch button,.decision-switch button:before,.exit-card{transition:none}.exit-card:hover{transform:none}}
+
+/* Shared company context, tuned for the exit workspace. */
+.exit-card .company-english{font-size:12px;line-height:1.6;color:#a7b8ae;margin:4px 0 0;overflow-wrap:anywhere}
+.exit-card .company-intro{background:#21362e;border-left-color:#719a88;margin:16px 0;padding:14px;border-radius:12px}
+.exit-card .company-industry{background:#314b3f;color:#d4e6da;font-size:12px}
+.exit-card .company-intro>p{color:#d2dfd5;font-size:14px;line-height:1.85;margin:10px 0}
+.exit-card .company-sources summary{font-size:12px;color:#a8beb0}
+.exit-card .company-sources p,.exit-card .company-sources a{font-size:12px;line-height:1.8;overflow-wrap:anywhere}
+.exit-card .company-sources a{color:#dfc399;text-underline-offset:4px}
