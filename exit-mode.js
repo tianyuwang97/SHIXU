@@ -99,7 +99,7 @@ export function initExitMode(onChange){
    buttons.forEach(b=>b.disabled=false);busy=false;
    if(active)$('decisionTitle').focus({preventScroll:true});else (trigger||document.querySelector('[data-decision="exit"]')).focus({preventScroll:true});
    if(guestReturn&&!active){
-    $('decisionInvitation').innerHTML='<a href="'+loginURL()+'"><strong>登录时序</strong><span>看见投资的另一面<span aria-hidden="true"> ↗</span></span></a>';
+    $('decisionInvitation').innerHTML='<a href="'+loginURL()+'"><strong>时序 (SHIXU)</strong><span>看见投资的另一面</span></a>';
     $('decisionInvitation').hidden=false;
     document.querySelector('.decision-mode').classList.add('has-invitation');
     if(!reduced.matches)$('decisionInvitation').animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:800,easing:'cubic-bezier(.22,1,.36,1)'});

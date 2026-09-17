@@ -8,10 +8,10 @@
 .decision-mode.has-invitation>.decision-switch{justify-self:end}
 .decision-invitation[hidden]{display:none}
 .decision-invitation{width:250px;justify-self:center;text-align:center}
-.decision-invitation a{display:flex;flex-direction:column;align-items:center;gap:8px;padding:21px 16px;border:1px solid #df8b39;border-radius:22px;background:#f4b56d;color:#113d32;text-decoration:none;box-shadow:inset 0 1px 0 #fff8,0 8px 24px #a7632426;transition:background .2s,box-shadow .2s,transform .2s}
+.decision-invitation a{display:flex;flex-direction:column;align-items:center;gap:8px;padding:21px 16px;border:1px solid #cbb99d;border-radius:22px;background:#e5d6bf;color:#113d32;text-decoration:none;box-shadow:inset 0 1px 0 #fff8,0 8px 24px #786b551a;transition:background .2s,box-shadow .2s,transform .2s}
 .decision-invitation strong{font-family:inherit;font-size:25px;font-weight:800;line-height:1.3;letter-spacing:-.025em}
 .decision-invitation a>span{font-size:15px;font-weight:700;line-height:1.5}
-.decision-invitation a:hover{background:#ffc681;box-shadow:inset 0 1px 0 #fff8,0 10px 28px #a7632440;transform:translateY(-2px)}
+.decision-invitation a:hover{background:#eddfca;box-shadow:inset 0 1px 0 #fff8,0 10px 28px #786b552b;transform:translateY(-2px)}
 .decision-invitation a:focus-visible{outline:3px solid #126452;outline-offset:5px}
 .decision-switch{display:grid;grid-template-columns:1fr 1.25fr;position:relative;isolation:isolate;min-width:370px;gap:6px;padding:6px;background:#e9efea;border:1px solid #cbd8cd;border-radius:23px}
 .decision-switch>i{position:absolute;inset:6px auto 6px 6px;width:calc((100% - 18px)/2.25);border-radius:17px;background:#fff;box-shadow:0 3px 9px #113a3012;transition:width .45s,transform .55s cubic-bezier(.22,1,.36,1)}

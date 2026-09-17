@@ -2004,7 +2004,7 @@ function initExitMode(onChange) {
       if (active) $2("decisionTitle").focus({ preventScroll: true });
       else (trigger || document.querySelector('[data-decision="exit"]')).focus({ preventScroll: true });
       if (guestReturn && !active) {
-        $2("decisionInvitation").innerHTML = '<a href="' + loginURL2() + '"><strong>\u767B\u5F55\u65F6\u5E8F</strong><span>\u770B\u89C1\u6295\u8D44\u7684\u53E6\u4E00\u9762<span aria-hidden="true"> \u2197</span></span></a>';
+        $2("decisionInvitation").innerHTML = '<a href="' + loginURL2() + '"><strong>\u65F6\u5E8F (SHIXU)</strong><span>\u770B\u89C1\u6295\u8D44\u7684\u53E6\u4E00\u9762</span></a>';
         $2("decisionInvitation").hidden = false;
         document.querySelector(".decision-mode").classList.add("has-invitation");
         if (!reduced.matches) $2("decisionInvitation").animate([{ opacity: 0, transform: "translateY(6px)" }, { opacity: 1, transform: "translateY(0)" }], { duration: 800, easing: "cubic-bezier(.22,1,.36,1)" });
