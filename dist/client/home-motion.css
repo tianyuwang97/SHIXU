@@ -20,3 +20,17 @@ body{overflow-x:clip}.home-intro.coin-home{display:flow-root;text-align:center;m
 .coin-rim i{position:absolute;left:51.1%;top:49.4%;display:block;backface-visibility:visible}
 .coin-button.spinning .coin-rotor{will-change:transform}
 .coin-button.spinning .coin-rotor img{will-change:auto;filter:none}
+
+/* A quiet, non-interactive invitation to discover the coin gesture. */
+.coin-swipe-hint{position:absolute;z-index:2;left:50%;top:50%;width:min(var(--coin-hint-span,304px),calc(100% - 12px));height:28px;transform:translate(-50%,-50%);display:flex;justify-content:space-between;color:#789387;opacity:0;pointer-events:none;user-select:none;transition:opacity .85s ease .8s}
+.coin-swipe-hint>span{display:block;width:32px;height:28px}
+.coin-swipe-hint svg{display:block;width:100%;height:100%}
+.coin-swipe-right svg{transform:scaleX(-1)}
+.coin-hint-ready .coin-swipe-hint{opacity:.5}
+.coin-hint-ready .coin-swipe-left{animation:coin-hint-left 3.8s ease-in-out 1.8s infinite}
+.coin-hint-ready .coin-swipe-right{animation:coin-hint-right 3.8s ease-in-out 1.8s infinite}
+.coin-stage.coin-hint-used .coin-swipe-hint{opacity:0;transition-delay:0s}
+.coin-hint-used .coin-swipe-hint>span{animation-play-state:paused}
+@keyframes coin-hint-left{0%,25%,100%{transform:translateX(0)}55%{transform:translateX(-4px)}}
+@keyframes coin-hint-right{0%,25%,100%{transform:translateX(0)}55%{transform:translateX(4px)}}
+@media(prefers-reduced-motion:reduce){.coin-swipe-hint{transition:none}.coin-hint-ready .coin-swipe-hint>span{animation:none}}

@@ -5,6 +5,12 @@
  const turn=document.getElementById('coinTurn'),caption=document.getElementById('coinCaption');
  const themes={fund:['/coin-fund.png','基金 · 北京中轴线'],cn:['/coin-cn.png','A股 · 浦东建筑群'],us:['/coin-us.png','美股 · 自由女神像'],hk:['/coin-hk.png','港股 · 维多利亚港']};
  const assets=new Map();let wanted=image.dataset?.market||'fund',shown=wanted,changeId=0,turnAnimation=null;
+ const swipeHint=document.createElement('span');
+ swipeHint.className='coin-swipe-hint';swipeHint.setAttribute('aria-hidden','true');
+ const hintArrow='<svg viewBox="0 0 32 28" fill="none" aria-hidden="true"><path d="M26 14H7M12 9l-5 5 5 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="m27 12 2 2-2 2-2-2Z" fill="currentColor" opacity=".5"/></svg>';
+ swipeHint.innerHTML='<span class="coin-swipe-left">'+hintArrow+'</span><span class="coin-swipe-right">'+hintArrow+'</span>';
+ stage.append(swipeHint);
+ const dismissSwipeHint=()=>stage.classList.add('coin-hint-used');
  // Two independently facing surfaces and a faceted gold rim give the turn real thickness.
  const rotor=document.createElement('span'),rim=document.createElement('span'),back=image.cloneNode(false);
  rotor.className='coin-rotor';rim.className='coin-rim';
@@ -18,6 +24,7 @@
  });
  function sizeCoin(){
   const w=button.clientWidth,h=button.clientHeight,depth=Math.max(14,w*.065);
+  stage.style.setProperty('--coin-hint-span',w+44+'px');
   rotor.style.setProperty('--coin-half-depth',depth/2+'px');
   rimPanels.forEach((panel,i)=>{
    const theta=i/48*Math.PI*2,rx=w*.365,ry=h*.398;
@@ -112,7 +119,7 @@
   if(!g.axis){
    if(Math.max(Math.abs(dx),Math.abs(dy))<8)return;
    if(Math.abs(dy)>Math.abs(dx)){releaseGesture();settleSpin();return;}
-   g.axis='x';button.setPointerCapture(e.pointerId);button.classList.add('dragging','spinning');
+   g.axis='x';dismissSwipeHint();button.setPointerCapture(e.pointerId);button.classList.add('dragging','spinning');
   }
   e.preventDefault();
   const delta=(e.clientX-g.lastX)*g.sensitivity,dt=Math.max(8,now-g.lastTime);
@@ -134,7 +141,7 @@
  button.addEventListener('pointerleave',e=>{if(gesture&&!gesture.axis)finishGesture(e,true);});
  button.addEventListener('keydown',e=>{
   if(!['ArrowLeft','ArrowRight'].includes(e.key)||!loaded||turnAnimation)return;
-  e.preventDefault();entrance?.cancel();entrance=null;flight.classList.remove('arriving');
+  e.preventDefault();dismissSwipeHint();entrance?.cancel();entrance=null;flight.classList.remove('arriving');
   stopFrame();velocity=e.key==='ArrowLeft'?-1.1:1.1;coast();
  });
  document.addEventListener('visibilitychange',()=>{if(document.hidden)resetSpin();});
@@ -158,6 +165,7 @@
  button.addEventListener('click',e=>{
   if(performance.now()<suppressClickUntil){e.preventDefault();return;}
   if(!loaded||turnAnimation||reduced.matches)return;
+  dismissSwipeHint();
   entrance?.cancel();entrance=null;flight.classList.remove('arriving');
   stopFrame();velocity=1.15;coast();
  });
@@ -170,5 +178,5 @@
  },{passive:true});
  stage.addEventListener('pointerleave',()=>{point=null;tilt.style.transform='';});
  reduced.addEventListener('change',()=>{cancelMotion();flight.classList.remove('arriving');tilt.style.transform='';changeTheme(wanted);});
- image.decode().then(()=>{const selected=document.querySelector?.('[data-home-market][aria-selected="true"]');if(selected)wanted=selected.dataset.homeMarket;loaded=true;replay();Object.keys(themes).forEach(key=>prepare(key).catch(()=>{}));if(wanted!==shown)changeTheme(wanted);}).catch(()=>{document.getElementById('coinError').hidden=false;if(caption)caption.hidden=true;});
+ image.decode().then(()=>{const selected=document.querySelector?.('[data-home-market][aria-selected="true"]');if(selected)wanted=selected.dataset.homeMarket;loaded=true;replay();stage.classList.add('coin-hint-ready');Object.keys(themes).forEach(key=>prepare(key).catch(()=>{}));if(wanted!==shown)changeTheme(wanted);}).catch(()=>{document.getElementById('coinError').hidden=false;if(caption)caption.hidden=true;});
 })();
