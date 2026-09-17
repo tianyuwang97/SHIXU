@@ -19,16 +19,14 @@ html.lenis,html.lenis body{scroll-behavior:auto!important}.scroll-feel{display:f
 /* Keep vertical page scrolling and pinch zoom while horizontal flicks rotate the coin. */
 .coin-button{touch-action:pan-y pinch-zoom;cursor:grab;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}.coin-button.dragging{cursor:grabbing}.coin-button img{pointer-events:none;transform-origin:50% 50%}
 
-/* Upright Y-axis coin: front, back, and a continuous 48-facet metal edge. */
+/* Upright Y-axis coin with consistent original artwork in motion and at rest. */
 .coin-button{perspective:1000px;overflow:visible;transform-style:preserve-3d}
 .coin-rotor{position:relative;display:block;width:100%;height:100%;transform-origin:51.1% 49.4%;transform-style:preserve-3d;pointer-events:none}
 .coin-button .coin-rotor img{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
 .coin-button .coin-front{transform:translateZ(var(--coin-half-depth,10px))}
 .coin-button .coin-back{transform:rotateY(180deg) translateZ(var(--coin-half-depth,10px))}
-.coin-rim{position:absolute;inset:0;display:block;transform-style:preserve-3d;visibility:hidden}
-.coin-rim i{position:absolute;left:51.1%;top:49.4%;display:block;backface-visibility:visible}
 .coin-button.spinning .coin-rotor{will-change:transform}
-.coin-button.spinning .coin-rotor img{will-change:auto;filter:none}
+.coin-button.spinning .coin-rotor img{will-change:auto}
 
 /* A quiet, non-interactive invitation to discover the coin gesture. */
 .coin-swipe-hint{position:absolute;z-index:2;left:50%;top:50%;width:min(var(--coin-hint-span,304px),calc(100% - 12px));height:28px;transform:translate(-50%,-50%);display:flex;justify-content:space-between;color:#789387;opacity:0;pointer-events:none;user-select:none;transition:opacity .85s ease .8s}

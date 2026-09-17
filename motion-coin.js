@@ -11,29 +11,16 @@
  swipeHint.innerHTML='<span class="coin-swipe-left">'+hintArrow+'</span><span class="coin-swipe-right">'+hintArrow+'</span>';
  stage.append(swipeHint);
  const dismissSwipeHint=()=>stage.classList.add('coin-hint-used');
- // Two independently facing surfaces and a faceted gold rim give the turn real thickness.
- const rotor=document.createElement('span'),rim=document.createElement('span'),back=image.cloneNode(false);
- rotor.className='coin-rotor';rim.className='coin-rim';
+ // Keep the original coin artwork on both faces without an extra rim overlay.
+ const rotor=document.createElement('span'),back=image.cloneNode(false);
+ rotor.className='coin-rotor';
  back.removeAttribute('id');back.removeAttribute('data-market');back.alt='';back.setAttribute('aria-hidden','true');
  back.className='coin-back';back.draggable=false;
- image.classList.add('coin-front');button.append(rotor);rotor.append(rim,image,back);
- const rimPanels=Array.from({length:48},(_,i)=>{
-  const panel=document.createElement('i');
-  panel.style.background=`linear-gradient(90deg,#a95710,hsl(38 95% ${44+12*Math.cos(i/48*Math.PI*2)}%),#e6a02a)`;
-  rim.append(panel);return panel;
- });
+ image.classList.add('coin-front');button.append(rotor);rotor.append(image,back);
  function sizeCoin(){
-  const w=button.clientWidth,h=button.clientHeight,depth=Math.max(14,w*.065);
+  const w=button.clientWidth,depth=Math.max(14,w*.065);
   stage.style.setProperty('--coin-hint-span',w+44+'px');
   rotor.style.setProperty('--coin-half-depth',depth/2+'px');
-  rimPanels.forEach((panel,i)=>{
-   const theta=i/48*Math.PI*2,rx=w*.365,ry=h*.398;
-   const normal=Math.atan2(rx*Math.sin(theta),ry*Math.cos(theta));
-   const length=Math.hypot(rx*Math.sin(theta),ry*Math.cos(theta))*Math.PI*2/48+1;
-   panel.style.width=depth+'px';panel.style.height=length+'px';
-   panel.style.marginLeft=-depth/2+'px';panel.style.marginTop=-length/2+'px';
-   panel.style.transform=`translate3d(${rx*Math.cos(theta)}px,${ry*Math.sin(theta)}px,0) rotateZ(${normal}rad) rotateY(90deg)`;
-  });
  }
  new ResizeObserver(sizeCoin).observe(button);sizeCoin();
  function prepare(key){
@@ -68,7 +55,6 @@
  function paintSpin(){
   // Cancel the existing decorative -8 degree tilt around the vertical spin axis.
   rotor.style.transform=`rotateZ(8deg) rotateY(${angle}deg) rotateZ(-8deg)`;
-  rim.style.visibility=Math.abs(Math.sin(angle*Math.PI/180))>.08?'visible':'hidden';
  }
  function stopFrame(){cancelAnimationFrame(spinFrame);spinFrame=0;}
  function releaseGesture(){
@@ -76,7 +62,7 @@
   if(id!==undefined&&button.hasPointerCapture(id))button.releasePointerCapture(id);
  }
  function resetSpin(){
-  stopFrame();releaseGesture();angle=velocity=0;rotor.style.transform='';rim.style.visibility='hidden';button.classList.remove('spinning');
+  stopFrame();releaseGesture();angle=velocity=0;rotor.style.transform='';button.classList.remove('spinning');
  }
  function settleSpin(){
   stopFrame();
