@@ -10,8 +10,8 @@ export function initExitMode(onChange){
  const orderCandidates=createCandidateOrder();
  const nav=document.querySelector('.market-navigation');
  nav.insertAdjacentHTML('afterend',`<section class="decision-mode" aria-label="研究模式"><div class="decision-caption"><h2 class="decision-title" id="decisionTitle" tabindex="-1"><span class="decision-kicker">留意</span><span>这些股票或基金</span><span class="decision-emphasis">机会正在浮现</span></h2><p id="decisionHint" role="status" hidden></p></div><div class="decision-switch" role="group" aria-label="切换研究模式"><i aria-hidden="true"></i><div class="decision-label"><span id="decisionLabel">${mysteryMark}</span><small id="decisionLabelEnglish" hidden>DISCOVER</small></div><button type="button" data-decision="exit" aria-pressed="false" aria-label="查看卖出候选（需要登录）"><span class="portal-aura" aria-hidden="true"></span><span class="portal-art" aria-hidden="true"><img class="portal-mark portal-closed" src="/stone-portal.png" width="142" height="164" alt="" draggable="false"><img class="portal-mark portal-open" src="/stone-portal-open.png" width="142" height="164" alt="" draggable="false"></span></button></div></section>
- <section class="exit-workspace" id="exit-workspace" hidden aria-labelledby="exitTitle"><header class="exit-heading"><div><h2 id="exitTitle">A股 · 退出信号</h2><p>查看出现退出信号的股票和基金，辅助判断减仓与离场时机。</p></div><a id="exitHoldingsLink" href="/portfolio?market=cn">管理我的持仓</a></header><div class="exit-toolbar"><div class="exit-scope" role="group" aria-label="检查范围"><button data-exit-scope="market" aria-pressed="true">市场观察池</button><button data-exit-scope="holdings" aria-pressed="false">我的持仓</button></div><label><span id="exitSearchLabel">搜索股票</span><input id="exitSearch" type="search" placeholder="名称或代码" autocomplete="off"></label></div><p id="exitMeta" class="exit-meta" role="status"></p><div id="exitStats" class="exit-stats"></div><div id="exitRules" class="exit-rules"></div><div id="exitCards" class="exit-grid"></div><button id="exitMore" hidden>查看更多</button><p class="exit-footnote" id="exitFootnote">市场候选每次打开随机展示，顺序不代表卖出优先级。只展示同时符合 R01 与向下 R02 的卖出候选，使用最近30自然日的行情观察期。候选不等于必须卖出；未入选也不代表可以放心持有。规则尚未完成收益回测，不自动执行交易。</p></section>`);
- document.body.insertAdjacentHTML('beforeend',`<dialog id="exitTransition" aria-labelledby="exitQuote"><span class="transition-brand">时序 <small>SHIXU</small></span><div class="exit-quote" id="exitQuote"><span>投资的远见</span><span>不止于发现价值</span><strong>更在于进退有据</strong></div><div class="transition-bottom"><span>KNOW WHEN TO EXIT</span><button id="skipExitTransition" type="button">看见另一面</button></div></dialog>`);
+ <section class="exit-workspace" id="exit-workspace" hidden aria-labelledby="exitTitle"><header class="exit-heading"><div><h2 id="exitTitle">A股</h2><p>查看出现退出信号的股票和基金，辅助判断减仓与离场时机。</p></div><a id="exitHoldingsLink" href="/portfolio?market=cn">管理我的持仓</a></header><div class="exit-toolbar"><div class="exit-scope" role="group" aria-label="检查范围"><button data-exit-scope="market" aria-pressed="true">市场观察池</button><button data-exit-scope="holdings" aria-pressed="false">我的持仓</button></div><label><span id="exitSearchLabel">搜索股票</span><input id="exitSearch" type="search" placeholder="名称或代码" autocomplete="off"></label></div><p id="exitMeta" class="exit-meta" role="status"></p><div id="exitStats" class="exit-stats"></div><div id="exitRules" class="exit-rules"></div><div id="exitCards" class="exit-grid"></div><button id="exitMore" hidden>查看更多</button><p class="exit-footnote" id="exitFootnote">市场候选每次打开随机展示，顺序不代表卖出优先级。只展示同时符合 R01 与向下 R02 的卖出候选，使用最近30自然日的行情观察期。候选不等于必须卖出；未入选也不代表可以放心持有。规则尚未完成收益回测，不自动执行交易。</p></section>`);
+ document.body.insertAdjacentHTML('beforeend',`<dialog id="exitTransition" aria-labelledby="exitQuote"><span class="transition-brand">时序 <small>SHIXU</small></span><div class="exit-quote" id="exitQuote"><span>投资的远见</span><span>不止于发现价值</span><strong>更在于进退有据</strong></div><div class="transition-bottom"><span>KNOW WHEN TO EXIT</span><button id="skipExitTransition" type="button" disabled aria-hidden="true">看见另一面</button></div></dialog>`);
  const $=id=>document.getElementById(id),dialog=$('exitTransition'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const openGate=document.querySelector('.portal-open');
  openGate.decode().then(()=>openGate.parentElement.classList.add('open-ready')).catch(()=>{});
@@ -36,7 +36,8 @@ export function initExitMode(onChange){
  function scrollToWorkspace(){const y=document.querySelector('.market-navigation').getBoundingClientRect().top+scrollY-parseFloat(getComputedStyle(document.body).getPropertyValue('--live-header-h')||'132')-14;window.scrollTo({top:Math.max(0,y),behavior:'instant'});document.dispatchEvent(new Event('shixu:scroll-reset'));}
  const pause=ms=>new Promise(resolve=>{const timer=setTimeout(resolve,ms);skip=()=>{clearTimeout(timer);resolve();};});
  async function change(next,trigger=null){
-  if(busy||next===active)return;busy=true;
+  if(busy||next===active)return;busy=true;skip=null;
+  const action=$('skipExitTransition');action.disabled=true;action.setAttribute('aria-hidden','true');
   let guestReturn=false;
   const returning=!next;
   const buttons=[...document.querySelectorAll('[data-decision]')];buttons.forEach(b=>b.disabled=true);
@@ -59,12 +60,18 @@ export function initExitMode(onChange){
     const cx=bounds.left+bounds.width/2,cy=bounds.top+bounds.height/2,radius=Math.hypot(innerWidth,innerHeight);
     $('exitQuote').hidden=false;$('skipExitTransition').textContent='看见另一面';
     dialog.showModal();
+    const quoteAnimations=[];
     if(!reduced.matches){
      animations.push(dialog.animate([{clipPath:'circle(0px at '+cx+'px '+cy+'px)'},{clipPath:'circle('+radius+'px at '+cx+'px '+cy+'px)'}],{duration:650,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'}));
-     [...dialog.querySelectorAll('.exit-quote>*')].forEach((el,i)=>animations.push(el.animate([{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'translateY(0)'}],{duration:1100,delay:[600,1950,3700][i],easing:'cubic-bezier(.22,1,.36,1)',fill:'both'})));
+     [...dialog.querySelectorAll('.exit-quote>*')].forEach((el,i)=>quoteAnimations.push(el.animate([{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'translateY(0)'}],{duration:1100,delay:[600,1950,3700][i],easing:'cubic-bezier(.22,1,.36,1)',fill:'both'})));
     }
-    // Last line finishes at 4.8s; hold it for 2.8s before the curtain lifts.
-    await pause(reduced.matches?3800:7600);
+    animations.push(...quoteAnimations);
+    // Reveal the action only after every line has actually finished animating.
+    if(reduced.matches)await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+    else await Promise.all(quoteAnimations.map(animation=>animation.finished));
+    action.removeAttribute('aria-hidden');action.disabled=false;
+    if(!reduced.matches)animations.push(action.animate([{opacity:0},{opacity:1}],{duration:450,easing:'ease-out',fill:'both'}));
+    await pause(reduced.matches?3800:2800);
     const session=await sessionPromise;
     guestReturn=session?.authenticated===false;
     if(!session?.authenticated)next=false;
@@ -83,7 +90,7 @@ export function initExitMode(onChange){
    $('decisionHint').hidden=false;$('decisionHint').textContent='暂时无法验证登录，请稍后再试。';
    document.querySelector('.decision-caption').classList.add('has-error');
   }finally{
-   skip=null;animations.forEach(a=>a.cancel());animations=[];
+   skip=null;action.disabled=true;action.setAttribute('aria-hidden','true');animations.forEach(a=>a.cancel());animations=[];
    if(dialog.open)dialog.close();dialog.getAnimations().forEach(a=>a.cancel());
    buttons.forEach(b=>b.disabled=false);busy=false;
    if(active)$('decisionTitle').focus({preventScroll:true});else (trigger||document.querySelector('[data-decision="exit"]')).focus({preventScroll:true});
@@ -95,7 +102,7 @@ export function initExitMode(onChange){
    }
   }
  }
- $('skipExitTransition').onclick=()=>skip?.();dialog.addEventListener('cancel',e=>{e.preventDefault();skip?.();});
+ $('skipExitTransition').onclick=()=>{if(!$('skipExitTransition').disabled)skip?.();};dialog.addEventListener('cancel',e=>{e.preventDefault();if(!$('skipExitTransition').disabled)skip?.();});
  const gateButton=document.querySelector('[data-decision=exit]');
  gateButton.onclick=()=>change(!active,gateButton);
  const holdings=()=>{try{const raw=JSON.parse(localStorage.getItem('shixu-holdings-v1')||'{}');return Array.isArray(raw[market]?.rows)?raw[market].rows.filter(r=>typeof r.code==='string'&&r.value>0):[];}catch{return [];}};
@@ -124,7 +131,7 @@ export function initExitMode(onChange){
  }
  async function load(){
   const id=++version,selected=market;data=null;limit=9;
-  $('exitTitle').textContent=names[market]+' · 退出信号';$('exitHoldingsLink').href='/portfolio?market='+market;
+  $('exitTitle').textContent=names[market];$('exitHoldingsLink').href='/portfolio?market='+market;
   $('exitStats').innerHTML='';$('exitRules').innerHTML='';$('exitCards').innerHTML='';$('exitMore').hidden=true;
   $('exitSearchLabel').textContent=market==='fund'?'搜索基金':'搜索股票';
   $('exitMeta').textContent='正在检查'+names[market]+'退出信号…';$('exitCards').innerHTML='<div class="exit-loading" role="status">正在读取行情快照与触发记录…</div>';

@@ -61,6 +61,7 @@
 .decision-caption.has-error a{color:inherit;text-decoration:underline;text-underline-offset:4px}
 .transition-bottom{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:20px}.transition-bottom>span{font-size:10px;letter-spacing:.23em;color:#a1b09e}
 #skipExitTransition{grid-column:2;justify-self:center;border:1px solid #69715c;border-radius:100px;background:transparent;color:#e7dfcd;padding:12px 22px;font-family:inherit;font-size:14px;font-weight:750;line-height:1.4;letter-spacing:.06em;cursor:pointer}
+#skipExitTransition[aria-hidden="true"]{visibility:hidden;pointer-events:none}
 #skipExitTransition:hover{background:#263329}#exitTransition :focus-visible{outline:2px solid #efba82;outline-offset:6px}
 
 /* Exit mode changes the whole home surface, rather than inverting pixels. */
