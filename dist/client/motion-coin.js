@@ -7,7 +7,7 @@
  const assets=new Map();let wanted=image.dataset?.market||'fund',shown=wanted,changeId=0,turnAnimation=null;
  const swipeHint=document.createElement('span');
  swipeHint.className='coin-swipe-hint';swipeHint.setAttribute('aria-hidden','true');
- const hintArrow='<svg viewBox="0 0 32 28" fill="none" aria-hidden="true"><path d="M26 14H7M12 9l-5 5 5 5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="m27 12 2 2-2 2-2-2Z" fill="currentColor" opacity=".5"/></svg>';
+ const hintArrow='<svg viewBox="0 0 32 28" fill="none" aria-hidden="true"><path d="M26 14H7M12 9l-5 5 5 5" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="m27 12 2 2-2 2-2-2Z" fill="currentColor" opacity=".5"/></svg>';
  swipeHint.innerHTML='<span class="coin-swipe-left">'+hintArrow+'</span><span class="coin-swipe-right">'+hintArrow+'</span>';
  stage.append(swipeHint);
  const dismissSwipeHint=()=>stage.classList.add('coin-hint-used');
@@ -62,7 +62,7 @@
   if(id!==undefined&&button.hasPointerCapture(id))button.releasePointerCapture(id);
  }
  function resetSpin(){
-  stopFrame();releaseGesture();angle=velocity=0;rotor.style.transform='';button.classList.remove('spinning');
+  stopFrame();releaseGesture();angle=velocity=0;rotor.style.transform='';button.classList.remove('spinning');stage.classList.remove('coin-hint-used');
  }
  function settleSpin(){
   stopFrame();
