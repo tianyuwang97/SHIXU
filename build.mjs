@@ -1,6 +1,7 @@
 import {buildHeaderDemo,buildHomeIsland} from './header-demo-build.mjs';
 import {build} from 'esbuild';
 import fs from 'node:fs';
+import {buildSiteIcons} from './site-icons-build.mjs';
 import {companies} from './company-data.mjs';
 import {extendScreener} from './screener-build.mjs';
 import {buildStockPicks,stockPick} from './stock-picks-core.mjs';
@@ -94,5 +95,6 @@ for(const page of ['index.html','funds.html','compare.html','companies.html','st
  if(!['simulation.html','stocks.html'].includes(page)){const end=html.includes('</body>')?'</body>':'</html>';html=html.replace(end,'<script type="module" src="/research-dock.js"></script>'+end);}
  fs.writeFileSync(path,html);
 }
+buildSiteIcons();
 await build({entryPoints:['worker.mjs'],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:'dist/server/index.js',minify:true});
 console.log('Built historical rehearsal Worker and preserved fund screener');
