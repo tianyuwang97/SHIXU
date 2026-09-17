@@ -10,6 +10,7 @@
 .decision-invitation{width:250px;justify-self:center;text-align:center}
 .decision-invitation a{display:flex;flex-direction:column;align-items:center;gap:8px;padding:21px 16px;border:1px solid #cbb99d;border-radius:22px;background:#e5d6bf;color:#113d32;text-decoration:none;box-shadow:inset 0 1px 0 #fff8,0 8px 24px #786b551a;transition:background .2s,box-shadow .2s,transform .2s}
 .decision-invitation strong{font-family:inherit;font-size:25px;font-weight:800;line-height:1.3;letter-spacing:-.025em}
+.decision-invitation .invitation-action{font-size:14px;letter-spacing:.12em}
 .decision-invitation a>span{font-size:15px;font-weight:700;line-height:1.5}
 .decision-invitation a:hover{background:#eddfca;box-shadow:inset 0 1px 0 #fff8,0 10px 28px #786b552b;transform:translateY(-2px)}
 .decision-invitation a:focus-visible{outline:3px solid #126452;outline-offset:5px}
