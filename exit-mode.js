@@ -67,7 +67,7 @@ export function initExitMode(onChange){
     const quoteAnimations=[];
     if(!reduced.matches){
      animations.push(dialog.animate([{clipPath:'circle(0px at '+cx+'px '+cy+'px)'},{clipPath:'circle('+radius+'px at '+cx+'px '+cy+'px)'}],{duration:650,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'}));
-     [...dialog.querySelectorAll('.exit-quote>*')].forEach((el,i)=>quoteAnimations.push(el.animate([{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'translateY(0)'}],{duration:1100,delay:[600,1950,3700][i],easing:'cubic-bezier(.22,1,.36,1)',fill:'both'})));
+     [...dialog.querySelectorAll('.exit-quote>*')].forEach((el,i)=>quoteAnimations.push(el.animate([{opacity:0,transform:'translateY(24px)'},{opacity:1,transform:'translateY(0)'}],{duration:1100,delay:[600,600,3700][i],easing:'cubic-bezier(.22,1,.36,1)',fill:'both'})));
     }
     animations.push(...quoteAnimations);
     // Reveal the action only after every line has actually finished animating.
